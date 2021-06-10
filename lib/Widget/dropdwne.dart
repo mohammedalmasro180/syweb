@@ -35,6 +35,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: 30,
+      height: 30,
       child: DropdownButton<String>(
         value: dropdownValue,
         dropdownColor: Colors.deepOrange,
@@ -45,7 +47,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         elevation: 16,
         style: const TextStyle(color: Colors.deepPurple),
         underline: Container(
-          height: 2,
+
           color: Colors.deepPurpleAccent,
         ),
         onChanged: (String newValue) {
@@ -57,12 +59,15 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             .map<DropdownMenuItem<String>>((String value) {
           return DropdownMenuItem<String>(
             value: value,
-            child: Container(
+            child: Padding(
+              padding: const EdgeInsets.all(22.0),
+              child: Container(
 
-                width: MediaQuery.of(context).size.width-150,
-                height: 140,
+                  width:50,
+                  height: 140,
 
-                child: Text(value)),
+                  child: Text("ppppp")),
+            ),
           );
         }).toList(),
       ),

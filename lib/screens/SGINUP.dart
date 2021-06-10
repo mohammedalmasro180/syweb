@@ -26,10 +26,10 @@ class _SignupState extends State<Signup> {
 
                     keyboardType: TextInputType.number,
                     decoration: InputDecoration(
-                        labelText: "Full Name",
+                      labelText: "Full Name",
 
 
-                        fillColor: Colors.white,
+                      fillColor: Colors.white,
 
 
 

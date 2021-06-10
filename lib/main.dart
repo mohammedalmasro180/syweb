@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:theone/screens/Employee.dart';
 import 'package:theone/screens/HomeScreen.dart';
 import 'package:theone/screens/Login.dart';
 import 'package:theone/screens/MainPage.dart';
@@ -9,6 +10,7 @@ import 'package:animated_splash_screen/animated_splash_screen.dart';
 
 import 'package:theone/screens/SGINUP.dart';
 import 'package:theone/screens/addgroup.dart';
+import 'package:theone/screens/store.dart';
 
 
 Future main() async {
@@ -40,6 +42,6 @@ class MyApp extends StatelessWidget {
     debugShowCheckedModeBanner: false,
     title: title,
     theme: ThemeData(primaryColor: Colors.indigo,fontFamily: 'Lato'),
-    home: addgroup(),
+    home: Employee(),
   );
 }
