@@ -8,6 +8,7 @@ import 'package:animated_splash/animated_splash.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 
 import 'package:theone/screens/SGINUP.dart';
+import 'package:theone/screens/addgroup.dart';
 
 
 Future main() async {
@@ -39,6 +40,6 @@ class MyApp extends StatelessWidget {
     debugShowCheckedModeBanner: false,
     title: title,
     theme: ThemeData(primaryColor: Colors.indigo,fontFamily: 'Lato'),
-    home: HomeScreen(),
+    home: addgroup(),
   );
 }
