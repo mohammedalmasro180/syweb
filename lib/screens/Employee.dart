@@ -3,6 +3,7 @@ import 'package:theone/Widget/Appbar.dart';
 import 'package:theone/Widget/drawer.dart';
 import 'package:theone/Widget/dwon.dart';
 import 'package:theone/Widget/textfelid.dart';
+import 'package:theone/localization/language/languages.dart';
 import 'package:theone/theme/color.dart';
 class Employee extends StatefulWidget {
 
@@ -84,7 +85,7 @@ class _EmployeeState extends State<Employee> {
                         children: [
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Text("البيانات الشخصية",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600),),
+                            child: Text(Languages.of(context).addres ,style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600),),
                           )
                         ],
                       ),
@@ -95,13 +96,13 @@ class _EmployeeState extends State<Employee> {
                           Expanded(
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: textfield(context, controller, "الكود"),
+                              child: textfield(context, controller,Languages.of(context).Employeetxtcode),
                             ),
                           ),
                           Expanded(
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: textfield(context, controller, "الكود الرئيسي"),
+                              child: textfield(context, controller, Languages.of(context).Employeetxtmaincode),
 
                             ),
                           ),
@@ -118,25 +119,25 @@ class _EmployeeState extends State<Employee> {
                     //rep
                     Expanded(child: Row(
                       children: [
-                        Expanded(child: textfield(context, controller, "الاسم"))
+                        Expanded(child: textfield(context, controller, Languages.of(context).Employeetxtname))
                       ],
                     )),
                     Column(
                       children: [
                         Padding(
                           padding: const EdgeInsets.all(1.0),
-                          child: Text("القسم",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600),),
+                          child: Text(Languages.of(context).Employeelbldepatment,style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600),),
                         ),
                         Padding(
                             padding: const EdgeInsets.all(1.0),
-                            child: down(context, controller, "جديد")),
+                            child: down(context, controller, Languages.of(context).EmployeedounNew)),
                         Padding(
                           padding: const EdgeInsets.all(1.0),
-                          child: Text("الجنس",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600),),
+                          child: Text(Languages.of(context).Employeelblgender,style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600),),
                         ),
                         Padding(
                             padding: const EdgeInsets.all(1.0),
-                            child: down(context, controller, "ذكر")),
+                            child: down(context, controller, Languages.of(context).Employeedwongender)),
 
                       ],
                     ),
@@ -154,18 +155,18 @@ class _EmployeeState extends State<Employee> {
                       children: [
                         Expanded(child: Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: textfield(context, controller, "الوظيفة"),
+                          child: textfield(context, controller, Languages.of(context).Employeetxtwork),
                         )),
                         Expanded(child: Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: textfield(context, controller, "الراتب"),
+                          child: textfield(context, controller, Languages.of(context).Employeesolary),
                         ))
 
                       ],
                     )),
                     Expanded(child: Row(
                       children: [
-                        Expanded(child: textfield(context, controller, "الموظف المسؤول"))
+                        Expanded(child: textfield(context, controller, Languages.of(context).Employeecharge))
                       ],
                     )),
 
@@ -173,17 +174,17 @@ class _EmployeeState extends State<Employee> {
                       children: [
                         Expanded(child: Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: textfield(context, controller, "الرقم المدني"),
+                          child: textfield(context, controller, Languages.of(context).Employeenumber),
                         )),Expanded(
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Text("الحالة الاجتماعية",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600),),
+                            child: Text(Languages.of(context).social,style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600),),
                           ),
                         ),
                         Expanded(
                           child: Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: down(context, controller, "اعزب")),
+                              child: down(context, controller, Languages.of(context).Employeeaingle)),
 
                         ),
 
@@ -195,7 +196,7 @@ class _EmployeeState extends State<Employee> {
                         children: [
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Text("العنوان",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600),),
+                            child: Text(Languages.of(context).Employee,style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600),),
                           )
                         ],
                       ),
@@ -204,11 +205,11 @@ class _EmployeeState extends State<Employee> {
                       children: [
                         Expanded(child: Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: down(context, controller, "المحافظة"),
+                          child: down(context, controller, Languages.of(context).EmployeeGovernorate),
                         )),
                         Expanded(child: Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: down(context, controller, "الفرع"),
+                          child: down(context, controller, Languages.of(context).EmployeeRegion),
                         )),
 
 
@@ -218,7 +219,7 @@ class _EmployeeState extends State<Employee> {
                       children: [
                         Expanded(child: Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: down(context, controller, "المنطقة"),
+                          child: down(context, controller, Languages.of(context).EmployeeBranch),
                         )),
 
 
@@ -229,7 +230,7 @@ class _EmployeeState extends State<Employee> {
                         children: [
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Text("اعدادات موظف",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600),),
+                            child: Text(Languages.of(context).Employeelblsetting,style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600),),
                           )
                         ],
                       ),
@@ -238,13 +239,13 @@ class _EmployeeState extends State<Employee> {
 
                     Expanded(child: Row(
                       children: [
-                        Expanded(child: textfield(context, controller, "حساب النقدية"))
+                        Expanded(child: textfield(context, controller, Languages.of(context).Employeeacount))
                       ],
                     )),
 
                     Expanded(child: Row(
                       children: [
-                        Expanded(child: textfield(context, controller, "المخزن"))
+                        Expanded(child: textfield(context, controller, Languages.of(context).Employestore))
                       ],
                     )),
 

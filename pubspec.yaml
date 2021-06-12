@@ -39,7 +39,9 @@ flutter_native_splash:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
+  flutter_localizations: # Add this line
+    sdk: flutter
+  shared_preferences: ^0.5.7+3  # Add this line
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
