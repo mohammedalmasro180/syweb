@@ -2,38 +2,28 @@ import 'package:flutter/material.dart';
 import 'package:theone/theme/color.dart';
 
 Widget down(context,TextEditingController controller ,String hint){
-  return Container(
-    width: 50,
-    height: 50,
-    child: DropdownButton(
-      value: hint,
-      dropdownColor: Colors.deepOrange,
+  return GestureDetector(
+    child: Container(
 
-
-      icon: const Icon(Icons.arrow_downward),
-      iconSize: 24,
-      elevation: 16,
-      style: const TextStyle(color: Colors.deepPurple),
-      underline: Container(
-        height: 2,
-        color: Colors.deepPurpleAccent,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(8),
+        color: primary,
       ),
-      items: <String>[hint]
-          .map<DropdownMenuItem<String>>((String value) {
-        return DropdownMenuItem<String>(
-          value: value,
-          child: Container(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      child: Row(
 
-              width: 50,
-              height: 140,
-
-             child: Align(
-            alignment: FractionalOffset.center,
-
-            child: Text(value),
-              )),
-        );
-      }).toList(), onChanged: (String value) {  },
+        children: <Widget>[
+          Text(
+            hint,
+            style: TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.w600),
+          ),
+          Spacer(),
+          Icon(
+            Icons.arrow_drop_down,
+            color: Colors.white,
+          ),
+        ],
+      ),
     ),
   );
 }

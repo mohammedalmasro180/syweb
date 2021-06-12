@@ -57,219 +57,203 @@ class _EmployeeState extends State<Employee> {
         appBar: myappbar(context),
         drawer: drawer(),
         body: ListView(
-          children: [
-            Container(
-              padding: EdgeInsets.all(30),
-              height: MediaQuery.of(context).size.height-200,
-              width: 700,
+            children: [
+              Container(
+                padding: EdgeInsets.all(30),
+                height: MediaQuery.of(context).size.height,
+                width: 700,
 
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.black,
-                        blurRadius: 4,
-                        spreadRadius: 0.1
-                    )
-                  ]
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.black,
+                          blurRadius: 4,
+                          spreadRadius: 0.1
+                      )
+                    ]
 
-              ),
+                ),
 
 
-              child: Column(
-                children: [
-                  Expanded(
-                    child: Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text("البيانات الشخصية",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600),),
-                        )
-                      ],
-                    ),
-                  ),
-                  Expanded(
-                    child: Row(
-                      children: [
-                        Expanded(
-                          child: Padding(
+                child: Column(
+                  children: [
+                    Expanded(
+                      child: Row(
+                        children: [
+                          Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: textfield(context, controller, "الكود"),
-                          ),
-                        ),
-                        Expanded(
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: textfield(context, controller, "الكود الرئيسي"),
-
-                          ),
-                        ),
-                        Expanded(
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child:down(context, controller, "الديانة"),
-                          ),
-                        ),
-
-                      ],
-                    ),
-                  ),
-                  //rep
-                  Expanded(child: Row(
-                    children: [
-                      Expanded(child: textfield(context, controller, "الاسم"))
-                    ],
-                  )),
-                  Expanded(
-                    child: Row(
-                      children: [
-                        Expanded(
-                          child: Row(
-                            children: [
-                              Expanded(
-                                child: Row(
-                                  children: [
-                                    Expanded(
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Text("القسم",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600),),
-                                      ),
-                                    ),
-                                    Expanded(
-                                      child: Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: down(context, controller, "جديد")),
-
-                                    ),
-                                    Expanded(
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Text("الجنس",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600),),
-                                      ),
-                                    ),
-                                    Expanded(
-                                      child: Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: down(context, controller, "ذكر")),
-
-                                    ),
-                                  ],
-                                ),
-                              ),
-
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
-                  //rep
-
-                  Expanded(child: Row(
-                    children: [
-                      Expanded(child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: textfield(context, controller, "الوظيفة"),
-                      )),
-                      Expanded(child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: textfield(context, controller, "الراتب"),
-                      ))
-
-                    ],
-                  )),
-                  Expanded(child: Row(
-                    children: [
-                      Expanded(child: textfield(context, controller, "الموظف المسؤول"))
-                    ],
-                  )),
-
-                  Expanded(child: Row(
-                    children: [
-                      Expanded(child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: textfield(context, controller, "الرقم المدني"),
-                      )),Expanded(
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text("الحالة الاجتماعية",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600),),
-                        ),
+                            child: Text("البيانات الشخصية",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600),),
+                          )
+                        ],
                       ),
-                      Expanded(
-                        child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: down(context, controller, "اعزب")),
+                    ),
+                    Expanded(
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: textfield(context, controller, "الكود"),
+                            ),
+                          ),
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: textfield(context, controller, "الكود الرئيسي"),
 
+                            ),
+                          ),
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child:down(context, controller, "الديانة"),
+                            ),
+                          ),
+
+                        ],
                       ),
-
-                    ],
-                  )),
-
-                  Expanded(
-                    child: Row(
+                    ),
+                    //rep
+                    Expanded(child: Row(
+                      children: [
+                        Expanded(child: textfield(context, controller, "الاسم"))
+                      ],
+                    )),
+                    Column(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text("العنوان",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600),),
-                        )
-                      ],
-                    ),
-                  ),
-                  Expanded(child: Row(
-                    children: [
-                      Expanded(child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: down(context, controller, "المحافظة"),
-                      )),
-                      Expanded(child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: down(context, controller, "الفرع"),
-                      )),
-
-
-                    ],
-                  )),
-                  Expanded(child: Row(
-                    children: [
-                      Expanded(child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: down(context, controller, "المنطقة"),
-                      )),
-
-
-                    ],
-                  )),
-                  Expanded(
-                    child: Row(
-                      children: [
+                          padding: const EdgeInsets.all(1.0),
+                          child: Text("القسم",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600),),
+                        ),
                         Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text("اعدادات موظف",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600),),
-                        )
+                            padding: const EdgeInsets.all(1.0),
+                            child: down(context, controller, "جديد")),
+                        Padding(
+                          padding: const EdgeInsets.all(1.0),
+                          child: Text("الجنس",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600),),
+                        ),
+                        Padding(
+                            padding: const EdgeInsets.all(1.0),
+                            child: down(context, controller, "ذكر")),
+
                       ],
                     ),
-                  ),
+                    Expanded(child: Row(
+                      children: [
+                       Expanded(child: Row(
+                         children: [
+                         ],
+                       ))
+                      ],
+                    )),
+                    //rep
+
+                    Expanded(child: Row(
+                      children: [
+                        Expanded(child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: textfield(context, controller, "الوظيفة"),
+                        )),
+                        Expanded(child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: textfield(context, controller, "الراتب"),
+                        ))
+
+                      ],
+                    )),
+                    Expanded(child: Row(
+                      children: [
+                        Expanded(child: textfield(context, controller, "الموظف المسؤول"))
+                      ],
+                    )),
+
+                    Expanded(child: Row(
+                      children: [
+                        Expanded(child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: textfield(context, controller, "الرقم المدني"),
+                        )),Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text("الحالة الاجتماعية",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600),),
+                          ),
+                        ),
+                        Expanded(
+                          child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: down(context, controller, "اعزب")),
+
+                        ),
+
+                      ],
+                    )),
+
+                    Expanded(
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text("العنوان",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600),),
+                          )
+                        ],
+                      ),
+                    ),
+                    Expanded(child: Row(
+                      children: [
+                        Expanded(child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: down(context, controller, "المحافظة"),
+                        )),
+                        Expanded(child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: down(context, controller, "الفرع"),
+                        )),
 
 
-                  Expanded(child: Row(
-                    children: [
-                      Expanded(child: textfield(context, controller, "حساب النقدية"))
-                    ],
-                  )),
-
-                  Expanded(child: Row(
-                    children: [
-                      Expanded(child: textfield(context, controller, "المخزن"))
-                    ],
-                  )),
+                      ],
+                    )),
+                    Expanded(child: Row(
+                      children: [
+                        Expanded(child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: down(context, controller, "المنطقة"),
+                        )),
 
 
-                ],
-        ),
+                      ],
+                    )),
+                    Expanded(
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text("اعدادات موظف",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600),),
+                          )
+                        ],
+                      ),
+                    ),
+
+
+                    Expanded(child: Row(
+                      children: [
+                        Expanded(child: textfield(context, controller, "حساب النقدية"))
+                      ],
+                    )),
+
+                    Expanded(child: Row(
+                      children: [
+                        Expanded(child: textfield(context, controller, "المخزن"))
+                      ],
+                    )),
+
+
+                  ],
+                ),
+              ),
+            ]),
       ),
-    ]),
-    ),
     );
   }
 }
