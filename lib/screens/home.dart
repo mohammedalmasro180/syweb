@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:theone/Widget/Appbar.dart';
 import 'package:theone/localization/language/languages.dart';
 import 'package:theone/localization/locale_constant.dart';
 import 'package:theone/model/language_data.dart';
 import 'package:theone/screens/Employee.dart';
+import 'package:theone/screens/HomeScreen.dart';
 import 'package:theone/theme/color.dart';
 
 class Home extends StatefulWidget {
@@ -14,15 +16,7 @@ class HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) =>
       Scaffold(
-        appBar: AppBar(
-          leading: Icon(
-            Icons.language,
-            color: Colors.white,
-          ),
-          title: Text(Languages
-              .of(context)
-              .appName),
-        ),
+        appBar:myappbar(context),
         body: Container(
           margin: EdgeInsets.all(30),
           child: Center(
@@ -43,14 +37,6 @@ class HomeState extends State<Home> {
                 SizedBox(
                   height: 30,
                 ),
-                Text(
-                  Languages
-                      .of(context)
-                      .labelInfo,
-                  style: TextStyle(fontSize: 20, color: Colors.grey),
-                  textAlign: TextAlign.center,
-
-                ),
                 SizedBox(
                   height: 70,
                 ),
@@ -66,7 +52,7 @@ class HomeState extends State<Home> {
                     onPressed:() {
 
                       Navigator.pushReplacement(
-                          context, MaterialPageRoute(builder: (context) =>Employee()));
+                          context, MaterialPageRoute(builder: (context) =>HomeScreen()));
 
                     },
 
@@ -91,32 +77,45 @@ class HomeState extends State<Home> {
       );
 
   _createLanguageDropDown() {
-    return DropdownButton<LanguageData>(
-      iconSize: 30,
-      hint: Text(Languages
-          .of(context)
-          .labelSelectLanguage),
-      onChanged: (LanguageData language) {
-        changeLanguage(context, language.languageCode);
-      },
-      items: LanguageData.languageList()
-          .map<DropdownMenuItem<LanguageData>>(
-            (e) =>
-            DropdownMenuItem<LanguageData>(
-              value: e,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: <Widget>[
-                  Text(
-                    e.flag,
-                    style: TextStyle(fontSize: 30),
-                  ),
-                  Text(e.name)
-                ],
+    return GestureDetector(
+        child: Container(
+          height: 35,
+
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(8),
+            color: primary,
+          ),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+
+      child: DropdownButton<LanguageData>(
+        iconSize: 30,
+        hint: Text(Languages
+            .of(context)
+            .labelSelectLanguage,style: TextStyle(color: Colors.white),),
+        onChanged: (LanguageData language) {
+          changeLanguage(context, language.languageCode);
+        },
+        items: LanguageData.languageList()
+            .map<DropdownMenuItem<LanguageData>>(
+              (e) =>
+              DropdownMenuItem<LanguageData>(
+                value: e,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: <Widget>[
+                    Text(
+                      e.flag,
+                       style: TextStyle(color: Colors.white),
+                    ),
+                    Text(e.name )
+                  ],
+                ),
               ),
-            ),
-      )
-          .toList(),
+        )
+            .toList(),
+    ),
+        ),
+
     );
   }
 }

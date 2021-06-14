@@ -1,5 +1,8 @@
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:theone/screens/HomeScreen.dart';
+import 'package:theone/screens/Unitss.dart';
 
 import 'package:theone/screens/home.dart';
 
@@ -7,7 +10,19 @@ import 'localization/locale_constant.dart';
 import 'localization/localizations_delegate.dart';
 
 void main() {
-  runApp(MyApp());
+
+  runApp(MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: AnimatedSplashScreen(
+        duration: 3000,
+        splash: Image.asset("assets/logo.jpg",width: 800,height: 800,),
+        nextScreen: MyApp(),
+        splashTransition: SplashTransition.scaleTransition,
+        //pageTransitionType: PageTransitionType.scale,
+
+      )
+  ));
+
 }
 
 class MyApp extends StatefulWidget {

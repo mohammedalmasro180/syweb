@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:theone/Widget/Appbar.dart';
 import 'package:theone/Widget/drawer.dart';
+import 'package:theone/localization/language/languages.dart';
+import 'package:theone/screens/Employee.dart';
 import 'package:theone/screens/addgroup.dart';
+import 'package:theone/screens/class_definition.dart';
+import 'package:theone/screens/extra_prices.dart';
 import 'package:theone/screens/store.dart';
 
 import 'package:theone/theme/color.dart';
@@ -15,75 +19,28 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: myappbar(context),
-      drawer: drawer(),
-      body: ListView(
-        children: [
-          Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  width: MediaQuery
-                      .of(context)
+    return Directionality(
+      textDirection: TextDirection.rtl,
+      child: Scaffold(
+        appBar: myappbar(context),
+        drawer: drawer(),
+        body: ListView(
+          children: [
+            Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    width: MediaQuery
+                        .of(context)
 
-                      .size
-                      .width,
-                  height: 100,
-                  color: Colors.amberAccent,
-                  child: InkWell(
-                    onTap: () {
-                      showAlertDialog(context,"Groups","Add Group","Edit Group","Delete Group",addgroup(),addgroup());
-                    },
-                    child: Row(
-                      children: [
-                        Expanded(
-                          child: Padding(
-                            padding: const EdgeInsets.all(30.0),
-                            child: Align(
-
-                                alignment: FractionalOffset.centerLeft,
-
-                                child: Icon(Icons.ac_unit_sharp, size: 30,
-                                  color: Colors.black,)),
-                          ),
-                        ),
-                        Expanded(
-                          child: Padding(
-                            padding: const EdgeInsets.all(30.0),
-                            child: Align(
-
-                                alignment: FractionalOffset.centerRight,
-
-                                child: Text(
-                                  "Group", style: TextStyle(fontSize: 14),)),
-                          ),
-                        ),
-
-
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  width: MediaQuery
-                      .of(context)
-                      .size
-                      .width,
-                  height: 100,
-                  color: Colors.amberAccent,
-                  child: InkWell(
-                    onTap: () {
-
-                    },
+                        .size
+                        .width,
+                    height: 100,
+                    color: Colors.amberAccent,
                     child: InkWell(
                       onTap: () {
-                        showAlertDialog(context,"Stores", "Add Store", "Edit Store",
-                            "Delete Store",store(),store());
+                        showAlertDialog(context,Languages.of(context).grouphome,addgroup(),addgroup());
                       },
                       child: Row(
                         children: [
@@ -92,9 +49,10 @@ class _HomeScreenState extends State<HomeScreen> {
                               padding: const EdgeInsets.all(30.0),
                               child: Align(
 
-                                  alignment: FractionalOffset.centerLeft,
+                                  alignment: FractionalOffset.centerRight,
 
-                                  child: Icon(Icons.ac_unit_sharp, size: 30,
+
+                                  child: Icon(Icons.group, size: 30,
                                     color: Colors.black,)),
                             ),
                           ),
@@ -103,10 +61,150 @@ class _HomeScreenState extends State<HomeScreen> {
                               padding: const EdgeInsets.all(30.0),
                               child: Align(
 
-                                  alignment: FractionalOffset.centerRight,
+                                  alignment: FractionalOffset.centerLeft,
 
                                   child: Text(
-                                    "Stores", style: TextStyle(fontSize: 14),)),
+                                    Languages.of(context).grouphome, style: TextStyle(fontSize: 14),)),
+                            ),
+                          ),
+
+
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    width: MediaQuery
+                        .of(context)
+                        .size
+                        .width,
+                    height: 100,
+                    color: Colors.amberAccent,
+                    child: InkWell(
+                      onTap: () {
+
+                      },
+                      child: InkWell(
+                        onTap: () {
+                          showAlertDialog(context,Languages.of(context).storehome,store(),store());
+                        },
+                        child: Row(
+                          children: [
+                            Expanded(
+                              child: Padding(
+                                padding: const EdgeInsets.all(30.0),
+                                child: Align(
+
+                                    alignment: FractionalOffset.centerRight,
+
+                                    child: Icon(Icons.ac_unit_sharp, size: 30,
+                                      color: Colors.black,)),
+                              ),
+                            ),
+                            Expanded(
+                              child: Padding(
+                                padding: const EdgeInsets.all(30.0),
+                                child: Align(
+
+                                    alignment: FractionalOffset.centerLeft,
+
+                                    child: Text(
+                                      Languages.of(context).storehome, style: TextStyle(fontSize: 14),)),
+                              ),
+                            ),
+
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    width: MediaQuery
+                        .of(context)
+                        .size
+                        .width,
+                    height: 100,
+                    color: Colors.amberAccent,
+                    child: InkWell(
+                      onTap: () {
+
+                      },
+                      child: InkWell(
+                        onTap: () {
+                          showAlertDialog(context,Languages.of(context).Employee,Employee(),Employee());
+                        },
+                        child: Row(
+                          children: [
+                            Expanded(
+                              child: Padding(
+                                padding: const EdgeInsets.all(30.0),
+                                child: Align(
+
+                                    alignment: FractionalOffset.centerRight,
+
+                                    child: Icon(Icons.person, size: 30,
+                                      color: Colors.black,)),
+                              ),
+                            ),
+                            Expanded(
+                              child: Padding(
+                                padding: const EdgeInsets.all(30.0),
+                                child: Align(
+
+                                    alignment: FractionalOffset.centerLeft,
+
+                                    child: Text(
+                                      Languages.of(context).Employehome, style: TextStyle(fontSize: 14),)),
+                              ),
+                            ),
+
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    width: MediaQuery
+                        .of(context)
+                        .size
+                        .width,
+                    height: 100,
+                    color: Colors.amberAccent,
+                    child: InkWell(
+                      onTap: () {
+                        showAlertDialog(context,Languages.of(context).pricehome,extra_prices(),extra_prices());
+                      },
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.all(30.0),
+                              child: Align(
+
+                                  alignment: FractionalOffset.centerRight,
+
+                                  child: Icon(Icons.attach_money, size: 30,
+                                    color: Colors.black,)),
+                            ),
+                          ),
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.all(30.0),
+                              child: Align(
+
+                                  alignment: FractionalOffset.centerLeft,
+
+                                  child: Text(
+                                    Languages.of(context).pricehome, style: TextStyle(fontSize: 14),)),
                             ),
                           ),
 
@@ -115,17 +213,61 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                 ),
-              ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    width: MediaQuery
+                        .of(context)
+                        .size
+                        .width,
+                    height: 100,
+                    color: Colors.amberAccent,
+                    child: InkWell(
+                      onTap: () {
+                        showAlertDialog(context,Languages.of(context).classhome,
+                            class_definition(),class_definition());
+                      },
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.all(30.0),
+                              child: Align(
 
-            ],
-          )
-        ],
+                                  alignment: FractionalOffset.centerRight,
+
+                                  child: Icon(Icons.class_, size: 30,
+                                    color: Colors.black,)),
+                            ),
+                          ),
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.all(30.0),
+                              child: Align(
+
+                                  alignment: FractionalOffset.centerLeft,
+
+                                  child: Text(
+                                    Languages.of(context).classhome, style: TextStyle(fontSize: 14),)),
+                            ),
+                          ),
+
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
 
 
-  showAlertDialog(BuildContext context,String address,String btn1,String btn2,String btn3,
+  showAlertDialog(BuildContext context,String address,
       StatefulWidget statefulWidget1,StatefulWidget statefulWidget2) {
 
     AlertDialog alert = AlertDialog(
@@ -151,7 +293,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Text(btn1,style: TextStyle(color:Colors.white),),
+                        Text(Languages.of(context).addhome+" "+address,style: TextStyle(color:Colors.white),),
+
 
                       ],
                     ),
@@ -173,7 +316,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Text(btn2,style: TextStyle(color:Colors.white),),
+                        Text(Languages.of(context).edithome+" "+address,style: TextStyle(color:Colors.white),),
 
                       ],
                     ),
@@ -194,7 +337,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Text(btn3,style: TextStyle(color:Colors.white),),
+                        Text(Languages.of(context).delhome+" "+address,style: TextStyle(color:Colors.white),),
 
                       ],
                     ),

@@ -83,83 +83,83 @@ class _class_definitionState extends State<class_definition> {
               child: ListView(
                 children: [
                   Row(
-                    children: [
-                      Expanded(child: Padding(
-                        padding: const EdgeInsets.all(20.0),
-                        child: Column(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: textfieldicon(context, controller, "المجموعة",  Icon(Icons.search)),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: textfield(context, controller, "رمز الصنف"),
-                            ),
+                      children: [
+                        Expanded(child: Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: textfieldicon(context, controller, "المجموعة",  Icon(Icons.search)),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: textfield(context, controller, "رمز الصنف"),
+                              ),
 
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: textfield(context, controller, "اسم الصنف"),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: textfield(context, controller, "اسم الصنف"),
 
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: textfield(context, controller, "الاسم اللاتيني"),
-                            ),
-
-
-
-                          ],
-                        ),
-                      )),
-                      Expanded(child:Align(
-                      alignment: FractionalOffset.bottomRight,
-                      child:Align(
-                        alignment: FractionalOffset.centerRight,
-                        child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                        children: [
-                        Column(
-                        children: [
-                        Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child:Text("تاريخ التسجيل",style: TextStyle(fontSize: 15),)
-                        ),
-                        Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child:down(
-                          context,controller,"06/02/21",)
-                        ),
-                        ],
-                        ),
-
-                                 Column(
-                                  children: [
-                                    Padding(
-                                      padding: const EdgeInsets.all(1.0),
-                                      child: check(context, controller, "نشر الصنف بالمتجر الالكتروني")
-                                    ),
-
-                                    Padding(
-                                        padding: const EdgeInsets.all(1.0),
-                                        child: check(context, controller,"صنف تجميعي")
-
-                                    ),
-                                  ],
-                                ),
-                    ]        ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: textfield(context, controller, "الاسم اللاتيني"),
+                              ),
 
 
 
-
-
+                            ],
                           ),
-                      ),
-                      )),
+                        )),
+                        Expanded(child:Align(
+                          alignment: FractionalOffset.bottomRight,
+                          child:Align(
+                            alignment: FractionalOffset.centerRight,
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                  children: [
+                                    Column(
+                                      children: [
+                                        Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child:Text("تاريخ التسجيل",style: TextStyle(fontSize: 15),)
+                                        ),
+                                        Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child:down(
+                                              context,controller,"06/02/21",)
+                                        ),
+                                      ],
+                                    ),
+
+                                    Column(
+                                      children: [
+                                        Padding(
+                                            padding: const EdgeInsets.all(1.0),
+                                            child: check(context, controller, "نشر الصنف بالمتجر الالكتروني")
+                                        ),
+
+                                        Padding(
+                                            padding: const EdgeInsets.all(1.0),
+                                            child: check(context, controller,"صنف تجميعي")
+
+                                        ),
+                                      ],
+                                    ),
+                                  ]        ),
 
 
-                    ]
+
+
+
+                            ),
+                          ),
+                        )),
+
+
+                      ]
                   ),
                   Row(
                     children: [

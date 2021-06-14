@@ -35,11 +35,6 @@ class _EmployeeState extends State<stander> {
             ),
 
 
-            child: Row(
-              children: [
-                Text("البيانات الشخصية",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600),)
-              ],
-            ),
           )
         ],
       ),

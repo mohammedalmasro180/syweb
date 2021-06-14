@@ -13,7 +13,9 @@ abstract class Languages {
   String get labelInfo;
 
   String get labelSelectLanguage;
-
+  String get addhome;
+  String get edithome;
+  String get delhome;
   String get Employeeaddreslabel;
   String get Employeetxtcode;
   String get Employeetxtmaincode;
@@ -39,7 +41,12 @@ abstract class Languages {
 
   String get Employeeacount;
   String get Employestore;
+  String get Employehome;
 
+  String get classhome;
+  String get pricehome;
+  String get storehome;
+  String get grouphome;
 
 //Employee
 }

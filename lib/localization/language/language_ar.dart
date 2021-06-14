@@ -59,10 +59,27 @@ class LanguageAr extends Languages {
   String get Employee=> "العنوان";
   @override
   String get Employeelblsetting=> "اعدادات الموظف";
-
   @override
+  String get Employehome=> " الموظف";
+
+
+  String get classhome=> "الصنف";
+  @override
+  String get pricehome=> "الاسعار الاضافية";
+  @override
+  String get storehome=> "المخزن";
+  @override
+  String get grouphome=> "مجموعة";
+
+
   String get Employeeacount=> "حساب النقدية";
   @override
   String get Employestore=> "المخزن";
+  @override
+  String get addhome=>"اضافة";
+  @override
+  String get edithome=>"تعديل";
+  @override
+  String get delhome=>"حذف";
 
 }

@@ -4,6 +4,7 @@ import 'package:theone/theme/color.dart';
 Widget down(context,TextEditingController controller ,String hint){
   return GestureDetector(
     child: Container(
+      height: 35,
 
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
@@ -15,7 +16,7 @@ Widget down(context,TextEditingController controller ,String hint){
         children: <Widget>[
           Text(
             hint,
-            style: TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.w600),
+            style: TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w600),
           ),
           Spacer(),
           Icon(

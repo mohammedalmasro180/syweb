@@ -62,6 +62,24 @@ class LanguageEn extends Languages {
   @override
   String get social=> "Social status";
 
+  @override
+  String get addhome=>"ADD";
+  @override
+  String get edithome=>"EDIT";
+  @override
+  String get delhome=>"DELETE";
+
+  @override
+  String get Employehome=> " Employee";
+
+
+  String get classhome=> "Class";
+  @override
+  String get pricehome=> "Extra Price";
+  @override
+  String get storehome=> "Store";
+  @override
+  String get grouphome=> "Group";
 
   @override
   // TODO: implement Employeeaddreslabel
