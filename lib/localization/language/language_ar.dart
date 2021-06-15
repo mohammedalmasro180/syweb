@@ -1,5 +1,4 @@
 import 'languages.dart';
-
 class LanguageAr extends Languages {
 
   @override
@@ -76,7 +75,7 @@ class LanguageAr extends Languages {
   @override
   String get Employestore=> "المخزن";
   @override
-  String get addhome=>"اضافة";
+  String get add=>"اضافة";
   @override
   String get edithome=>"تعديل";
   @override

@@ -13,7 +13,7 @@ abstract class Languages {
   String get labelInfo;
 
   String get labelSelectLanguage;
-  String get addhome;
+  String get add;
   String get edithome;
   String get delhome;
   String get Employeeaddreslabel;

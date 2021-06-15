@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:theone/Widget/Appbar.dart';
+import 'package:theone/Widget/botrombar.dart';
 import 'package:theone/Widget/check.dart';
 import 'package:theone/Widget/dwon.dart';
 import 'package:theone/Widget/textfeildicon.dart';
 import 'package:theone/Widget/textfelid.dart';
 import 'package:theone/Widget/drawer.dart';
+import 'package:theone/localization/language/languages.dart';
 class units extends StatefulWidget {
 
 
@@ -16,7 +18,8 @@ class _unitsState extends State<units> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: myappbar(context),
+      bottomNavigationBar: BottomBar(context),
+      appBar: myappbar(context,Languages.of(context).add+" "+Languages.of(context).classhome),
       drawer: drawer(),
       body: ListView(
         children: [

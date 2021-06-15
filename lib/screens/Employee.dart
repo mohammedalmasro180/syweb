@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:theone/Widget/Appbar.dart';
+import 'package:theone/Widget/botrombar.dart';
 import 'package:theone/Widget/drawer.dart';
 import 'package:theone/Widget/dwon.dart';
 import 'package:theone/Widget/textfelid.dart';
@@ -12,50 +13,16 @@ class Employee extends StatefulWidget {
   _EmployeeState createState() => _EmployeeState();
 }
 TextEditingController controller;
+
 class _EmployeeState extends State<Employee> {
   @override
   Widget build(BuildContext context) {
+    String address= Languages.of(context).Employee;
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
-        bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: sh,
-          showUnselectedLabels: true,
-          items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-                icon: Icon(Icons.open_in_new,color: Colors.white,),
-                title: Text('جديد'),
-                backgroundColor: sh
-            ),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.add,color: Colors.white,),
-                title: Text('اضافة'),
-                backgroundColor: sh
-            ),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.edit,color: Colors.white,),
-                title: Text('تعديل'),
-                backgroundColor: sh
-            ),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.person,color: Colors.white,),
-                title: Text('مجموعات'),backgroundColor: sh
-            ),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.settings,color: Colors.white,),
-                title: Text('حسابات'),
-                backgroundColor: Colors.red
-            ),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.settings,color: Colors.white,),
-                title: Text('اغلاق'),
-                backgroundColor: Colors.red
-            ),
-          ],
-
-
-        ),
-        appBar: myappbar(context),
+        bottomNavigationBar: BottomBar(context),
+        appBar: myappbar(context,Languages.of(context).add+" "+Languages.of(context).Employee),
         drawer: drawer(),
         body: ListView(
             children: [
@@ -85,7 +52,7 @@ class _EmployeeState extends State<Employee> {
                         children: [
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Text(Languages.of(context).addres ,style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600),),
+                            child: Text(address.toString() ,style: TextStyle(fontSize: 12,fontWeight: FontWeight.w600),),
                           )
                         ],
                       ),

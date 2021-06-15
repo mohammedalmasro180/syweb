@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:theone/theme/color.dart';
 
-Widget myappbar(context){
-  return  AppBar(title: Text('The one',),
+Widget myappbar(context,String title){
+  return  AppBar(title: Text(title,),
     centerTitle: true,
     backgroundColor: primary,
     actions: [

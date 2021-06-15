@@ -16,7 +16,7 @@ class HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) =>
       Scaffold(
-        appBar:myappbar(context),
+        appBar:myappbar(context,"The one"),
         body: Container(
           margin: EdgeInsets.all(30),
           child: Center(
@@ -45,29 +45,34 @@ class HomeState extends State<Home> {
                   height: 70,
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: RaisedButton(
-                    color: rowto,
-                    padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
-                    onPressed:() {
+                  padding: const EdgeInsets.only(top:150),
+                  child: Container(
+                    height: 45,
+                    width: 180,
 
-                      Navigator.pushReplacement(
-                          context, MaterialPageRoute(builder: (context) =>HomeScreen()));
+                    child: RaisedButton(
+                      color: rowto,
+                      padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
+                      onPressed:() {
 
-                    },
+                        Navigator.pushReplacement(
+                            context, MaterialPageRoute(builder: (context) =>HomeScreen()));
 
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Text(Languages.of(context).Enter,style: TextStyle(color:Colors.white),),
-                        Icon(Icons.arrow_forward,color: Colors.white,
-                        )
-                      ],
+                      },
 
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(Languages.of(context).Enter,style: TextStyle(color:Colors.white),),
+                          Icon(Icons.arrow_forward,color: Colors.white,
+                          )
+                        ],
+
+
+                      ),
 
                     ),
-
                   ),
                 ),
               ],
@@ -79,19 +84,24 @@ class HomeState extends State<Home> {
   _createLanguageDropDown() {
     return GestureDetector(
         child: Container(
-          height: 35,
+          height: 45,
+          width: 180,
+
 
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(8),
+
             color: primary,
           ),
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+          //padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 8),
 
       child: DropdownButton<LanguageData>(
         iconSize: 30,
-        hint: Text(Languages
-            .of(context)
-            .labelSelectLanguage,style: TextStyle(color: Colors.white),),
+        hint: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(Languages
+              .of(context)
+              .labelSelectLanguage,style: TextStyle(color: Colors.white),),
+        ),
         onChanged: (LanguageData language) {
           changeLanguage(context, language.languageCode);
         },
@@ -103,11 +113,10 @@ class HomeState extends State<Home> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
-                    Text(
-                      e.flag,
-                       style: TextStyle(color: Colors.white),
-                    ),
-                    Text(e.name )
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text("  "+e.name ),
+                    )
                   ],
                 ),
               ),

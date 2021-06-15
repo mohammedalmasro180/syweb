@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:theone/Widget/Appbar.dart';
 import 'package:theone/Widget/drawer.dart';
+import 'package:theone/localization/language/languages.dart';
 class stander extends StatefulWidget {
 
 
@@ -12,7 +13,7 @@ class _EmployeeState extends State<stander> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: myappbar(context),
+      appBar: myappbar(context,Languages.of(context).add+" "+Languages.of(context).classhome),
       drawer: drawer(),
       body: ListView(
         children: [

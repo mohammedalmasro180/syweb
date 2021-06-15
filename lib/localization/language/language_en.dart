@@ -63,7 +63,7 @@ class LanguageEn extends Languages {
   String get social=> "Social status";
 
   @override
-  String get addhome=>"ADD";
+  String get add=>"ADD";
   @override
   String get edithome=>"EDIT";
   @override

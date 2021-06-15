@@ -22,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
-        appBar: myappbar(context),
+        appBar: myappbar(context,"The one"),
         drawer: drawer(),
         body: ListView(
           children: [
@@ -40,7 +40,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: Colors.amberAccent,
                     child: InkWell(
                       onTap: () {
-                        showAlertDialog(context,Languages.of(context).grouphome,addgroup(),addgroup());
+//                        showAlertDialog(context,Languages.of(context).grouphome,addgroup(),addgroup());
+                      showMyDialog(context,Languages.of(context).grouphome,addgroup(),addgroup(),Languages.of(context).delhome,Languages.of(context).add,Languages.of(context).edithome);
+
                       },
                       child: Row(
                         children: [
@@ -89,7 +91,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       },
                       child: InkWell(
                         onTap: () {
-                          showAlertDialog(context,Languages.of(context).storehome,store(),store());
+                          showMyDialog(context,Languages.of(context).storehome,store(),store(),Languages.of(context).delhome,Languages.of(context).add,Languages.of(context).edithome);
                         },
                         child: Row(
                           children: [
@@ -122,7 +124,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                 ),
-                Padding(
+   /*             Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
                     width: MediaQuery
@@ -137,7 +139,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       },
                       child: InkWell(
                         onTap: () {
-                          showAlertDialog(context,Languages.of(context).Employee,Employee(),Employee());
+                          showMyDialog(context,Languages.of(context).Employehome,Employee(),Employee(),Languages.of(context).delhome,Languages.of(context).add,Languages.of(context).edithome);
                         },
                         child: Row(
                           children: [
@@ -169,7 +171,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
-                ),
+                ),*/
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
@@ -181,7 +183,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: Colors.amberAccent,
                     child: InkWell(
                       onTap: () {
-                        showAlertDialog(context,Languages.of(context).pricehome,extra_prices(),extra_prices());
+                        showMyDialog(context,Languages.of(context).pricehome,extra_prices(),extra_prices(),Languages.of(context).delhome,Languages.of(context).add,Languages.of(context).edithome);
                       },
                       child: Row(
                         children: [
@@ -224,8 +226,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: Colors.amberAccent,
                     child: InkWell(
                       onTap: () {
-                        showAlertDialog(context,Languages.of(context).classhome,
-                            class_definition(),class_definition());
+
+                        showMyDialog(context,Languages.of(context).classhome,
+                            class_definition(),class_definition(),Languages.of(context).delhome,Languages.of(context).add,Languages.of(context).edithome);
                       },
                       child: Row(
                         children: [
@@ -266,11 +269,130 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+   showMyDialog(BuildContext context,String address,
+      StatefulWidget statefulWidget1,StatefulWidget statefulWidget2,String  del,String add,String edit)  {
 
-  showAlertDialog(BuildContext context,String address,
-      StatefulWidget statefulWidget1,StatefulWidget statefulWidget2) {
+    return showDialog(
+        context: context,
+        barrierDismissible: false, //this means the user must tap a button to exit the Alert Dialog
+        builder: (BuildContext context) {
+    return AlertDialog(
+    title: Text(address),
+    content: SingleChildScrollView(
+    child:Container(
+      width: 350,
+      height: 250,
+      alignment: FractionalOffset.center,
+      child: Column(
+        children: [
+          Padding(
+              padding: const EdgeInsets.all(8.0),
+              child:  Container(
+                height: 65,
+                width: MediaQuery.of(context).size.width-200,
+                child: RaisedButton (
+                  color: sh,
+                  padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
+                  onPressed:(){
+                    Navigator.pushReplacement(
+                        context, MaterialPageRoute(builder: (context) => statefulWidget1));
+                    //Navigator.pop(context);
+                    //Navigator.pop(context, true); // passing false
+
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(add+" "+address,style: TextStyle(color:Colors.white),),
+
+
+                    ],
+                  ),
+
+                ),
+              )
+          ),
+          Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                height: 65,
+                width: MediaQuery.of(context).size.width-200,
+                child: RaisedButton (
+
+                  color: sh,
+                  padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
+                  onPressed:(){
+                    Navigator.pushReplacement(
+                        context, MaterialPageRoute(builder: (context) => statefulWidget2));
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(edit+" "+address,style: TextStyle(color:Colors.white),),
+
+                    ],
+                  ),
+
+                ),
+              )
+          ),
+
+          Padding(
+              padding: const EdgeInsets.all(8.0),
+              child:  Container(
+                height: 65,
+                width: MediaQuery.of(context).size.width-200,
+                child: RaisedButton (
+
+                  color: sh,
+                  padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
+                  onPressed:(){
+                    Navigator.pop(context);
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(del+" "+address,style: TextStyle(color:Colors.white),),
+
+                    ],
+                  ),
+
+                ),
+              )
+          ),
+
+
+
+
+
+
+        ],
+
+      ),
+    ),
+    ),
+      actions: <Widget>[
+        FlatButton(
+          child: Text('Approve'),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
+      ],
+    );
+    }
+    );
+  }
+  Future<void> showAlertDialog(BuildContext context,String address,
+      StatefulWidget statefulWidget1,StatefulWidget statefulWidget2)  async {
 
     AlertDialog alert = AlertDialog(
+
+
+
         title: Text(address),
         content: Container(
           width: 350,
@@ -280,68 +402,81 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: RaisedButton (
+                  child:  Container(
+                    height: 65,
+                    width: MediaQuery.of(context).size.width-200,
+                    child: RaisedButton (
 
-                    color: sh,
-                    padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
-                    onPressed:(){
-                      Navigator.pushReplacement(
-                          context, MaterialPageRoute(builder: (context) => statefulWidget1));
+                      color: sh,
+                      padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
+                      onPressed:(){
+                        Navigator.pushReplacement(
+                            context, MaterialPageRoute(builder: (context) => statefulWidget1));
+                        //Navigator.pop(context);
+                        //Navigator.pop(context, true); // passing false
 
-                    },
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Text(Languages.of(context).addhome+" "+address,style: TextStyle(color:Colors.white),),
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(Languages.of(context).add+" "+address,style: TextStyle(color:Colors.white),),
 
 
-                      ],
+                        ],
+                      ),
+
                     ),
-
                   )
               ),
               Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: RaisedButton (
+                  child: Container(
+                    height: 65,
+                    width: MediaQuery.of(context).size.width-200,
+                    child: RaisedButton (
 
-                    color: sh,
-                    padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
-                    onPressed:(){
-                      Navigator.pushReplacement(
-                          context, MaterialPageRoute(builder: (context) => statefulWidget2));
+                      color: sh,
+                      padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
+                      onPressed:(){
+                        Navigator.pushReplacement(
+                            context, MaterialPageRoute(builder: (context) => statefulWidget2));
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(Languages.of(context).edithome+" "+address,style: TextStyle(color:Colors.white),),
 
-                    },
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Text(Languages.of(context).edithome+" "+address,style: TextStyle(color:Colors.white),),
+                        ],
+                      ),
 
-                      ],
                     ),
-
                   )
               ),
 
               Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: RaisedButton (
+                  child:  Container(
+                    height: 65,
+                    width: MediaQuery.of(context).size.width-200,
+                    child: RaisedButton (
 
-                    color: sh,
-                    padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
-                    onPressed:(){
+                      color: sh,
+                      padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
+                      onPressed:(){
+                        Navigator.pop(context);
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(Languages.of(context).delhome+" "+address,style: TextStyle(color:Colors.white),),
 
-                    },
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Text(Languages.of(context).delhome+" "+address,style: TextStyle(color:Colors.white),),
+                        ],
+                      ),
 
-                      ],
                     ),
-
                   )
               ),
 
@@ -353,20 +488,30 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
 
           ),
-        )
+        ),
+
+      actions: <Widget>[
+        FlatButton(
+          child: Text('Approve'),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
+      ],
+
     );
 
     // show the dialog
-    showDialog(
+    return showDialog<void>(
       context: context,
+      barrierDismissible: false, //this means the user must tap a button to exit the Alert Dialog
       builder: (BuildContext context) {
         return alert;
       },
     );
 
   }
-}
-addstore(BuildContext context){
-return   Navigator.pushReplacement(
-    context, MaterialPageRoute(builder: (context) => store()));
+
+
+
 }

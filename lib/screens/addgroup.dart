@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:theone/Widget/Appbar.dart';
+import 'package:theone/Widget/botrombar.dart';
+import 'package:theone/Widget/check.dart';
 import 'package:theone/Widget/drawer.dart';
 import 'package:theone/Widget/textfelid.dart';
+import 'package:theone/localization/language/languages.dart';
 import 'package:theone/theme/color.dart';
 class addgroup extends StatefulWidget {
 
@@ -17,52 +20,18 @@ TextEditingController maingroup;
 TextEditingController text;
 
 class _addgroupState extends State<addgroup> {
+
   @override
+
   Widget build(BuildContext context) {
+    String add=Languages.of(context).add;
     return  Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
           drawer: drawer(),
 
-          bottomNavigationBar: BottomNavigationBar(
-            backgroundColor: sh,
-            showUnselectedLabels: true,
-            items: const <BottomNavigationBarItem>[
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.open_in_new,color: Colors.white,),
-                  title: Text('جديد'),
-                  backgroundColor: sh
-              ),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.add,color: Colors.white,),
-                  title: Text('اضافة'),
-                  backgroundColor: sh
-              ),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.edit,color: Colors.white,),
-                  title: Text('تعديل'),
-                  backgroundColor: sh
-              ),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.person,color: Colors.white,),
-                  title: Text('مجموعات'),backgroundColor: sh
-              ),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.settings,color: Colors.white,),
-                  title: Text('حسابات'),
-                  backgroundColor: Colors.red
-              ),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.settings,color: Colors.white,),
-                  title: Text('اغلاق'),
-                  backgroundColor: Colors.red
-              ),
-            ],
-
-
-          ),
-
-          appBar: myappbar(context),
+          bottomNavigationBar: BottomBar(context),
+          appBar: myappbar(context,add+" "+Languages.of(context).grouphome),
           body: ListView(
             children: [
               Center(
@@ -112,18 +81,15 @@ class _addgroupState extends State<addgroup> {
                                               children: [
                                                 Row(
                                                   children: [
-                                                    Checkbox(value: false, onChanged: null,
 
-                                                    ),
-                                                    Text("ايقاف  المجموعة")
+                                                    check(context,code,    "ايقاف  المجموعة"),
+
+
                                                   ],
                                                 ),
                                                 Row(
                                                   children: [
-                                                    Checkbox(value: false, onChanged: null,
-
-                                                    ),
-                                                    Text("غير مرئية في نقاط البيع")
+                                                    check(context,code,    "غير مرئية في نقاط البيع"),
                                                   ],
                                                 ),
 
