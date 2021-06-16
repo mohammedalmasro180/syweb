@@ -6,6 +6,9 @@ class LanguageEn extends Languages {
   String get Enter => "Enter";
   @override
   String get labelWelcome => "Welcome";
+  @override
+  String get test => "Welcome";
+
 
   @override
   String get labelSelectLanguage => "Select Language";
@@ -80,9 +83,78 @@ class LanguageEn extends Languages {
   String get storehome=> "Store";
   @override
   String get grouphome=> "Group";
-
+  @override
+  String get loginadres=> "Login";
+  @override
+  String get loginemail=> "email";
+  @override
+  String get loginpass=> "password";
+  @override
+  String get loginbtn=> "Login";
+  @override
+  String get loginskip=> "Skip";
+  @override
+  String get loginlbl=> "I don't have an account";
+  @override
+  String get loginurl=> "Register";
   @override
   // TODO: implement Employeeaddreslabel
   String get Employeeaddreslabel => throw UnimplementedError();
 
+  @override
+  // TODO: implement loginaddres
+  String get loginaddres => throw UnimplementedError();
+  @override
+
+  String get sginupfull=> "full name";
+  @override
+
+  String get sginupphonn=> "Phone";
+  @override
+  String get sginupcode=> "referral code";
+  @override
+  String get sginupcontry=> "Country";
+  @override
+  String get sginuplbl=> "I have an account";
+  @override
+  String get sginupbtn=> "Register";
+  @override
+  String get sginupurl=> "Login";
+  @override
+  String get groupcode=> "code";
+  String get groupname=> "Name";
+  String get groupnameto=> "Latin name";
+  String get groupmaingroup=> "the main group";
+  String get groupnots=> "Notes";
+  String get groupstopgroup=> "Stop group";
+  String get groupdisable=> "not visible in POS";
+  String get storestoped=> "Stopped";
+  String get storeshortname=> "Shortcut name";
+  String get storeplace=> "location";
+  String get storetel=> "Phone";
+  String get storefax=> "Fax";
+  String get storeact1=> "Debit Account";
+  String get storeact2=> "Credit Account";
+  String get storeactcompoy=> "Company";
+  String get extracode=>"Item Code";
+  String get extradete=>"Register date";
+  String get extradetee=>"Register date";
+
+  String get extrapublish=>"Publish the item to the online store";
+  String get extraun=>"None";
+  String get extraprice=>"price";
+  String get extraclass=>"String get extraclass";
+  String get des=>"Description";
+  String get extraunit=>"Unit";
+
+  @override
+  // TODO: implement extrapublesh
+  String get extrapublesh => throw UnimplementedError();
+
+  String get bottomadd=>"Add";
+  String get bottomnew=>"new";
+  String get bottomedit=>"Edit";
+
+  String get bottomac=>"Accounts";
+  String get bottomclose=>"close";
 }

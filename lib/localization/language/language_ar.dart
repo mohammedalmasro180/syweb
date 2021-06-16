@@ -25,7 +25,7 @@ class LanguageAr extends Languages {
   @override
   String get Employeetxtmaincode  => "الكود الرئيسي";
   @override
-
+  String get des=>"وصف";
   String get Employeetxtname=> "الاسم";
   @override
   String get Employeelbldepatment => "القسم";
@@ -70,10 +70,62 @@ class LanguageAr extends Languages {
   @override
   String get grouphome=> "مجموعة";
 
+  @override
+  String get loginaddres=> "تسجيل الدخول";
+  @override
+  String get loginemail=> "البريد الالكتروني";
+  @override
+  String get loginpass=> "كلمة المرور";
+  @override
+  String get loginbtn=> "تسجيل الدخول";
+  @override
+  String get loginskip=> "تخطي";
+  @override
+  String get loginlbl=> "ليس لدي حساب";
+  @override
+  String get loginurl=> "تسجيل";
+
+  @override
+  String get sginupfull=> "الاسم الكامل";
+  @override
+  String get sginupphonn=> "الهاتف";
+  @override
+  String get sginupcode=> "رمز الإحالة";
+  @override
+  String get sginupcontry=> "البلد";
+  @override
+  String get sginuplbl=> "لدي حساب";
+  @override
+  String get sginupbtn=> "تسجيل";
+  @override
+  String get sginupurl=> "تسجيل دخول";
+  @override
+  String get groupcode=> "الرمز";
+
+  String get storestoped=> "موقوف";
+  String get storeshortname=> "اختصار الاسم";
+  String get storeplace=> "المكان";
+  String get storetel=> "الهاتف";
+  String get storefax=> "الفاكس";
+  String get storeact1=> "حساب المدين";
+  String get storeact2=> "حساب الدائن";
+  String get storeactcompoy=> "الشركة";
+
+  String get groupname=> "الاسم";
+  String get groupnameto=> "الاسم اللاتيني";
+  String get groupmaingroup=> "المجموعة الرئيسية";
+  String get groupnots=> "الملاحظات";
+  String get groupstopgroup=> "ايقاف المجموعة";
+  String get groupdisable=> "غير مرئية في نقاط البيع";
+
+
+
+
 
   String get Employeeacount=> "حساب النقدية";
   @override
   String get Employestore=> "المخزن";
+  String get test => "اضافة";
   @override
   String get add=>"اضافة";
   @override
@@ -81,4 +133,22 @@ class LanguageAr extends Languages {
   @override
   String get delhome=>"حذف";
 
+  String get extracode=>"رمز الصنف";
+  String get extradete=>"تاريخ التسجيل";
+  String get extradetee=>"تاريخ التسجيل";
+
+  String get extrapublesh=>"نشر الصنف بالمتجر الالكتروني";
+  String get extraun=>"بدون";
+  String get extraprice=>"سعر";
+  String get extraclass=>"صنف تجميعي";
+
+  String get extraunit=>"الوحدة";
+  String get bottomadd=>"اضافة";
+  String get bottomnew=>"جديد";
+  String get bottomedit=>"تعديل";
+
+  String get bottomac=>"حسابات";
+  String get bottomclose=>"اغلاق";
+
 }
+

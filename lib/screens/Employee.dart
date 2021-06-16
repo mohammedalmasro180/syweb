@@ -22,7 +22,7 @@ class _EmployeeState extends State<Employee> {
       textDirection: TextDirection.rtl,
       child: Scaffold(
         bottomNavigationBar: BottomBar(context),
-        appBar: myappbar(context,Languages.of(context).add+" "+Languages.of(context).Employee),
+        appBar: myappbar(context,'Employee'),
         drawer: drawer(),
         body: ListView(
             children: [

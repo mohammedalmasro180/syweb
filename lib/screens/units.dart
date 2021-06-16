@@ -19,7 +19,7 @@ class _unitsState extends State<units> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomBar(context),
-      appBar: myappbar(context,Languages.of(context).add+" "+Languages.of(context).classhome),
+      appBar: myappbar(context,''),
       drawer: drawer(),
       body: ListView(
         children: [

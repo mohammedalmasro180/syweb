@@ -25,7 +25,7 @@ class _extra_pricesState extends State<extra_prices> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomBar(context),
-      appBar: myappbar(context,Languages.of(context).add+" "+Languages.of(context).pricehome),
+      appBar: myappbar(context,'Extra Prices'),
       drawer: drawer(),
       body: ListView(
         children: [
@@ -50,7 +50,7 @@ class _extra_pricesState extends State<extra_prices> {
             child: Column(
               children: [
                 Expanded(
-                  child: Row(
+                  child: Column(
                       children: [
                         Expanded(child: Padding(
                           padding: const EdgeInsets.all(2.0),
@@ -58,19 +58,19 @@ class _extra_pricesState extends State<extra_prices> {
                             children: [
                               Padding(
                                 padding: const EdgeInsets.all(1.0),
-                                child: textfieldicon(context, controller, "المجموعة",  Icon(Icons.search)),
+                                child: textfieldicon(context, controller, Languages.of(context).grouphome,  Icon(Icons.search)),
                               ),
                               Padding(
                                 padding: const EdgeInsets.all(1.0),
-                                child: textfield(context, controller, "رمز الصنف"),
+                                child: textfield(context, controller,  Languages.of(context).extracode),
                               ),
                               Padding(
                                 padding: const EdgeInsets.all(1.0),
-                                child: textfield(context, controller, "الاسم اللاتيني"),
+                                child: textfield(context, controller,  Languages.of(context).groupnameto),
                               ),
                               Padding(
                                 padding: const EdgeInsets.all(1.0),
-                                child: textfield(context, controller, "اسم الصنف"),
+                                child: textfield(context, controller,  Languages.of(context).classhome),
 
                               ),
 
@@ -91,7 +91,7 @@ class _extra_pricesState extends State<extra_prices> {
                                       children: [
                                         Padding(
                                             padding: const EdgeInsets.all(1.0),
-                                            child:Text("تاريخ التسجيل",style: TextStyle(fontSize: 15),)
+                                            child:Text(Languages.of(context).extradete,style: TextStyle(fontSize: 15),)
                                         ),
                                         Padding(
                                             padding: const EdgeInsets.all(1.0),
@@ -105,12 +105,12 @@ class _extra_pricesState extends State<extra_prices> {
                                       children: [
                                         Padding(
                                             padding: const EdgeInsets.all(1.0),
-                                            child: check(context, controller, "نشر الصنف بالمتجر الالكتروني")
+                                            child: check(context, controller, Languages.of(context).extraprice)
                                         ),
 
                                         Padding(
                                             padding: const EdgeInsets.all(1.0),
-                                            child: check(context, controller,"صنف تجميعي")
+                                            child: check(context, controller,Languages.of(context).extraclass)
 
                                         ),
                                       ],
@@ -148,11 +148,12 @@ class _extra_pricesState extends State<extra_prices> {
                                     children: [
                                       Padding(
                                         padding: const EdgeInsets.all(8.0),
-                                        child: Text("الوحدة"+index.toString()),
+                                        child: Text(Languages.of(context).extraunit+" "+
+                                            index.toString()),
                                       ),
                                       Padding(
                                         padding: const EdgeInsets.all(8.0),
-                                        child: down(context, controller, "بدون"),
+                                        child: down(context, controller, Languages.of(context).extraun),
                                       ),
                                     ],
                                   )),
@@ -166,7 +167,7 @@ class _extra_pricesState extends State<extra_prices> {
                                       children: [
                                         Padding(
                                           padding: const EdgeInsets.all(8.0),
-                                          child: textfield(context, controller, "سعر"+index.toString()),
+                                          child: textfield(context, controller, Languages.of(context).extraprice+" "+index.toString()),
                                         ),
                                       ],
                                     );

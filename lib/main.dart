@@ -2,6 +2,8 @@ import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:theone/screens/HomeScreen.dart';
+import 'package:theone/screens/Login.dart';
+import 'package:theone/screens/SGINUP.dart';
 import 'package:theone/screens/Unitss.dart';
 
 import 'package:theone/screens/home.dart';

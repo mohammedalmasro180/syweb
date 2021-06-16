@@ -24,7 +24,7 @@ class _storeState extends State<store> {
 
           bottomNavigationBar: BottomBar(context),
 
-          appBar: myappbar(context,Languages.of(context).add+" "+Languages.of(context).storehome),
+          appBar: myappbar(context,'Store'),
           body: ListView(
             children: [
               Center(
@@ -48,66 +48,71 @@ class _storeState extends State<store> {
                                     child: ListView(
 
                                       children: [
-                                        Row(
+                                        Column(
                                           children: [
-                                            Expanded(child: textfield(context,code, "الرمز")),
+                                            textfield(context,code, Languages.of(context).groupcode),
 
-                                            Expanded(child: Checkbox(value: false, onChanged: null,)
-                                            ),
-                                            Expanded(child: Text("موقوف",style:  TextStyle(fontSize: 15),)
-                                            ),
 
 
 
                                           ],
                                         ),
+                                        Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Row(
+                                            children: [
+
+                                              Checkbox(value: false, onChanged: null,),
+                                              Text(Languages.of(context).storestoped,style:  TextStyle(fontSize: 15),),
+                                            ],
+                                          ),
+                                        ),
+                                        Padding(
+                                            padding: const EdgeInsets.all(3.0),
+                                            child:textfield(context,code, Languages.of(context).groupname)
+                                        ),
+                                        SizedBox(height: 10,),
+                                        Padding(
+                                            padding: const EdgeInsets.all(3.0),
+                                            child:textfield(context,code,Languages.of(context).groupnameto)
+                                        ),
+                                        SizedBox(height: 10,),
+                                        Padding(
+                                            padding: const EdgeInsets.all(3.0),
+                                            child:textfield(context,code, Languages.of(context).storeshortname)
+                                        ),
+
+                                        SizedBox(height: 10,),
 
                                         Padding(
                                             padding: const EdgeInsets.all(3.0),
-                                            child:textfield(context,code, "الاسم")
-                                        ),
-                                        SizedBox(height: 10,),
-                                        Padding(
-                                            padding: const EdgeInsets.all(3.0),
-                                            child:textfield(context,code, "الاسم اللاتيني")
-                                        ),
-                                        SizedBox(height: 10,),
-                                        Padding(
-                                            padding: const EdgeInsets.all(3.0),
-                                            child:textfield(context,code, "اختصار الاسم")
-                                        ),
-
-                                        SizedBox(height: 10,),
-
-                                        Padding(
-                                            padding: const EdgeInsets.all(3.0),
-                                            child:textfield(context,code, "المكان")
+                                            child:textfield(context,code,Languages.of(context).storeplace)
                                         ),
                                         SizedBox(height: 10,),
 
                                         Padding(
                                             padding: const EdgeInsets.all(3.0),
-                                            child:textfield(context,code, "التليفون")
+                                            child:textfield(context,code, Languages.of(context).storetel)
                                         ),
                                         SizedBox(height: 10,),
                                         Padding(
                                             padding: const EdgeInsets.all(3.0),
-                                            child:textfield(context,code, "الفاكس")
+                                            child:textfield(context,code, Languages.of(context).storefax)
                                         ),
                                         SizedBox(height: 10,),
                                         Padding(
                                             padding: const EdgeInsets.all(3.0),
-                                            child:textfield(context,code, "حساب المدين")
+                                            child:textfield(context,code, Languages.of(context).storeact1)
                                         ),
                                         SizedBox(height: 10,),
                                         Padding(
                                             padding: const EdgeInsets.all(3.0),
-                                            child:textfield(context,code, "حساب الدائن")
+                                            child:textfield(context,code, Languages.of(context).storeact2)
                                         ),
                                         SizedBox(height: 10,),
                                         Padding(
                                             padding: const EdgeInsets.all(3.0),
-                                            child:textfield(context,code, "الشركة")
+                                            child:textfield(context,code, Languages.of(context).storeactcompoy)
                                         ),
 
 

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:theone/Widget/Appbar.dart';
 import 'package:theone/Widget/drawer.dart';
 import 'package:theone/localization/language/languages.dart';
+import 'package:theone/localization/locale_constant.dart';
 import 'package:theone/screens/Employee.dart';
 import 'package:theone/screens/addgroup.dart';
 import 'package:theone/screens/class_definition.dart';
@@ -35,13 +36,17 @@ class _HomeScreenState extends State<HomeScreen> {
                         .of(context)
 
                         .size
+
                         .width,
                     height: 100,
-                    color: Colors.amberAccent,
+                    color: sh,
                     child: InkWell(
                       onTap: () {
+                        Navigator.pushReplacement(
+                            context, MaterialPageRoute(builder: (context) =>addgroup()));
+
 //                        showAlertDialog(context,Languages.of(context).grouphome,addgroup(),addgroup());
-                      showMyDialog(context,Languages.of(context).grouphome,addgroup(),addgroup(),Languages.of(context).delhome,Languages.of(context).add,Languages.of(context).edithome);
+ //                     showMyDialog(context,Languages.of(context).grouphome,addgroup(),addgroup(),Languages.of(context).delhome,Languages.of(context).add,Languages.of(context).edithome);
 
                       },
                       child: Row(
@@ -55,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
 
                                   child: Icon(Icons.group, size: 30,
-                                    color: Colors.black,)),
+                         color: Colors.white,)),
                             ),
                           ),
                           Expanded(
@@ -66,7 +71,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                   alignment: FractionalOffset.centerLeft,
 
                                   child: Text(
-                                    Languages.of(context).grouphome, style: TextStyle(fontSize: 14),)),
+                                    Languages.of(context).grouphome, style: TextStyle(fontSize: 14,color: Colors.white),
+                                  )),
                             ),
                           ),
 
@@ -84,14 +90,17 @@ class _HomeScreenState extends State<HomeScreen> {
                         .size
                         .width,
                     height: 100,
-                    color: Colors.amberAccent,
+                    color: sh,
                     child: InkWell(
                       onTap: () {
 
                       },
                       child: InkWell(
                         onTap: () {
-                          showMyDialog(context,Languages.of(context).storehome,store(),store(),Languages.of(context).delhome,Languages.of(context).add,Languages.of(context).edithome);
+                        //  showMyDialog(context,Languages.of(context).storehome,store(),store(),Languages.of(context).delhome,Languages.of(context).add,Languages.of(context).edithome);
+                          Navigator.pushReplacement(
+                              context, MaterialPageRoute(builder: (context) =>store()));
+
                         },
                         child: Row(
                           children: [
@@ -102,8 +111,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
                                     alignment: FractionalOffset.centerRight,
 
-                                    child: Icon(Icons.ac_unit_sharp, size: 30,
-                                      color: Colors.black,)),
+                                    child: Icon(Icons.store, size: 30,
+                                      color: Colors.white,)),
                               ),
                             ),
                             Expanded(
@@ -114,7 +123,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     alignment: FractionalOffset.centerLeft,
 
                                     child: Text(
-                                      Languages.of(context).storehome, style: TextStyle(fontSize: 14),)),
+                                      Languages.of(context).storehome, style: TextStyle(fontSize: 14,color: Colors.white),)),
                               ),
                             ),
 
@@ -124,54 +133,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                 ),
-   /*             Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    width: MediaQuery
-                        .of(context)
-                        .size
-                        .width,
-                    height: 100,
-                    color: Colors.amberAccent,
-                    child: InkWell(
-                      onTap: () {
 
-                      },
-                      child: InkWell(
-                        onTap: () {
-                          showMyDialog(context,Languages.of(context).Employehome,Employee(),Employee(),Languages.of(context).delhome,Languages.of(context).add,Languages.of(context).edithome);
-                        },
-                        child: Row(
-                          children: [
-                            Expanded(
-                              child: Padding(
-                                padding: const EdgeInsets.all(30.0),
-                                child: Align(
-
-                                    alignment: FractionalOffset.centerRight,
-
-                                    child: Icon(Icons.person, size: 30,
-                                      color: Colors.black,)),
-                              ),
-                            ),
-                            Expanded(
-                              child: Padding(
-                                padding: const EdgeInsets.all(30.0),
-                                child: Align(
-
-                                    alignment: FractionalOffset.centerLeft,
-
-                                    child: Text(
-                                      Languages.of(context).Employehome, style: TextStyle(fontSize: 14),)),
-                              ),
-                            ),
-
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ),*/
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
@@ -180,10 +142,13 @@ class _HomeScreenState extends State<HomeScreen> {
                         .size
                         .width,
                     height: 100,
-                    color: Colors.amberAccent,
+                    color: sh,
                     child: InkWell(
                       onTap: () {
-                        showMyDialog(context,Languages.of(context).pricehome,extra_prices(),extra_prices(),Languages.of(context).delhome,Languages.of(context).add,Languages.of(context).edithome);
+                        //showMyDialog(context,Languages.of(context).pricehome,extra_prices(),extra_prices(),Languages.of(context).delhome,Languages.of(context).add,Languages.of(context).edithome);
+                        Navigator.pushReplacement(
+                            context, MaterialPageRoute(builder: (context) =>extra_prices()));
+
                       },
                       child: Row(
                         children: [
@@ -194,8 +159,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
                                   alignment: FractionalOffset.centerRight,
 
+
                                   child: Icon(Icons.attach_money, size: 30,
-                                    color: Colors.black,)),
+                         color: Colors.white,)),
                             ),
                           ),
                           Expanded(
@@ -206,7 +172,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   alignment: FractionalOffset.centerLeft,
 
                                   child: Text(
-                                    Languages.of(context).pricehome, style: TextStyle(fontSize: 14),)),
+                                    Languages.of(context).pricehome, style: TextStyle(fontSize: 14,color: Colors.white),)),
                             ),
                           ),
 
@@ -223,12 +189,12 @@ class _HomeScreenState extends State<HomeScreen> {
                         .size
                         .width,
                     height: 100,
-                    color: Colors.amberAccent,
+                    color: sh,
                     child: InkWell(
                       onTap: () {
 
-                        showMyDialog(context,Languages.of(context).classhome,
-                            class_definition(),class_definition(),Languages.of(context).delhome,Languages.of(context).add,Languages.of(context).edithome);
+                        Navigator.pushReplacement(
+                            context, MaterialPageRoute(builder: (context) =>class_definition()));
                       },
                       child: Row(
                         children: [
@@ -240,7 +206,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   alignment: FractionalOffset.centerRight,
 
                                   child: Icon(Icons.class_, size: 30,
-                                    color: Colors.black,)),
+                         color: Colors.white,)),
                             ),
                           ),
                           Expanded(
@@ -251,7 +217,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   alignment: FractionalOffset.centerLeft,
 
                                   child: Text(
-                                    Languages.of(context).classhome, style: TextStyle(fontSize: 14),)),
+                                    Languages.of(context).classhome, style: TextStyle(fontSize: 14,color: Colors.white),)),
                             ),
                           ),
 
@@ -296,7 +262,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   onPressed:(){
                     Navigator.pushReplacement(
                         context, MaterialPageRoute(builder: (context) => statefulWidget1));
-                    //Navigator.pop(context);
+
+          changeLanguage(context, 'ar');
+          //Navigator.pop(context);
                     //Navigator.pop(context, true); // passing false
 
                   },
@@ -339,6 +307,7 @@ class _HomeScreenState extends State<HomeScreen> {
               )
           ),
 
+          
           Padding(
               padding: const EdgeInsets.all(8.0),
               child:  Container(
@@ -404,7 +373,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: const EdgeInsets.all(8.0),
                   child:  Container(
                     height: 65,
-                    width: MediaQuery.of(context).size.width-200,
+                    width: MediaQuery.of(context).size.width,
                     child: RaisedButton (
 
                       color: sh,
@@ -433,7 +402,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
                     height: 65,
-                    width: MediaQuery.of(context).size.width-200,
+                    width: MediaQuery.of(context).size.width,
                     child: RaisedButton (
 
                       color: sh,
@@ -459,7 +428,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: const EdgeInsets.all(8.0),
                   child:  Container(
                     height: 65,
-                    width: MediaQuery.of(context).size.width-200,
+                    width: MediaQuery.of(context).size.width,
                     child: RaisedButton (
 
                       color: sh,

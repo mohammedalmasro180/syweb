@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:theone/Widget/Appbar.dart';
 import 'package:theone/Widget/dropdwne.dart';
+import 'package:theone/Widget/dwon.dart';
+import 'package:theone/localization/language/languages.dart';
 import 'package:theone/screens/Login.dart';
 import 'package:theone/theme/color.dart';
 class Signup extends StatefulWidget {
@@ -11,6 +13,7 @@ class Signup extends StatefulWidget {
 }
 
 class _SignupState extends State<Signup> {
+  TextEditingController controller;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +29,7 @@ class _SignupState extends State<Signup> {
 
                     keyboardType: TextInputType.number,
                     decoration: InputDecoration(
-                      labelText: "Full Name",
+                      labelText: Languages.of(context).sginupfull,
 
 
                       fillColor: Colors.white,
@@ -44,7 +47,7 @@ class _SignupState extends State<Signup> {
 
                     keyboardType: TextInputType.number,
                     decoration: InputDecoration(
-                        labelText: "Email",
+                        labelText: Languages.of(context).loginemail,
 
 
                         fillColor: Colors.white,
@@ -61,7 +64,7 @@ class _SignupState extends State<Signup> {
                     keyboardType: TextInputType.number,
                     decoration: InputDecoration(
 
-                        labelText: "Password ",
+                        labelText: Languages.of(context).loginpass,
 
                         fillColor: Colors.white,
 
@@ -78,7 +81,7 @@ class _SignupState extends State<Signup> {
 
                     keyboardType: TextInputType.number,
                     decoration: InputDecoration(
-                        labelText: "Phone",
+                        labelText: Languages.of(context).sginupphonn,
 
 
 
@@ -95,14 +98,7 @@ class _SignupState extends State<Signup> {
                   // ignore: missing_required_param
                   child:Row(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text("Country",style: TextStyle(fontWeight: FontWeight.w500),),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Dropdwon(),
-                      ),
+                      Expanded(child: down(context, controller, Languages.of(context).sginupcontry)),
                     ],
                   ),
                 ),
@@ -112,7 +108,7 @@ class _SignupState extends State<Signup> {
 
                     keyboardType: TextInputType.number,
                     decoration: InputDecoration(
-                        labelText: "Refer code",
+                        labelText: Languages.of(context).sginupcode,
 
 
                         fillColor: Colors.white,
@@ -124,10 +120,6 @@ class _SignupState extends State<Signup> {
                 )
                 ,
 
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text("Forget your Password?",style: TextStyle(fontSize: 15,fontWeight: FontWeight.w500),),
-                ),
 
                 Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -146,7 +138,7 @@ class _SignupState extends State<Signup> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                Text("SGIN UP",style: TextStyle(color:Colors.white),),
+                                Text(Languages.of(context).sginupbtn,style: TextStyle(color:Colors.white),),
                                 Icon(Icons.arrow_forward,color: Colors.white,
                                 )
                               ],
@@ -165,7 +157,7 @@ class _SignupState extends State<Signup> {
                   padding: const EdgeInsets.all(25.0),
                   child: Row(
                     children: [
-                      Text("You already have  account",style: TextStyle(fontSize: 15,fontWeight: FontWeight.w500),),
+                      Text(Languages.of(context).sginuplbl,style: TextStyle(fontSize: 15,fontWeight: FontWeight.w500),),
                       InkWell(
 
                         onTap: (){
@@ -175,7 +167,7 @@ class _SignupState extends State<Signup> {
                         },
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Text("SGIN IN",style: TextStyle(fontSize: 15,fontWeight: FontWeight.w500,color: primary),),
+                          child: Text(Languages.of(context).sginupbtn,style: TextStyle(fontSize: 15,fontWeight: FontWeight.w500,color: primary),),
                         ),
                       ),
 

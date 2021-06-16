@@ -5,6 +5,17 @@ import 'package:theone/Widget/check.dart';
 import 'package:theone/Widget/drawer.dart';
 import 'package:theone/Widget/textfelid.dart';
 import 'package:theone/localization/language/languages.dart';
+import 'package:theone/localization/language/languages.dart';
+import 'package:theone/localization/locale_constant.dart';
+import 'package:theone/model/language_data.dart';
+import 'package:theone/screens/Employee.dart';
+import 'package:theone/screens/addgroup.dart';
+import 'package:theone/screens/class_definition.dart';
+import 'package:theone/screens/extra_prices.dart';
+import 'package:theone/screens/store.dart';
+
+import 'package:theone/theme/color.dart';
+
 import 'package:theone/theme/color.dart';
 class addgroup extends StatefulWidget {
 
@@ -24,14 +35,30 @@ class _addgroupState extends State<addgroup> {
   @override
 
   Widget build(BuildContext context) {
-    String add=Languages.of(context).add;
+String _locale="ar";
+    void setLocale(Locale locale) {
+      setState(() {
+        _locale = "ar";
+      });
+    }
+
+    @override
+    void didChangeDependencies() async {
+      getLocale().then((locale) {
+        setState(() {
+          _locale = "ar";
+        });
+      });
+      super.didChangeDependencies();
+    }
+
     return  Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
           drawer: drawer(),
 
           bottomNavigationBar: BottomBar(context),
-          appBar: myappbar(context,add+" "+Languages.of(context).grouphome),
+          appBar: myappbar(context,'Add Group'),
           body: ListView(
             children: [
               Center(
@@ -52,27 +79,27 @@ class _addgroupState extends State<addgroup> {
                                       children: [
                                         Padding(
                                             padding: const EdgeInsets.all(3.0),
-                                            child: textfield(context,code, "الرمز")
+                                            child: textfield(context,code, Languages.of(context).groupcode)
                                         ),
                                         SizedBox(height: 20,),
                                         Padding(
                                             padding: const EdgeInsets.all(3.0),
-                                            child:textfield(context,code, "الاسم")
+                                            child:textfield(context,code, Languages.of(context).groupname)
                                         ),
                                         SizedBox(height: 20,),
                                         Padding(
                                             padding: const EdgeInsets.all(3.0),
-                                            child:textfield(context,code, "الاسم اللاتيني")
+                                            child:textfield(context,code, Languages.of(context).groupnameto)
                                         ),
                                         SizedBox(height: 20,),
                                         Padding(
                                             padding: const EdgeInsets.all(3.0),
-                                            child:textfield(context,code, "المجموعة الرئيسية")
+                                            child:textfield(context,code, Languages.of(context).groupmaingroup)
                                         ),
                                         SizedBox(height: 20,),
                                         Padding(
                                             padding: const EdgeInsets.all(3.0),
-                                            child:textfield(context,code, "ملاحظات")
+                                            child:textfield(context,code, Languages.of(context).groupnots)
                                         ),
 
                                         Padding(
@@ -82,14 +109,14 @@ class _addgroupState extends State<addgroup> {
                                                 Row(
                                                   children: [
 
-                                                    check(context,code,    "ايقاف  المجموعة"),
+                                                    check(context,code,    Languages.of(context).groupstopgroup),
 
 
                                                   ],
                                                 ),
                                                 Row(
                                                   children: [
-                                                    check(context,code,    "غير مرئية في نقاط البيع"),
+                                                    check(context,code,    Languages.of(context).groupdisable),
                                                   ],
                                                 ),
 

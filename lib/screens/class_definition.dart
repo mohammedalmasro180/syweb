@@ -49,131 +49,141 @@ class _class_definitionState extends State<class_definition> {
 
               child: ListView(
                 children: [
-                  Row(
-                      children: [
-                        Expanded(child: Padding(
-                          padding: const EdgeInsets.all(20.0),
-                          child: Column(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: textfieldicon(context, controller, "المجموعة",  Icon(Icons.search)),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: textfield(context, controller, "رمز الصنف"),
-                              ),
-
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: textfield(context, controller, "اسم الصنف"),
-
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: textfield(context, controller, "الاسم اللاتيني"),
-                              ),
-
-
-
-                            ],
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(1.0),
+                            child: textfieldicon(context, controller, Languages.of(context).grouphome,  Icon(Icons.search)),
                           ),
-                        )),
-                        Expanded(child:Align(
-                          alignment: FractionalOffset.bottomRight,
-                          child:Align(
-                            alignment: FractionalOffset.centerRight,
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Column(
-                                  children: [
-                                    Column(
-                                      children: [
-                                        Padding(
-                                            padding: const EdgeInsets.all(8.0),
-                                            child:Text("تاريخ التسجيل",style: TextStyle(fontSize: 15),)
-                                        ),
-                                        Padding(
-                                            padding: const EdgeInsets.all(8.0),
-                                            child:down(
-                                              context,controller,"06/02/21",)
-                                        ),
-                                      ],
-                                    ),
-
-                                    Column(
-                                      children: [
-                                        Padding(
-                                            padding: const EdgeInsets.all(1.0),
-                                            child: check(context, controller, "نشر الصنف بالمتجر الالكتروني")
-                                        ),
-
-                                        Padding(
-                                            padding: const EdgeInsets.all(1.0),
-                                            child: check(context, controller,"صنف تجميعي")
-
-                                        ),
-                                      ],
-                                    ),
-                                  ]        ),
-
-
-
-
-
-                            ),
+                          Padding(
+                            padding: const EdgeInsets.all(1.0),
+                            child: textfield(context, controller,  Languages.of(context).extracode),
                           ),
-                        )),
+                          Padding(
+                            padding: const EdgeInsets.all(1.0),
+                            child: textfield(context, controller,  Languages.of(context).groupnameto),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(1.0),
+                            child: textfield(context, controller,  Languages.of(context).classhome),
+
+                          ),
+                          Padding(
+                              padding: const EdgeInsets.all(1.0),
+                              child:Text(Languages.of(context).extradete,style: TextStyle(fontSize: 15),)
+                          ),
+                          Padding(
+                              padding: const EdgeInsets.all(1.0),
+                              child:down(
+                                context,controller,"06/02/21",)
+                          ),
 
 
-                      ]
+                        ],
+                      ),
+                    ),
                   ),
                   Row(
                     children: [
                       Expanded(child:
                       Padding(
-                       padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(2.0),
                         child: Column(
                           children: [
                             Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: textfield(context, controller, "وصف1"),
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
                             ),
                             Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: textfield(context, controller, "وصف3"),
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
                             ),
                             Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: textfield(context, controller, "وصف5"),
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
                             ),
                             Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: textfield(context, controller, "وصف7"),
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
                             ),
                             Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: textfield(context, controller, "وصف9"),
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
                             ),
                             Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: textfield(context, controller, "وصف11"),
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
                             ),
                             Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: textfield(context, controller, "وصف13"),
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
                             ),
                             Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: textfield(context, controller, "وصف15"),
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
                             ),
                             Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: textfield(context, controller, "وصف17"),
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
                             ),
                             Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: textfield(context, controller, "وصف19"),
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
                             ),
 
                           ],
@@ -181,53 +191,106 @@ class _class_definitionState extends State<class_definition> {
                       )),
                       Expanded(child:
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(2.0),
                         child: Column(
                           children: [
                             Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: textfield(context, controller, "وصف2"),
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
                             ),
                             Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: textfield(context, controller, "وصف4"),
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
                             ),
                             Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: textfield(context, controller, "وصف6"),
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
                             ),
                             Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: textfield(context, controller, "وصف8"),
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
                             ),
                             Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: textfield(context, controller, "وصف10"),
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
                             ),
                             Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: textfield(context, controller, "وصف12"),
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
                             ),
                             Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: textfield(context, controller, "وصف14"),
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
                             ),
                             Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: textfield(context, controller, "وصف16"),
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
                             ),
                             Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: textfield(context, controller, "وصف18"),
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
                             ),
                             Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: textfield(context, controller, "وصف20"),
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(2.0),
+                              child: textfield(context, controller, Languages.of(context).des),
                             ),
 
                           ],
                         ),
                       )),
+
 
                     ],
                   )
@@ -241,4 +304,3 @@ class _class_definitionState extends State<class_definition> {
     );
   }
 }
-
