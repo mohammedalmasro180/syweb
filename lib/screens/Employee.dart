@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:theone/Widget/Appbar.dart';
 import 'package:theone/Widget/botrombar.dart';
 import 'package:theone/Widget/drawer.dart';
 import 'package:theone/Widget/dwon.dart';
 import 'package:theone/Widget/textfelid.dart';
 import 'package:theone/localization/language/languages.dart';
+import 'package:theone/localization/locale_constant.dart';
 import 'package:theone/theme/color.dart';
 class Employee extends StatefulWidget {
 
@@ -17,9 +19,15 @@ TextEditingController controller;
 class _EmployeeState extends State<Employee> {
   @override
   Widget build(BuildContext context) {
+
+    String codee;
+    getLocale(codee);
+
     String address= Languages.of(context).Employee;
     return Directionality(
-      textDirection: TextDirection.rtl,
+
+      textDirection: codee=='ar'? TextDirection.rtl:TextDirection.ltr,
+
       child: Scaffold(
         bottomNavigationBar: BottomBar(context),
         appBar: myappbar(context,'Employee'),
@@ -76,7 +84,7 @@ class _EmployeeState extends State<Employee> {
                           Expanded(
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child:down(context, controller, "الديانة"),
+       //                       child:down(context, controller, "الديانة"),
                             ),
                           ),
 
@@ -224,4 +232,13 @@ class _EmployeeState extends State<Employee> {
       ),
     );
   }
+
+  Future<Locale> getLocale(String code) async {
+    SharedPreferences _prefs = await SharedPreferences.getInstance();
+    String languageCode = _prefs.getString(prefSelectedLanguageCode) ?? "en";
+    code=languageCode;
+    print(languageCode);
+  }
+
+
 }

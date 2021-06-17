@@ -57,7 +57,7 @@ class HomeState extends State<Home> {
                       padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
                       onPressed:() {
 
-                        Navigator.pushReplacement(
+                        Navigator.push(
                             context, MaterialPageRoute(builder: (context) =>HomeScreen()));
 
                       },
@@ -86,47 +86,47 @@ class HomeState extends State<Home> {
 
   _createLanguageDropDown() {
     return GestureDetector(
-        child: Container(
-          height: 45,
-          width: 180,
+      child: Container(
+        height: 45,
+        width: 180,
 
 
-          decoration: BoxDecoration(
+        decoration: BoxDecoration(
 
-            color: primary,
+          color: primary,
+        ),
+        //padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 8),
+
+        child: DropdownButton<LanguageData>(
+          iconSize: 30,
+          hint: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(Languages
+                .of(context)
+                .labelSelectLanguage,style: TextStyle(color: Colors.white),),
           ),
-          //padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 8),
-
-      child: DropdownButton<LanguageData>(
-        iconSize: 30,
-        hint: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Text(Languages
-              .of(context)
-              .labelSelectLanguage,style: TextStyle(color: Colors.white),),
-        ),
-        onChanged: (LanguageData language) {
-          changeLanguage(context, language.languageCode);
-        },
-        items: LanguageData.languageList()
-            .map<DropdownMenuItem<LanguageData>>(
-              (e) =>
-              DropdownMenuItem<LanguageData>(
-                value: e,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: <Widget>[
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text("  "+e.name ),
-                    )
-                  ],
+          onChanged: (LanguageData language) {
+            changeLanguage(context, language.languageCode);
+          },
+          items: LanguageData.languageList()
+              .map<DropdownMenuItem<LanguageData>>(
+                (e) =>
+                DropdownMenuItem<LanguageData>(
+                  value: e,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text("  "+e.name ),
+                      )
+                    ],
+                  ),
                 ),
-              ),
-        )
-            .toList(),
-    ),
+          )
+              .toList(),
         ),
+      ),
 
     );
   }

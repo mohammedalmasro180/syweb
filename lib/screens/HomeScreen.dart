@@ -1,3 +1,4 @@
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/material.dart';
 import 'package:theone/Widget/Appbar.dart';
 import 'package:theone/Widget/drawer.dart';
@@ -20,8 +21,14 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
+    String codee;
+    getLocale(codee);
+
     return Directionality(
-      textDirection: TextDirection.rtl,
+
+      textDirection: codee=='ar'? TextDirection.rtl:TextDirection.ltr,
+
+
       child: Scaffold(
         appBar: myappbar(context,"The one"),
         drawer: drawer(),
@@ -42,15 +49,16 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: sh,
                     child: InkWell(
                       onTap: () {
-                        Navigator.pushReplacement(
+                        Navigator.push(
                             context, MaterialPageRoute(builder: (context) =>addgroup()));
 
 //                        showAlertDialog(context,Languages.of(context).grouphome,addgroup(),addgroup());
- //                     showMyDialog(context,Languages.of(context).grouphome,addgroup(),addgroup(),Languages.of(context).delhome,Languages.of(context).add,Languages.of(context).edithome);
+                        //                     showMyDialog(context,Languages.of(context).grouphome,addgroup(),addgroup(),Languages.of(context).delhome,Languages.of(context).add,Languages.of(context).edithome);
 
                       },
                       child: Row(
                         children: [
+                          
                           Expanded(
                             child: Padding(
                               padding: const EdgeInsets.all(30.0),
@@ -60,7 +68,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
 
                                   child: Icon(Icons.group, size: 30,
-                         color: Colors.white,)),
+                                    color: Colors.white,)),
                             ),
                           ),
                           Expanded(
@@ -97,8 +105,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       },
                       child: InkWell(
                         onTap: () {
-                        //  showMyDialog(context,Languages.of(context).storehome,store(),store(),Languages.of(context).delhome,Languages.of(context).add,Languages.of(context).edithome);
-                          Navigator.pushReplacement(
+                          //  showMyDialog(context,Languages.of(context).storehome,store(),store(),Languages.of(context).delhome,Languages.of(context).add,Languages.of(context).edithome);
+                          Navigator.push(
                               context, MaterialPageRoute(builder: (context) =>store()));
 
                         },
@@ -146,7 +154,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: InkWell(
                       onTap: () {
                         //showMyDialog(context,Languages.of(context).pricehome,extra_prices(),extra_prices(),Languages.of(context).delhome,Languages.of(context).add,Languages.of(context).edithome);
-                        Navigator.pushReplacement(
+                        Navigator.push(
                             context, MaterialPageRoute(builder: (context) =>extra_prices()));
 
                       },
@@ -161,7 +169,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
 
                                   child: Icon(Icons.attach_money, size: 30,
-                         color: Colors.white,)),
+                                    color: Colors.white,)),
                             ),
                           ),
                           Expanded(
@@ -193,7 +201,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: InkWell(
                       onTap: () {
 
-                        Navigator.pushReplacement(
+                        Navigator.push(
                             context, MaterialPageRoute(builder: (context) =>class_definition()));
                       },
                       child: Row(
@@ -206,7 +214,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   alignment: FractionalOffset.centerRight,
 
                                   child: Icon(Icons.class_, size: 30,
-                         color: Colors.white,)),
+                                    color: Colors.white,)),
                             ),
                           ),
                           Expanded(
@@ -235,124 +243,123 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-   showMyDialog(BuildContext context,String address,
+  showMyDialog(BuildContext context,String address,
       StatefulWidget statefulWidget1,StatefulWidget statefulWidget2,String  del,String add,String edit)  {
 
     return showDialog(
         context: context,
         barrierDismissible: false, //this means the user must tap a button to exit the Alert Dialog
         builder: (BuildContext context) {
-    return AlertDialog(
-    title: Text(address),
-    content: SingleChildScrollView(
-    child:Container(
-      width: 350,
-      height: 250,
-      alignment: FractionalOffset.center,
-      child: Column(
-        children: [
-          Padding(
-              padding: const EdgeInsets.all(8.0),
-              child:  Container(
-                height: 65,
-                width: MediaQuery.of(context).size.width-200,
-                child: RaisedButton (
-                  color: sh,
-                  padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
-                  onPressed:(){
-                    Navigator.pushReplacement(
-                        context, MaterialPageRoute(builder: (context) => statefulWidget1));
+          return AlertDialog(
+            title: Text(address),
+            content: SingleChildScrollView(
+              child:Container(
+                width: 350,
+                height: 250,
+                alignment: FractionalOffset.center,
+                child: Column(
+                  children: [
+                    Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child:  Container(
+                          height: 65,
+                          width: MediaQuery.of(context).size.width-200,
+                          child: RaisedButton (
+                            color: sh,
+                            padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
+                            onPressed:(){
+                              Navigator.push(
+                                  context, MaterialPageRoute(builder: (context) => statefulWidget1));
 
-          changeLanguage(context, 'ar');
-          //Navigator.pop(context);
-                    //Navigator.pop(context, true); // passing false
+                              changeLanguage(context, 'ar');
+                              //Navigator.push(context);
+                              //Navigator.push(context, true); // passing false
 
-                  },
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text(add+" "+address,style: TextStyle(color:Colors.white),),
+                            },
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Text(add+" "+address,style: TextStyle(color:Colors.white),),
 
 
-                    ],
-                  ),
+                              ],
+                            ),
+
+                          ),
+                        )
+                    ),
+                    Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          height: 65,
+                          width: MediaQuery.of(context).size.width-200,
+                          child: RaisedButton (
+
+                            color: sh,
+                            padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
+                            onPressed:(){
+                              Navigator.push(
+                                  context, MaterialPageRoute(builder: (context) => statefulWidget2));
+                            },
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Text(edit+" "+address,style: TextStyle(color:Colors.white),),
+
+                              ],
+                            ),
+
+                          ),
+                        )
+                    ),
+
+
+                    Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child:  Container(
+                          height: 65,
+                          width: MediaQuery.of(context).size.width-200,
+                          child: RaisedButton (
+
+                            color: sh,
+                            padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
+                            onPressed:(){
+                            },
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Text(del+" "+address,style: TextStyle(color:Colors.white),),
+
+                              ],
+                            ),
+
+                          ),
+                        )
+                    ),
+
+
+
+
+
+
+                  ],
 
                 ),
-              )
-          ),
-          Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                height: 65,
-                width: MediaQuery.of(context).size.width-200,
-                child: RaisedButton (
-
-                  color: sh,
-                  padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
-                  onPressed:(){
-                    Navigator.pushReplacement(
-                        context, MaterialPageRoute(builder: (context) => statefulWidget2));
-                  },
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text(edit+" "+address,style: TextStyle(color:Colors.white),),
-
-                    ],
-                  ),
-
-                ),
-              )
-          ),
-
-          
-          Padding(
-              padding: const EdgeInsets.all(8.0),
-              child:  Container(
-                height: 65,
-                width: MediaQuery.of(context).size.width-200,
-                child: RaisedButton (
-
-                  color: sh,
-                  padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
-                  onPressed:(){
-                    Navigator.pop(context);
-                  },
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text(del+" "+address,style: TextStyle(color:Colors.white),),
-
-                    ],
-                  ),
-
-                ),
-              )
-          ),
-
-
-
-
-
-
-        ],
-
-      ),
-    ),
-    ),
-      actions: <Widget>[
-        FlatButton(
-          child: Text('Approve'),
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-        ),
-      ],
-    );
-    }
+              ),
+            ),
+            actions: <Widget>[
+              FlatButton(
+                child: Text('Approve'),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+            ],
+          );
+        }
     );
   }
   Future<void> showAlertDialog(BuildContext context,String address,
@@ -362,102 +369,101 @@ class _HomeScreenState extends State<HomeScreen> {
 
 
 
-        title: Text(address),
-        content: Container(
-          width: 350,
-          height: 250,
-          alignment: FractionalOffset.center,
-          child: Column(
-            children: [
-              Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child:  Container(
-                    height: 65,
-                    width: MediaQuery.of(context).size.width,
-                    child: RaisedButton (
+      title: Text(address),
+      content: Container(
+        width: 350,
+        height: 250,
+        alignment: FractionalOffset.center,
+        child: Column(
+          children: [
+            Padding(
+                padding: const EdgeInsets.all(8.0),
+                child:  Container(
+                  height: 65,
+                  width: MediaQuery.of(context).size.width,
+                  child: RaisedButton (
 
-                      color: sh,
-                      padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
-                      onPressed:(){
-                        Navigator.pushReplacement(
-                            context, MaterialPageRoute(builder: (context) => statefulWidget1));
-                        //Navigator.pop(context);
-                        //Navigator.pop(context, true); // passing false
+                    color: sh,
+                    padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
+                    onPressed:(){
+                      Navigator.push(
+                          context, MaterialPageRoute(builder: (context) => statefulWidget1));
+                      //Navigator.push(context);
+                      //Navigator.push(context, true); // passing false
 
-                      },
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Text(Languages.of(context).add+" "+address,style: TextStyle(color:Colors.white),),
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(Languages.of(context).add+" "+address,style: TextStyle(color:Colors.white),),
 
 
-                        ],
-                      ),
-
+                      ],
                     ),
-                  )
-              ),
-              Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: 65,
-                    width: MediaQuery.of(context).size.width,
-                    child: RaisedButton (
 
-                      color: sh,
-                      padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
-                      onPressed:(){
-                        Navigator.pushReplacement(
-                            context, MaterialPageRoute(builder: (context) => statefulWidget2));
-                      },
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Text(Languages.of(context).edithome+" "+address,style: TextStyle(color:Colors.white),),
+                  ),
+                )
+            ),
+            Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: 65,
+                  width: MediaQuery.of(context).size.width,
+                  child: RaisedButton (
 
-                        ],
-                      ),
+                    color: sh,
+                    padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
+                    onPressed:(){
+                      Navigator.push(
+                          context, MaterialPageRoute(builder: (context) => statefulWidget2));
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(Languages.of(context).edithome+" "+address,style: TextStyle(color:Colors.white),),
 
+                      ],
                     ),
-                  )
-              ),
 
-              Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child:  Container(
-                    height: 65,
-                    width: MediaQuery.of(context).size.width,
-                    child: RaisedButton (
+                  ),
+                )
+            ),
 
-                      color: sh,
-                      padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
-                      onPressed:(){
-                        Navigator.pop(context);
-                      },
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Text(Languages.of(context).delhome+" "+address,style: TextStyle(color:Colors.white),),
+            Padding(
+                padding: const EdgeInsets.all(8.0),
+                child:  Container(
+                  height: 65,
+                  width: MediaQuery.of(context).size.width,
+                  child: RaisedButton (
 
-                        ],
-                      ),
+                    color: sh,
+                    padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
+                    onPressed:(){
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(Languages.of(context).delhome+" "+address,style: TextStyle(color:Colors.white),),
 
+                      ],
                     ),
-                  )
-              ),
+
+                  ),
+                )
+            ),
 
 
 
 
 
 
-            ],
+          ],
 
-          ),
         ),
+      ),
 
       actions: <Widget>[
         FlatButton(
@@ -481,6 +487,12 @@ class _HomeScreenState extends State<HomeScreen> {
 
   }
 
+Future<Locale> getLocale(String code) async {
+SharedPreferences _prefs = await SharedPreferences.getInstance();
+String languageCode = _prefs.getString(prefSelectedLanguageCode) ?? "en";
+code=languageCode;
+print(languageCode);
+}
 
 
 }

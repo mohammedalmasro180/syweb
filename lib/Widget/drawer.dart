@@ -30,7 +30,7 @@ class _drwaerState extends State<drawer> {
 
           InkWell(
             onTap:(){
-              Navigator.pushReplacement(
+              Navigator.push(
                   context, MaterialPageRoute(builder: (context) => addgroup()));
 
             },
@@ -43,7 +43,7 @@ class _drwaerState extends State<drawer> {
 
           InkWell(
             onTap:(){
-              Navigator.pushReplacement(
+              Navigator.push(
                   context, MaterialPageRoute(builder: (context) => class_definition()));
 
             },
@@ -56,7 +56,7 @@ class _drwaerState extends State<drawer> {
 
           InkWell(
             onTap:(){
-              Navigator.pushReplacement(
+              Navigator.push(
                   context, MaterialPageRoute(builder: (context) => store()));
 
             },
@@ -69,7 +69,7 @@ class _drwaerState extends State<drawer> {
 
           InkWell(
             onTap:(){
-              Navigator.pushReplacement(
+              Navigator.push(
                   context, MaterialPageRoute(builder: (context) => Employee()));
 
             },
@@ -82,7 +82,7 @@ class _drwaerState extends State<drawer> {
 
           InkWell(
             onTap:(){
-              Navigator.pushReplacement(
+              Navigator.push(
                   context, MaterialPageRoute(builder: (context) => extra_prices()));
 
             },

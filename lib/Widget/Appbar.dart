@@ -12,6 +12,11 @@ Widget myappbar(context,String title){
           })],
     elevation:10,
     titleSpacing: 25,
-    leading: IconButton(icon: Icon(Icons.list,color: Colors.white,),),
+
+    leading: new IconButton(
+      icon: new Icon(Icons.arrow_back,color: Colors.white,),
+      onPressed: () => Navigator.of(context).pop(),
+    ),
+
   );
 }

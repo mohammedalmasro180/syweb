@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:theone/Widget/Appbar.dart';
 import 'package:theone/Widget/botrombar.dart';
 import 'package:theone/Widget/check.dart';
@@ -10,6 +10,7 @@ import 'package:theone/Widget/drawer.dart';
 
 import 'package:theone/Widget/Appbar.dart';
 import 'package:theone/localization/language/languages.dart';
+import 'package:theone/localization/locale_constant.dart';
 import 'package:theone/theme/color.dart';
 class extra_prices extends StatefulWidget {
 
@@ -23,9 +24,12 @@ class _extra_pricesState extends State<extra_prices> {
   @override
 
   Widget build(BuildContext context) {
+    String codee;
+    getLocale(codee);
+
     return Scaffold(
       bottomNavigationBar: BottomBar(context),
-      appBar: myappbar(context,'Extra Prices'),
+      appBar: myappbar(context,Languages.of(context).extraprice),
       drawer: drawer(),
       body: ListView(
         children: [
@@ -101,7 +105,7 @@ class _extra_pricesState extends State<extra_prices> {
                                       ],
                                     ),
 
-                                    Column(
+                                    Row(
                                       children: [
                                         Padding(
                                             padding: const EdgeInsets.all(1.0),
@@ -196,4 +200,13 @@ class _extra_pricesState extends State<extra_prices> {
       ),
     );
   }
+
+  Future<Locale> getLocale(String code) async {
+    SharedPreferences _prefs = await SharedPreferences.getInstance();
+    String languageCode = _prefs.getString(prefSelectedLanguageCode) ?? "en";
+    code=languageCode;
+    print(languageCode);
+  }
+
+
 }

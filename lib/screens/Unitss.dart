@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:theone/Widget/Appbar.dart';
 import 'package:theone/Widget/botrombar.dart';
 import 'package:theone/Widget/check.dart';
@@ -10,6 +10,7 @@ import 'package:theone/Widget/drawer.dart';
 
 import 'package:theone/Widget/Appbar.dart';
 import 'package:theone/localization/language/languages.dart';
+import 'package:theone/localization/locale_constant.dart';
 import 'package:theone/theme/color.dart';
 class unitss extends StatefulWidget {
 
@@ -21,9 +22,13 @@ TextEditingController controller;
 class _unitssState extends State<unitss> {
   @override
   Widget build(BuildContext context) {
+
+    String codee;
+    getLocale(codee);
+
     return Scaffold(
       bottomNavigationBar: BottomBar(context),
-      appBar: myappbar(context,'Units'),
+      appBar: myappbar(context,Languages.of(context).classhome),
       body: new Center(
         child: new ListView(
           children: <Widget>[
@@ -274,4 +279,12 @@ class _unitssState extends State<unitss> {
       ),
     );
   }
+  Future<Locale> getLocale(String code) async {
+    SharedPreferences _prefs = await SharedPreferences.getInstance();
+    String languageCode = _prefs.getString(prefSelectedLanguageCode) ?? "en";
+    code=languageCode;
+    print(languageCode);
+  }
+
+
 }

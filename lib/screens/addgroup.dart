@@ -13,7 +13,7 @@ import 'package:theone/screens/addgroup.dart';
 import 'package:theone/screens/class_definition.dart';
 import 'package:theone/screens/extra_prices.dart';
 import 'package:theone/screens/store.dart';
-
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:theone/theme/color.dart';
 
 import 'package:theone/theme/color.dart';
@@ -35,124 +35,115 @@ class _addgroupState extends State<addgroup> {
   @override
 
   Widget build(BuildContext context) {
-String _locale="ar";
-    void setLocale(Locale locale) {
-      setState(() {
-        _locale = "ar";
-      });
-    }
+    String codee;
+    getLocale(codee);
 
-    @override
-    void didChangeDependencies() async {
-      getLocale().then((locale) {
-        setState(() {
-          _locale = "ar";
-        });
-      });
-      super.didChangeDependencies();
-    }
+    return  Scaffold(
+        drawer: drawer(),
 
-    return  Directionality(
-      textDirection: TextDirection.rtl,
-      child: Scaffold(
-          drawer: drawer(),
+        bottomNavigationBar: BottomBar(context),
+        appBar: myappbar(context,'Add Group'),
+        body: ListView(
+          children: [
+            Center(
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(15),
+                    child: Center(
+                      child: Container(
+        child:Padding(
+                          padding: const EdgeInsets.all(3.0),
+                          child: Center(
+                            child: Form(
+                              //      key: formstate,
+                                child: Center(
+                                  child: Column(
 
-          bottomNavigationBar: BottomBar(context),
-          appBar: myappbar(context,'Add Group'),
-          body: ListView(
-            children: [
-              Center(
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(15),
-                      child: Center(
-                        child: Container(
-          child:Padding(
-                            padding: const EdgeInsets.all(3.0),
-                            child: Center(
-                              child: Form(
-                                //      key: formstate,
-                                  child: Center(
-                                    child: Column(
+                                    children: [
+                                      Padding(
+                                          padding: const EdgeInsets.all(3.0),
+                                          child: textfield(context,code, Languages.of(context).groupcode)
+                                      ),
+                                      SizedBox(height: 20,),
+                                      Padding(
+                                          padding: const EdgeInsets.all(3.0),
+                                          child:textfield(context,code, Languages.of(context).groupname)
+                                      ),
+                                      SizedBox(height: 20,),
+                                      Padding(
+                                          padding: const EdgeInsets.all(3.0),
+                                          child:textfield(context,code, Languages.of(context).groupnameto)
+                                      ),
+                                      SizedBox(height: 20,),
+                                      Padding(
+                                          padding: const EdgeInsets.all(3.0),
+                                          child:textfield(context,code, Languages.of(context).groupmaingroup)
+                                      ),
+                                      SizedBox(height: 20,),
+                                      Padding(
+                                          padding: const EdgeInsets.all(3.0),
+                                          child:textfield(context,code, Languages.of(context).groupnots)
+                                      ),
 
-                                      children: [
-                                        Padding(
-                                            padding: const EdgeInsets.all(3.0),
-                                            child: textfield(context,code, Languages.of(context).groupcode)
-                                        ),
-                                        SizedBox(height: 20,),
-                                        Padding(
-                                            padding: const EdgeInsets.all(3.0),
-                                            child:textfield(context,code, Languages.of(context).groupname)
-                                        ),
-                                        SizedBox(height: 20,),
-                                        Padding(
-                                            padding: const EdgeInsets.all(3.0),
-                                            child:textfield(context,code, Languages.of(context).groupnameto)
-                                        ),
-                                        SizedBox(height: 20,),
-                                        Padding(
-                                            padding: const EdgeInsets.all(3.0),
-                                            child:textfield(context,code, Languages.of(context).groupmaingroup)
-                                        ),
-                                        SizedBox(height: 20,),
-                                        Padding(
-                                            padding: const EdgeInsets.all(3.0),
-                                            child:textfield(context,code, Languages.of(context).groupnots)
-                                        ),
+                                      Padding(
+                                          padding: const EdgeInsets.all(3.0),
+                                          child:Column(
+                                            children: [
+                                              Row(
+                                                children: [
 
-                                        Padding(
-                                            padding: const EdgeInsets.all(3.0),
-                                            child:Column(
-                                              children: [
-                                                Row(
-                                                  children: [
-
-                                                    check(context,code,    Languages.of(context).groupstopgroup),
+                                                  check(context,code,    Languages.of(context).groupstopgroup),
 
 
-                                                  ],
-                                                ),
-                                                Row(
-                                                  children: [
-                                                    check(context,code,    Languages.of(context).groupdisable),
-                                                  ],
-                                                ),
+                                                ],
+                                              ),
+                                              Row(
+                                                children: [
+                                                  check(context,code,    Languages.of(context).groupdisable),
+                                                ],
+                                              ),
 
-                                              ],
-                                            )
-                                        ),
+                                            ],
+                                          )
+                                      ),
 
 
-                                      ],
-                                    ),
-                                  )),
-                            ),
+                                    ],
+                                  ),
+                                )),
                           ),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Colors.white,
-                              boxShadow: [
-                                BoxShadow(
-                                    color: Colors.black,
-                                    blurRadius: 4,
-                                    spreadRadius: 0.1
-                                )
-                              ]
-
-                          ),
+                        ),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.white,
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.black,
+                                  blurRadius: 4,
+                                  spreadRadius: 0.1
+                              )
+                            ]
 
                         ),
+
                       ),
                     ),
+                  ),
 
-                  ],
-                ),
+                ],
               ),
-            ],
-          )
-      ),
+            ),
+          ],
+        )
     );
   }
+
+  Future<Locale> getLocale(String code) async {
+    SharedPreferences _prefs = await SharedPreferences.getInstance();
+    String languageCode = _prefs.getString(prefSelectedLanguageCode) ?? "en";
+    code=languageCode;
+    print(languageCode);
+  }
+
 }
