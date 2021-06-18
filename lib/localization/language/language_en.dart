@@ -150,7 +150,7 @@ class LanguageEn extends Languages {
   @override
   // TODO: implement extrapublesh
   String get extrapublesh => throw UnimplementedError();
-
+  String get religion=>"Religion";
   String get bottomadd=>"Add";
   String get bottomnew=>"new";
   String get bottomedit=>"Edit";

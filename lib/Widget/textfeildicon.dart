@@ -7,7 +7,7 @@ Widget textfieldicon(context,TextEditingController controller ,String hint,Icon 
 
     decoration: InputDecoration(
       labelText: hint,
-      prefixIcon: icon,
+      suffixIcon: icon,
 
       fillColor: Colors.white,
 

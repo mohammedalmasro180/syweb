@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:theone/Widget/Appbar.dart';
 import 'package:theone/Widget/botrombar.dart';
+import 'package:theone/Widget/checkbox.dart';
 import 'package:theone/Widget/drawer.dart';
 import 'package:theone/Widget/textfelid.dart';
 import 'package:theone/localization/language/languages.dart';
@@ -66,8 +67,7 @@ class _storeState extends State<store> {
                                         child: Row(
                                           children: [
 
-                                            Checkbox(value: false, onChanged: null,),
-                                            Text(Languages.of(context).storestoped,style:  TextStyle(fontSize: 15),),
+                                            Mycheckbox(title: Languages.of(context).storestoped,)
                                           ],
                                         ),
                                       ),

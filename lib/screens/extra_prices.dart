@@ -3,6 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:theone/Widget/Appbar.dart';
 import 'package:theone/Widget/botrombar.dart';
 import 'package:theone/Widget/check.dart';
+import 'package:theone/Widget/checkbox.dart';
 import 'package:theone/Widget/dwon.dart';
 import 'package:theone/Widget/textfeildicon.dart';
 import 'package:theone/Widget/textfelid.dart';
@@ -35,7 +36,7 @@ class _extra_pricesState extends State<extra_prices> {
         children: [
           Container(
             padding: EdgeInsets.all(30),
-            height: MediaQuery.of(context).size.height-200,
+            height: MediaQuery.of(context).size.height-2,
             width: 700,
 
             decoration: BoxDecoration(
@@ -73,16 +74,18 @@ class _extra_pricesState extends State<extra_prices> {
                                 child: textfield(context, controller,  Languages.of(context).groupnameto),
                               ),
                               Padding(
+
                                 padding: const EdgeInsets.all(1.0),
+
+
                                 child: textfield(context, controller,  Languages.of(context).classhome),
 
                               ),
 
-
-
                             ],
                           ),
                         )),
+
                         Expanded(child:Align(
                           alignment: FractionalOffset.bottomRight,
                           child:Align(
@@ -90,17 +93,24 @@ class _extra_pricesState extends State<extra_prices> {
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Column(
+
                                   children: [
-                                    Column(
+                                    Row(
                                       children: [
-                                        Padding(
-                                            padding: const EdgeInsets.all(1.0),
-                                            child:Text(Languages.of(context).extradete,style: TextStyle(fontSize: 15),)
+
+
+                                        Expanded(
+                                          child: Padding(
+                                              padding: const EdgeInsets.all(1.0),
+                                              child:Text(Languages.of(context).extradete,style: TextStyle(fontSize: 15),)
+                                          ),
                                         ),
-                                        Padding(
-                                            padding: const EdgeInsets.all(1.0),
-                                            child:down(
-                                              context,controller,"06/02/21",)
+                                        Expanded(
+                                          child: Padding(
+                                              padding: const EdgeInsets.all(1.0),
+                                              child:down(
+                                                context,controller,"06/02/21",)
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -109,12 +119,12 @@ class _extra_pricesState extends State<extra_prices> {
                                       children: [
                                         Padding(
                                             padding: const EdgeInsets.all(1.0),
-                                            child: check(context, controller, Languages.of(context).extraprice)
+                                            child: Mycheckbox(title: Languages.of(context).extraprice,)
                                         ),
 
                                         Padding(
                                             padding: const EdgeInsets.all(1.0),
-                                            child: check(context, controller,Languages.of(context).extraclass)
+                                            child: Mycheckbox(title: Languages.of(context).extraclass,)
 
                                         ),
                                       ],

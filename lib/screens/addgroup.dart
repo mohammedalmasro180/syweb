@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:theone/Widget/Appbar.dart';
 import 'package:theone/Widget/botrombar.dart';
 import 'package:theone/Widget/check.dart';
+import 'package:theone/Widget/checkbox.dart';
 import 'package:theone/Widget/drawer.dart';
 import 'package:theone/Widget/textfelid.dart';
 import 'package:theone/localization/language/languages.dart';
@@ -42,7 +43,7 @@ class _addgroupState extends State<addgroup> {
         drawer: drawer(),
 
         bottomNavigationBar: BottomBar(context),
-        appBar: myappbar(context,'Add Group'),
+        appBar: myappbar(context,Languages.of(context).add+' '+Languages.of(context).grouphome),
         body: ListView(
           children: [
             Center(
@@ -93,14 +94,15 @@ class _addgroupState extends State<addgroup> {
                                               Row(
                                                 children: [
 
-                                                  check(context,code,    Languages.of(context).groupstopgroup),
+                                                  Mycheckbox(title: Languages.of(context).groupstopgroup,)
+
 
 
                                                 ],
                                               ),
                                               Row(
                                                 children: [
-                                                  check(context,code,    Languages.of(context).groupdisable),
+                                                  Mycheckbox(title:    Languages.of(context).groupdisable),
                                                 ],
                                               ),
 

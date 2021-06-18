@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:theone/theme/color.dart';
-bool ValueChanged;
+bool _checkbox = false;
 
 Widget check(context,TextEditingController controller ,String hint){
   return Padding(
       padding: const EdgeInsets.all(3.0),
       child:Row(
         children: [
-          Checkbox(value: false,
-        onChanged: (bool newValue) {
-  setState(() {
-  ValueChanged = newValue;
-  });
-  },
-  ),
-          Text(hint)
+          Checkbox(
+            value: _checkbox,
+            onChanged: (value) {
+              setState(() {
+                _checkbox = !_checkbox;
+              });
+            },
+          ),
+          Text(hint),
         ],
-      )
+      ),
   );
 }
 

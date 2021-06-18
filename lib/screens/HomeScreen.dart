@@ -24,164 +24,87 @@ class _HomeScreenState extends State<HomeScreen> {
     String codee;
     getLocale(codee);
 
-    return Directionality(
+    return Scaffold(
+      appBar: myappbar(context,"The one"),
+      drawer: drawer(),
+      body: ListView(
+        children: [
+          Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  width: MediaQuery
+                      .of(context)
 
-      textDirection: codee=='ar'? TextDirection.rtl:TextDirection.ltr,
+                      .size
 
-
-      child: Scaffold(
-        appBar: myappbar(context,"The one"),
-        drawer: drawer(),
-        body: ListView(
-          children: [
-            Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    width: MediaQuery
-                        .of(context)
-
-                        .size
-
-                        .width,
-                    height: 100,
-                    color: sh,
-                    child: InkWell(
-                      onTap: () {
-                        Navigator.push(
-                            context, MaterialPageRoute(builder: (context) =>addgroup()));
+                      .width,
+                  height: 100,
+                  color: sh,
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context, MaterialPageRoute(builder: (context) =>addgroup()));
 
 //                        showAlertDialog(context,Languages.of(context).grouphome,addgroup(),addgroup());
-                        //                     showMyDialog(context,Languages.of(context).grouphome,addgroup(),addgroup(),Languages.of(context).delhome,Languages.of(context).add,Languages.of(context).edithome);
+                      //                     showMyDialog(context,Languages.of(context).grouphome,addgroup(),addgroup(),Languages.of(context).delhome,Languages.of(context).add,Languages.of(context).edithome);
 
-                      },
-                      child: Row(
-                        children: [
-                          
-                          Expanded(
-                            child: Padding(
-                              padding: const EdgeInsets.all(30.0),
-                              child: Align(
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
 
-                                  alignment: FractionalOffset.centerRight,
-
-
-                                  child: Icon(Icons.group, size: 30,
-                                    color: Colors.white,)),
-                            ),
-                          ),
-                          Expanded(
-                            child: Padding(
-                              padding: const EdgeInsets.all(30.0),
-                              child: Align(
-
-                                  alignment: FractionalOffset.centerLeft,
-
-                                  child: Text(
-                                    Languages.of(context).grouphome, style: TextStyle(fontSize: 14,color: Colors.white),
-                                  )),
-                            ),
-                          ),
-
-
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    width: MediaQuery
-                        .of(context)
-                        .size
-                        .width,
-                    height: 100,
-                    color: sh,
-                    child: InkWell(
-                      onTap: () {
-
-                      },
-                      child: InkWell(
-                        onTap: () {
-                          //  showMyDialog(context,Languages.of(context).storehome,store(),store(),Languages.of(context).delhome,Languages.of(context).add,Languages.of(context).edithome);
-                          Navigator.push(
-                              context, MaterialPageRoute(builder: (context) =>store()));
-
-                        },
-                        child: Row(
-                          children: [
-                            Expanded(
-                              child: Padding(
-                                padding: const EdgeInsets.all(30.0),
-                                child: Align(
-
-                                    alignment: FractionalOffset.centerRight,
-
-                                    child: Icon(Icons.store, size: 30,
-                                      color: Colors.white,)),
-                              ),
-                            ),
-                            Expanded(
-                              child: Padding(
-                                padding: const EdgeInsets.all(30.0),
-                                child: Align(
-
-                                    alignment: FractionalOffset.centerLeft,
-
-                                    child: Text(
-                                      Languages.of(context).storehome, style: TextStyle(fontSize: 14,color: Colors.white),)),
-                              ),
-                            ),
-
-                          ],
+                        Padding(
+                          padding: const EdgeInsets.all(30.0),
+                          child: Icon(Icons.group, size: 30,
+                            color: Colors.black,),
                         ),
-                      ),
+                        Padding(
+                          padding: const EdgeInsets.all(30.0),
+                          child: Text(
+                            Languages.of(context).grouphome, style: TextStyle(fontSize: 14,color: Colors.black),
+                          ),
+                        ),
+
+
+                      ],
                     ),
                   ),
                 ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  width: MediaQuery
+                      .of(context)
+                      .size
+                      .width,
+                  height: 100,
+                  color: sh,
+                  child: InkWell(
+                    onTap: () {
 
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    width: MediaQuery
-                        .of(context)
-                        .size
-                        .width,
-                    height: 100,
-                    color: sh,
+                    },
                     child: InkWell(
                       onTap: () {
-                        //showMyDialog(context,Languages.of(context).pricehome,extra_prices(),extra_prices(),Languages.of(context).delhome,Languages.of(context).add,Languages.of(context).edithome);
+                        //  showMyDialog(context,Languages.of(context).storehome,store(),store(),Languages.of(context).delhome,Languages.of(context).add,Languages.of(context).edithome);
                         Navigator.push(
-                            context, MaterialPageRoute(builder: (context) =>extra_prices()));
+                            context, MaterialPageRoute(builder: (context) =>store()));
 
                       },
                       child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Expanded(
-                            child: Padding(
-                              padding: const EdgeInsets.all(30.0),
-                              child: Align(
-
-                                  alignment: FractionalOffset.centerRight,
-
-
-                                  child: Icon(Icons.attach_money, size: 30,
-                                    color: Colors.white,)),
-                            ),
+                          Padding(
+                            padding: const EdgeInsets.all(30.0),
+                            child: Icon(Icons.store, size: 30,
+                              color: Colors.black,),
                           ),
-                          Expanded(
-                            child: Padding(
-                              padding: const EdgeInsets.all(30.0),
-                              child: Align(
-
-                                  alignment: FractionalOffset.centerLeft,
-
-                                  child: Text(
-                                    Languages.of(context).pricehome, style: TextStyle(fontSize: 14,color: Colors.white),)),
-                            ),
+                          Padding(
+                            padding: const EdgeInsets.all(30.0),
+                            child: Text(
+                              Languages.of(context).storehome, style: TextStyle(fontSize: 14,color: Colors.black),),
                           ),
 
                         ],
@@ -189,56 +112,123 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    width: MediaQuery
-                        .of(context)
-                        .size
-                        .width,
-                    height: 100,
-                    color: sh,
-                    child: InkWell(
-                      onTap: () {
+              ),
 
-                        Navigator.push(
-                            context, MaterialPageRoute(builder: (context) =>class_definition()));
-                      },
-                      child: Row(
-                        children: [
-                          Expanded(
-                            child: Padding(
-                              padding: const EdgeInsets.all(30.0),
-                              child: Align(
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  width: MediaQuery
+                      .of(context)
+                      .size
+                      .width,
+                  height: 100,
+                  color: sh,
+                  child: InkWell(
+                    onTap: () {
+                      //showMyDialog(context,Languages.of(context).pricehome,extra_prices(),extra_prices(),Languages.of(context).delhome,Languages.of(context).add,Languages.of(context).edithome);
+                      Navigator.push(
+                          context, MaterialPageRoute(builder: (context) =>extra_prices()));
 
-                                  alignment: FractionalOffset.centerRight,
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(30.0),
+                          child: Icon(Icons.attach_money, size: 30,
+                            color: Colors.black,),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(30.0),
+                          child: Text(
+                            Languages.of(context).pricehome, style: TextStyle(fontSize: 14,color: Colors.black),),
+                        ),
 
-                                  child: Icon(Icons.class_, size: 30,
-                                    color: Colors.white,)),
-                            ),
-                          ),
-                          Expanded(
-                            child: Padding(
-                              padding: const EdgeInsets.all(30.0),
-                              child: Align(
-
-                                  alignment: FractionalOffset.centerLeft,
-
-                                  child: Text(
-                                    Languages.of(context).classhome, style: TextStyle(fontSize: 14,color: Colors.white),)),
-                            ),
-                          ),
-
-                        ],
-                      ),
+                      ],
                     ),
                   ),
                 ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  width: MediaQuery
+                      .of(context)
+                      .size
+                      .width,
+                  height: 100,
+                  color: sh,
+                  child: InkWell(
+                    onTap: () {
 
-              ],
-            )
-          ],
-        ),
+                      Navigator.push(
+                          context, MaterialPageRoute(builder: (context) =>class_definition()));
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(30.0),
+                          child: Icon(Icons.class_, size: 30,
+                            color: Colors.black,),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(30.0),
+                          child: Align(
+
+                              alignment: FractionalOffset.centerLeft,
+
+                              child: Text(
+                                Languages.of(context).classhome, style: TextStyle(fontSize: 14,color: Colors.black),)),
+                        ),
+
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  width: MediaQuery
+                      .of(context)
+                      .size
+                      .width,
+                  height: 100,
+                  color: sh,
+                  child: InkWell(
+                    onTap: () {
+
+                      Navigator.push(
+                          context, MaterialPageRoute(builder: (context) =>Employee()));
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(30.0),
+                          child: Icon(Icons.person, size: 30,
+                            color: Colors.black,),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(30.0),
+                          child: Align(
+
+                              alignment: FractionalOffset.centerLeft,
+
+                              child: Text(
+                                Languages.of(context).Employehome, style: TextStyle(fontSize: 14,color: Colors.black),)),
+                        ),
+
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+
+            ],
+          )
+        ],
       ),
     );
   }
@@ -280,7 +270,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                Text(add+" "+address,style: TextStyle(color:Colors.white),),
+                                Text(add+" "+address,style: TextStyle(color:Colors.black),),
 
 
                               ],
@@ -306,7 +296,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                Text(edit+" "+address,style: TextStyle(color:Colors.white),),
+                                Text(edit+" "+address,style: TextStyle(color:Colors.black),),
 
                               ],
                             ),
@@ -331,7 +321,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                Text(del+" "+address,style: TextStyle(color:Colors.white),),
+                                Text(del+" "+address,style: TextStyle(color:Colors.black),),
 
                               ],
                             ),
@@ -396,7 +386,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Text(Languages.of(context).add+" "+address,style: TextStyle(color:Colors.white),),
+                        Text(Languages.of(context).add+" "+address,style: TextStyle(color:Colors.black),),
 
 
                       ],
@@ -422,7 +412,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Text(Languages.of(context).edithome+" "+address,style: TextStyle(color:Colors.white),),
+                        Text(Languages.of(context).edithome+" "+address,style: TextStyle(color:Colors.black),),
 
                       ],
                     ),
@@ -446,7 +436,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Text(Languages.of(context).delhome+" "+address,style: TextStyle(color:Colors.white),),
+                        Text(Languages.of(context).delhome+" "+address,style: TextStyle(color:Colors.black),),
 
                       ],
                     ),

@@ -149,6 +149,6 @@ class LanguageAr extends Languages {
 
   String get bottomac=>"حسابات";
   String get bottomclose=>"اغلاق";
-
+  String get religion=>"ديانة";
 }
 

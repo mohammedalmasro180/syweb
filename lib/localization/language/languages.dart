@@ -71,6 +71,7 @@ abstract class Languages {
   String get test;
   String get labelSelectLanguage;
   String get add;
+  String get religion;
   String get edithome;
   String get delhome;
   String get Employeeaddreslabel;

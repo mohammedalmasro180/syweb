@@ -54,251 +54,248 @@ class _class_definitionState extends State<class_definition> {
 
             child: ListView(
               children: [
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.all(2.0),
-                    child: Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(1.0),
-                          child: textfieldicon(context, controller, Languages.of(context).grouphome,  Icon(Icons.search)),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(1.0),
-                          child: textfield(context, controller,  Languages.of(context).extracode),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(1.0),
-                          child: textfield(context, controller,  Languages.of(context).groupnameto),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(1.0),
-                          child: textfield(context, controller,  Languages.of(context).classhome),
-
-                        ),
-                        Padding(
-                            padding: const EdgeInsets.all(1.0),
-                            child:Text(Languages.of(context).extradete,style: TextStyle(fontSize: 15),)
-                        ),
-                        Padding(
-                            padding: const EdgeInsets.all(1.0),
-                            child:down(
-                              context,controller,"06/02/21",)
-                        ),
-
-
-                      ],
-                    ),
-                  ),
-                ),
-                Row(
+                Column(
                   children: [
-                    Expanded(child:
                     Padding(
-                      padding: const EdgeInsets.all(2.0),
-                      child: Column(
+                      padding: const EdgeInsets.all(1.0),
+                      child: textfieldicon(context, controller, Languages.of(context).grouphome,  Icon(Icons.search)),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(1.0),
+                      child: textfield(context, controller,  Languages.of(context).extracode),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(1.0),
+                      child: textfield(context, controller,  Languages.of(context).groupnameto),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(1.0),
+                      child: textfield(context, controller,  Languages.of(context).classhome),
+
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
+                          Expanded(
+                            child: Padding(
+                                padding: const EdgeInsets.all(1.0),
+                                child:Text(Languages.of(context).extradete,style: TextStyle(fontSize: 15,color: Colors.grey.shade700),)
+                            ),
                           ),
 
+                          Expanded(
+                            child: Padding(
+                                padding: const EdgeInsets.all(1.0),
+                                child:down(
+                                  context,controller,"06/02/21",)
+                            ),
+                          ),
                         ],
                       ),
-                    )),
-                    Expanded(child:
-                    Padding(
-                      padding: const EdgeInsets.all(2.0),
-                      child: Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(2.0),
-                            child: textfield(context, controller, Languages.of(context).des),
-                          ),
-
-                        ],
-                      ),
-                    )),
+                    ),
 
 
                   ],
-                )
+                ),
+                Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: textfield(context, controller, Languages.of(context).des),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: textfield(context, controller, Languages.of(context).des),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: textfield(context, controller, Languages.of(context).des),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: textfield(context, controller, Languages.of(context).des),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: textfield(context, controller, Languages.of(context).des),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: textfield(context, controller, Languages.of(context).des),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: textfield(context, controller, Languages.of(context).des),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: textfield(context, controller, Languages.of(context).des),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: textfield(context, controller, Languages.of(context).des),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: textfield(context, controller, Languages.of(context).des),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: textfield(context, controller, Languages.of(context).des),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: textfield(context, controller, Languages.of(context).des),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: textfield(context, controller, Languages.of(context).des),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: textfield(context, controller, Languages.of(context).des),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: textfield(context, controller, Languages.of(context).des),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: textfield(context, controller, Languages.of(context).des),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: textfield(context, controller, Languages.of(context).des),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: textfield(context, controller, Languages.of(context).des),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: textfield(context, controller, Languages.of(context).des),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: textfield(context, controller, Languages.of(context).des),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: textfield(context, controller, Languages.of(context).des),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: textfield(context, controller, Languages.of(context).des),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: textfield(context, controller, Languages.of(context).des),
+                    ),
+
+                  ],
+                ),
+                Expanded(child:
+                Padding(
+                  padding: const EdgeInsets.all(2.0),
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(2.0),
+                        child: textfield(context, controller, Languages.of(context).des),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(2.0),
+                        child: textfield(context, controller, Languages.of(context).des),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(2.0),
+                        child: textfield(context, controller, Languages.of(context).des),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(2.0),
+                        child: textfield(context, controller, Languages.of(context).des),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(2.0),
+                        child: textfield(context, controller, Languages.of(context).des),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(2.0),
+                        child: textfield(context, controller, Languages.of(context).des),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(2.0),
+                        child: textfield(context, controller, Languages.of(context).des),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(2.0),
+                        child: textfield(context, controller, Languages.of(context).des),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(2.0),
+                        child: textfield(context, controller, Languages.of(context).des),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(2.0),
+                        child: textfield(context, controller, Languages.of(context).des),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(2.0),
+                        child: textfield(context, controller, Languages.of(context).des),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(2.0),
+                        child: textfield(context, controller, Languages.of(context).des),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(2.0),
+                        child: textfield(context, controller, Languages.of(context).des),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(2.0),
+                        child: textfield(context, controller, Languages.of(context).des),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(2.0),
+                        child: textfield(context, controller, Languages.of(context).des),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(2.0),
+                        child: textfield(context, controller, Languages.of(context).des),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(2.0),
+                        child: textfield(context, controller, Languages.of(context).des),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(2.0),
+                        child: textfield(context, controller, Languages.of(context).des),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(2.0),
+                        child: textfield(context, controller, Languages.of(context).des),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(2.0),
+                        child: textfield(context, controller, Languages.of(context).des),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(2.0),
+                        child: textfield(context, controller, Languages.of(context).des),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(2.0),
+                        child: textfield(context, controller, Languages.of(context).des),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(2.0),
+                        child: textfield(context, controller, Languages.of(context).des),
+                      ),
+
+                    ],
+                  ),
+                ))
               ],
             ),
 
