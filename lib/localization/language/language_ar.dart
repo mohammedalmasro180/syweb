@@ -138,8 +138,8 @@ class LanguageAr extends Languages {
   String get extradetee=>"تاريخ التسجيل";
 
   String get extrapublesh=>"نشر الصنف بالمتجر الالكتروني";
+  String get extraprice=>"اسعار  اضافية";
   String get extraun=>"بدون";
-  String get extraprice=>"سعر";
   String get extraclass=>"صنف تجميعي";
 
   String get extraunit=>"الوحدة";

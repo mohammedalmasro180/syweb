@@ -142,7 +142,7 @@ class LanguageEn extends Languages {
 
   String get extrapublish=>"Publish the item to the online store";
   String get extraun=>"None";
-  String get extraprice=>"price";
+  String get extraprice=>"extra prices";
   String get extraclass=>"String get extraclass";
   String get des=>"Description";
   String get extraunit=>"Unit";

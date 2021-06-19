@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:theone/theme/color.dart';
 
 Widget myappbar(context,String title){
-  return  AppBar(title: Text(title,style: TextStyle(color: Colors.black),),
+  return  AppBar(title: Text(title,style: TextStyle(color: Colors.white),),
     centerTitle: true,
-    backgroundColor: coltext,
+    backgroundColor: sh,
     actions: [
       IconButton(icon: Icon(Icons.search,color: Colors.white,),
           color: Colors.white, onPressed: (){

@@ -41,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
                       .width,
                   height: 100,
-                  color: sh,
+                 color: rowone,
                   child: InkWell(
                     onTap: () {
                       Navigator.push(
@@ -81,7 +81,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       .size
                       .width,
                   height: 100,
-                  color: sh,
+                  color: rowone,
                   child: InkWell(
                     onTap: () {
 
@@ -122,7 +122,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       .size
                       .width,
                   height: 100,
-                  color: sh,
+                 color: rowone,
                   child: InkWell(
                     onTap: () {
                       //showMyDialog(context,Languages.of(context).pricehome,extra_prices(),extra_prices(),Languages.of(context).delhome,Languages.of(context).add,Languages.of(context).edithome);
@@ -157,7 +157,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       .size
                       .width,
                   height: 100,
-                  color: sh,
+                 color: rowone,
                   child: InkWell(
                     onTap: () {
 
@@ -195,7 +195,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       .size
                       .width,
                   height: 100,
-                  color: sh,
+                 color: rowone,
                   child: InkWell(
                     onTap: () {
 
@@ -255,7 +255,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           height: 65,
                           width: MediaQuery.of(context).size.width-200,
                           child: RaisedButton (
-                            color: sh,
+                           color: rowone,
                             padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
                             onPressed:(){
                               Navigator.push(
@@ -286,7 +286,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           width: MediaQuery.of(context).size.width-200,
                           child: RaisedButton (
 
-                            color: sh,
+                           color: rowone,
                             padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
                             onPressed:(){
                               Navigator.push(
@@ -313,7 +313,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           width: MediaQuery.of(context).size.width-200,
                           child: RaisedButton (
 
-                            color: sh,
+                           color: rowone,
                             padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
                             onPressed:(){
                             },
@@ -373,7 +373,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   width: MediaQuery.of(context).size.width,
                   child: RaisedButton (
 
-                    color: sh,
+                   color: rowone,
                     padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
                     onPressed:(){
                       Navigator.push(
@@ -402,7 +402,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   width: MediaQuery.of(context).size.width,
                   child: RaisedButton (
 
-                    color: sh,
+                   color: rowone,
                     padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
                     onPressed:(){
                       Navigator.push(
@@ -428,7 +428,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   width: MediaQuery.of(context).size.width,
                   child: RaisedButton (
 
-                    color: sh,
+                   color: rowone,
                     padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
                     onPressed:(){
                     },

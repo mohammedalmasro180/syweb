@@ -32,181 +32,168 @@ class _extra_pricesState extends State<extra_prices> {
       bottomNavigationBar: BottomBar(context),
       appBar: myappbar(context,Languages.of(context).extraprice),
       drawer: drawer(),
-      body: ListView(
-        children: [
-          Container(
-            padding: EdgeInsets.all(30),
-            height: MediaQuery.of(context).size.height-2,
-            width: 700,
+      body: Container(
+        padding: EdgeInsets.all(30),
+        height: MediaQuery.of(context).size.height-2,
+        width: 700,
 
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: Colors.white,
-                boxShadow: [
-                  BoxShadow(
-                      color: Colors.black,
-                      blurRadius: 4,
-                      spreadRadius: 0.1
-                  )
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            color: Colors.white,
+            boxShadow: [
+              BoxShadow(
+                  color: Colors.black,
+                  blurRadius: 4,
+                  spreadRadius: 0.1
+              )
 
-                ]
+            ]
 
+        ),
+        child: ListView(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(2.0),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(1.0),
+                    child: textfieldicon(context, controller, Languages.of(context).grouphome,  Icon(Icons.search)),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(1.0),
+                    child: textfield(context, controller,  Languages.of(context).extracode),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(1.0),
+                    child: textfield(context, controller,  Languages.of(context).groupnameto),
+                  ),
+                  Padding(
+
+                    padding: const EdgeInsets.all(1.0),
+
+
+                    child: textfield(context, controller,  Languages.of(context).classhome),
+
+                  ),
+
+                ],
+              ),
             ),
-            child: Column(
-              children: [
-                Expanded(
+
+            Align(
+              alignment: FractionalOffset.bottomRight,
+              child:Align(
+                alignment: FractionalOffset.centerRight,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
                   child: Column(
+
                       children: [
-                        Expanded(child: Padding(
-                          padding: const EdgeInsets.all(2.0),
-                          child: ListView(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.all(1.0),
-                                child: textfieldicon(context, controller, Languages.of(context).grouphome,  Icon(Icons.search)),
+                        Row(
+                          children: [
+
+
+                            Expanded(
+                              child: Padding(
+                                  padding: const EdgeInsets.all(1.0),
+                                  child:Text(Languages.of(context).extradete,style: TextStyle(fontSize: 15),)
                               ),
-                              Padding(
-                                padding: const EdgeInsets.all(1.0),
-                                child: textfield(context, controller,  Languages.of(context).extracode),
+                            ),
+                            Expanded(
+                              child: Padding(
+                                  padding: const EdgeInsets.all(1.0),
+                                  child:down(
+                                    context,controller,"06/02/21",)
                               ),
-                              Padding(
+                            ),
+                            Expanded(child: SizedBox(width: 55,)),
+
+                                                      ],
+                        ),
+                        Row(
+                          children: [
+                            Padding(
                                 padding: const EdgeInsets.all(1.0),
-                                child: textfield(context, controller,  Languages.of(context).groupnameto),
-                              ),
-                              Padding(
+                                child: Mycheckbox(title: Languages.of(context).extraprice,)
+                            ),
 
+                            Padding(
                                 padding: const EdgeInsets.all(1.0),
-
-
-                                child: textfield(context, controller,  Languages.of(context).classhome),
-
-                              ),
-
-                            ],
-                          ),
-                        )),
-
-                        Expanded(child:Align(
-                          alignment: FractionalOffset.bottomRight,
-                          child:Align(
-                            alignment: FractionalOffset.centerRight,
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Column(
-
-                                  children: [
-                                    Row(
-                                      children: [
-
-
-                                        Expanded(
-                                          child: Padding(
-                                              padding: const EdgeInsets.all(1.0),
-                                              child:Text(Languages.of(context).extradete,style: TextStyle(fontSize: 15),)
-                                          ),
-                                        ),
-                                        Expanded(
-                                          child: Padding(
-                                              padding: const EdgeInsets.all(1.0),
-                                              child:down(
-                                                context,controller,"06/02/21",)
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-
-                                    Row(
-                                      children: [
-                                        Padding(
-                                            padding: const EdgeInsets.all(1.0),
-                                            child: Mycheckbox(title: Languages.of(context).extraprice,)
-                                        ),
-
-                                        Padding(
-                                            padding: const EdgeInsets.all(1.0),
-                                            child: Mycheckbox(title: Languages.of(context).extraclass,)
-
-                                        ),
-                                      ],
-                                    ),
-                                  ]        ),
-
-
-
-
+                                child: Mycheckbox(title: Languages.of(context).extraclass,)
 
                             ),
-                          ),
-                        )),
+                          ],
+                        ),
+
+                      ]        ),
 
 
-                      ]
-                  ),
+
+
+
                 ),
-                Expanded(child:
-                ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: new List.generate(3, (int index) {
-                    return new Card(
-                      //color: Colors.blue[index * 100],
-                      child: new Container(
-                        width: 200.0,
-                        height: 300.0,
-                        child: Column(
-                          children: [
-                            Expanded(child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Align(
-                                  alignment: FractionalOffset.topCenter,
-                                  child: Column(
+              ),
+            ),
+            Column(
+
+              children: new List.generate(3, (int index) {
+                return new Card(
+                  //color: Colors.blue[index * 100],
+                  child: new Container(
+                    width: 700.0,
+                    height: 300.0,
+                    child: Column(
+                      children: [
+                        Expanded(child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Align(
+                              alignment: FractionalOffset.topCenter,
+                              child: Column(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text(Languages.of(context).extraunit+" "+
+                                        index.toString()),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: down(context, controller, Languages.of(context).extraun),
+                                  ),
+                                ],
+                              )),
+                        )),
+                        Expanded(
+                          child: new ListView(
+                              scrollDirection: Axis.vertical,
+                              children: new List.generate(10, (int index) {
+                                return
+                                  Column(
                                     children: [
                                       Padding(
                                         padding: const EdgeInsets.all(8.0),
-                                        child: Text(Languages.of(context).extraunit+" "+
-                                            index.toString()),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: down(context, controller, Languages.of(context).extraun),
+                                        child: textfield(context, controller, Languages.of(context).extraprice+" "+index.toString()),
                                       ),
                                     ],
-                                  )),
-                            )),
-                            Expanded(
-                              child: new ListView(
-                                scrollDirection: Axis.vertical,
-                                children: new List.generate(10, (int index) {
-                                  return
-                                    Column(
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: textfield(context, controller, Languages.of(context).extraprice+" "+index.toString()),
-                                        ),
-                                      ],
-                                    );
+                                  );
 
 
                               }
 
                               )
 
-                    ),
-                            ),
-                          ],
+                          ),
                         ),
-                      ),
+                      ],
+                    ),
+                  ),
 
-                    );
-                  }),
-                ),
-                )
-
-              ],
+                );
+              }),
             ),
+          ],
+        ),
 
-          )
-        ],
       ),
     );
   }

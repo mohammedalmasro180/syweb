@@ -5,8 +5,10 @@ import 'package:theone/screens/HomeScreen.dart';
 import 'package:theone/screens/Login.dart';
 import 'package:theone/screens/SGINUP.dart';
 import 'package:theone/screens/Unitss.dart';
+import 'package:theone/screens/cost_center.dart';
 
 import 'package:theone/screens/home.dart';
+import 'package:theone/screens/salesrepresentative.dart';
 
 import 'localization/locale_constant.dart';
 import 'localization/localizations_delegate.dart';
@@ -73,7 +75,7 @@ class _MyAppState extends State<MyApp> {
       title: 'Multi Language',
       debugShowCheckedModeBanner: false,
       locale: _locale,
-      home: Home(),
+      home:sales_representative(),
       supportedLocales: [
         Locale('en', ''),
         Locale('ar', ''),
