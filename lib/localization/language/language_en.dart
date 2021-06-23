@@ -161,4 +161,58 @@ class LanguageEn extends Languages {
 
   String get bottomac=>"Accounts";
   String get bottomclose=>"close";
+
+
+
+
+
+  String get accountname=>'account name';
+  String get companybranch=>'company branch';
+  String get accounttype=>' account type';
+//--------------------------
+  String get normal=>'normal';
+
+  String get accountsuspended=>'account suspended';
+
+  // String get Not allowed to sell when the limit is exceeded=>'';
+  // String get bound/ main=>'';
+  // String get customer receivables=>'';
+  // String get String=>'';
+  String get balancesheet=>'balance sheet';
+  String get matchdate=>'match date';
+  //String get set account=>'';
+
+
+
+  String get box=>'box';
+
+  String get expense=>'expense';
+
+  String get supplier=>'supplier';
+  String get approvalExcluded=>' approvalExcluded';
+
+  String get clause=>'clause';
+
+  String get revenue=>'revenue';
+
+  String get estimatedvalue=>'estimated value';
+  String get currency=>'currency';
+
+
+
+  String get exchange=>'exchange';
+
+
+  String get credit=>'credit';
+  String get averageexchange=>' averageex change';
+
+
+  String get accountentity=>'account entity';
+
+  String get currentbalance=>'current balance';
+  String get debit=>'debit';
+
+//String get credit=>'';
+
+//Employee
 }

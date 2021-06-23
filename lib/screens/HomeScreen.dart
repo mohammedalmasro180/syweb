@@ -4,12 +4,15 @@ import 'package:theone/Widget/Appbar.dart';
 import 'package:theone/Widget/drawer.dart';
 import 'package:theone/localization/language/languages.dart';
 import 'package:theone/localization/locale_constant.dart';
+import 'package:theone/screens/Account.dart';
 import 'package:theone/screens/Employee.dart';
+import 'package:theone/screens/Item_Quantities.dart';
 import 'package:theone/screens/addgroup.dart';
 import 'package:theone/screens/class_definition.dart';
 import 'package:theone/screens/class_definition_public.dart';
 import 'package:theone/screens/classs.dart';
 import 'package:theone/screens/cost_center.dart';
+import 'package:theone/screens/data_client.dart';
 import 'package:theone/screens/extra_prices.dart';
 import 'package:theone/screens/purchase_prices.dart';
 import 'package:theone/screens/salesrepresentative.dart';
@@ -212,6 +215,7 @@ class _HomeScreenState extends State<HomeScreen>
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
+
                         Padding(
                           padding: const EdgeInsets.all(30.0),
                           child: Icon(Icons.person, size: 30,
@@ -252,11 +256,6 @@ class _HomeScreenState extends State<HomeScreen>
                       children: [
                         Padding(
                           padding: const EdgeInsets.all(30.0),
-                          child: Icon(Icons.person, size: 30,
-                            color: Colors.black,),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(30.0),
                           child: Align(
 
                               alignment: FractionalOffset.centerLeft,
@@ -288,11 +287,6 @@ class _HomeScreenState extends State<HomeScreen>
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.all(30.0),
-                          child: Icon(Icons.person, size: 30,
-                            color: Colors.black,),
-                        ),
                         Padding(
                           padding: const EdgeInsets.all(30.0),
                           child: Align(
@@ -327,11 +321,6 @@ class _HomeScreenState extends State<HomeScreen>
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.all(30.0),
-                          child: Icon(Icons.person, size: 30,
-                            color: Colors.black,),
-                        ),
                         Padding(
                           padding: const EdgeInsets.all(30.0),
                           child: Align(
@@ -369,11 +358,6 @@ class _HomeScreenState extends State<HomeScreen>
                       children: [
                         Padding(
                           padding: const EdgeInsets.all(30.0),
-                          child: Icon(Icons.person, size: 30,
-                            color: Colors.black,),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(30.0),
                           child: Align(
 
                               alignment: FractionalOffset.centerLeft,
@@ -407,12 +391,6 @@ class _HomeScreenState extends State<HomeScreen>
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-
-                        Padding(
-                          padding: const EdgeInsets.all(30.0),
-                          child: Icon(Icons.person, size: 30,
-                            color: Colors.black,),
-                        ),
                         Padding(
                           padding: const EdgeInsets.all(30.0),
                           child: Align(
@@ -442,7 +420,7 @@ class _HomeScreenState extends State<HomeScreen>
                     onTap: () {
 
                       Navigator.push(
-                          context, MaterialPageRoute(builder: (context) => gridclass()));
+                          context, MaterialPageRoute(builder: (context) => Item_Quantities()));
 
                     },
                     child: Row(
@@ -451,9 +429,39 @@ class _HomeScreenState extends State<HomeScreen>
 
                         Padding(
                           padding: const EdgeInsets.all(30.0),
-                          child: Icon(Icons.person, size: 30,
-                            color: Colors.black,),
+                          child: Align(
+
+                              alignment: FractionalOffset.centerLeft,
+
+                              child: Text(
+                                'كميات الصنف', style: TextStyle(fontSize: 14,color: Colors.black),)),
                         ),
+
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  width: MediaQuery
+                      .of(context)
+                      .size
+                      .width,
+                  height: 100,
+                  color: rowone,
+                  child: InkWell(
+                    onTap: () {
+
+                      Navigator.push(
+                          context, MaterialPageRoute(builder: (context) => gridclass()));
+
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
                         Padding(
                           padding: const EdgeInsets.all(30.0),
                           child: Align(
@@ -462,6 +470,75 @@ class _HomeScreenState extends State<HomeScreen>
 
                               child: Text(
                                 'كميات الصنف', style: TextStyle(fontSize: 14,color: Colors.black),)),
+                        ),
+
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  width: MediaQuery
+                      .of(context)                      .size
+                      .width,
+                  height: 100,
+                  color: rowone,
+                  child: InkWell(
+                    onTap: () {
+
+                      Navigator.push(
+                          context, MaterialPageRoute(builder: (context) => data_client()));
+
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(30.0),
+                          child: Align(
+
+                              alignment: FractionalOffset.centerLeft,
+
+                              child: Text(
+                                'معلومات العميل', style: TextStyle(fontSize: 14,color: Colors.black),)),
+                        ),
+
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  width: MediaQuery
+                      .of(context)
+                      .size
+                      .width,
+                  height: 100,
+                  color: rowone,
+                  child: InkWell(
+                    onTap: () {
+
+                      Navigator.push(
+                          context, MaterialPageRoute(builder: (context) => Account()));
+
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(30.0),
+                          child: Align(
+
+                              alignment: FractionalOffset.centerLeft,
+
+                              child: Text(
+                                'الحساب', style: TextStyle(fontSize: 14,color: Colors.black),)),
                         ),
 
                       ],

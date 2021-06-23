@@ -154,5 +154,59 @@ class LanguageAr extends Languages {
   String get bottomac=>"حسابات";
   String get bottomclose=>"اغلاق";
   String get religion=>"ديانة";
+//-----------------------------------------------------------
+  String get normal => 'normal';
+
+  String get accountsuspended => "الحساب معلق" ;
+
+    String get chek1=>' غير مسموح لها بالبيع عند تجاوز الحد ' ;
+  //  String get  bound / main => "" ;
+  // مستحقات العميل  String get  => "" ;
+  //  String get  String => '' ;
+  String get balancesheet => "الميزانية العمومية" ;
+  String get matchdate => "تاريخ المطابقة" ;
+  // String get set account => "" ;
+
+
+
+  String get box => 'الصندوق' ;
+
+  String get expense => 'expense';
+
+  String get supplier => 'مورد' ;
+  String get approvalExcluded => 'AcceptExcluded';
+
+  String get clause => 'جملة' ;
+
+  String get revenue => "الإيرادات" ;
+
+  String get estimatedvalue => "القيمة المقدرة" ;
+  String get currency => 'العملة' ;
+
+
+
+  String get exchange => 'exchange' ;
+
+
+  String get credit => "ائتمان" ;
+  String get averageexchange => "تغيير متوسط الحجم" ;
+
+
+  String get accountentity => "كيان الحساب" ;
+
+  String get currentbalance => "الرصيد الحالي" ;
+  String get debit => "الخصم" ;
+
+  @override
+  // TODO: implement accountname
+  String get accountname => throw UnimplementedError();
+
+  @override
+  // TODO: implement accounttype
+  String get accounttype => throw UnimplementedError();
+
+  @override
+  // TODO: implement companybranch
+  String get companybranch => throw UnimplementedError();
 }
 

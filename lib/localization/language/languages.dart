@@ -110,5 +110,55 @@ abstract class Languages {
   String get storehome;
   String get grouphome;
 
+
+
+  String get accountname;
+  String get companybranch;
+  String get accounttype;
+
+  String get normal;
+
+  String get accountsuspended;
+
+  // String get Not allowed to sell when the limit is exceeded;
+  // String get bound/ main;
+  // String get customer receivables;
+  // String get String;
+  String get balancesheet;
+  String get matchdate;
+  //String get set account;
+
+
+
+  String get box;
+
+  String get expense;
+
+  String get supplier;
+
+  String get approvalExcluded;
+
+  String get clause;
+
+  String get revenue;
+
+  String get estimatedvalue;
+  String get currency;
+
+
+
+  String get exchange;
+
+
+  String get credit;
+  String get averageexchange;
+
+  String get accountentity;
+
+  String get currentbalance;
+  String get debit;
+
+//String get credit;
+
 //Employee
 }

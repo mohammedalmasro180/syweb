@@ -23,7 +23,7 @@ class _AccountState extends State<Account> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomBar(context),
-      appBar: myappbar(context,''),
+      appBar: myappbar(context,'الحساب'),
       drawer: drawer(),
       body: ListView(
         children: [

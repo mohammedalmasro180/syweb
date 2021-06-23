@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:theone/screens/Account.dart';
 import 'package:theone/screens/HomeScreen.dart';
+import 'package:theone/screens/Item_Quantities.dart';
 import 'package:theone/screens/Login.dart';
 import 'package:theone/screens/SGINUP.dart';
 import 'package:theone/screens/Unitss.dart';
 import 'package:theone/screens/class_definition_card.dart';
 import 'package:theone/screens/cost_center.dart';
+import 'package:theone/screens/data_client.dart';
 
 import 'package:theone/screens/home.dart';
 import 'package:theone/screens/purchase_prices.dart';
@@ -79,7 +81,7 @@ class _MyAppState extends State<MyApp> {
       title: 'Multi Language',
       debugShowCheckedModeBanner: false,
       locale: _locale,
-      home:Account(),
+      home:Home(),
       supportedLocales: [
         Locale('en', ''),
         Locale('ar', ''),
