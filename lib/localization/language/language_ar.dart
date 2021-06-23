@@ -66,6 +66,10 @@ class LanguageAr extends Languages {
   @override
   String get pricehome=> "الاسعار الاضافية";
   @override
+  String get price=> "السعر";
+  @override
+  String get qn=> "الجودة";
+  @override
   String get storehome=> "المخزن";
   @override
   String get grouphome=> "مجموعة";

@@ -128,6 +128,10 @@ class LanguageEn extends Languages {
   String get groupnots=> "Notes";
   String get groupstopgroup=> "Stop group";
   String get groupdisable=> "not visible in POS";
+
+  String get price=> "Price";
+
+  String get qn=> "Quality";
   String get storestoped=> "Stopped";
   String get storeshortname=> "Shortcut name";
   String get storeplace=> "location";

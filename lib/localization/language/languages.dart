@@ -58,6 +58,10 @@ abstract class Languages {
 
 
 
+  String get price;
+
+  String get qn;
+
   String get bottomadd;
   String get bottomnew;
   String get bottomedit;

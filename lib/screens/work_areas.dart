@@ -15,7 +15,7 @@ class _work_areasState extends State<work_areas> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: myappbar(context,Languages.of(context).add+" "+Languages.of(context).classhome),
+      appBar: myappbar(context,'مناطق العمل'),
       drawer: drawer(),
       body: ListView(
         children: [

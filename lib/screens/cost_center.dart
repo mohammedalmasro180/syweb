@@ -19,7 +19,7 @@ class _costcenterState extends State<costcenter> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: myappbar(context,Languages.of(context).add+" "+Languages.of(context).classhome),
+      appBar: myappbar(context,'مركز الكلفة'),
       drawer: drawer(),
       bottomNavigationBar:BottomBar(context),
       body: ListView(

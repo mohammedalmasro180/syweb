@@ -7,8 +7,14 @@ import 'package:theone/localization/locale_constant.dart';
 import 'package:theone/screens/Employee.dart';
 import 'package:theone/screens/addgroup.dart';
 import 'package:theone/screens/class_definition.dart';
+import 'package:theone/screens/class_definition_public.dart';
+import 'package:theone/screens/classs.dart';
+import 'package:theone/screens/cost_center.dart';
 import 'package:theone/screens/extra_prices.dart';
+import 'package:theone/screens/purchase_prices.dart';
+import 'package:theone/screens/salesrepresentative.dart';
 import 'package:theone/screens/store.dart';
+import 'package:theone/screens/work_areas.dart';
 
 import 'package:theone/theme/color.dart';
 class HomeScreen extends StatefulWidget {
@@ -18,7 +24,8 @@ class HomeScreen extends StatefulWidget {
   _HomeScreenState createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenState extends State<HomeScreen>
+{
   @override
   Widget build(BuildContext context) {
     String codee;
@@ -47,7 +54,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Navigator.push(
                           context, MaterialPageRoute(builder: (context) =>addgroup()));
 
-//                        showAlertDialog(context,Languages.of(context).grouphome,addgroup(),addgroup());
+                        showAlertDialog(context,Languages.of(context).grouphome,addgroup(),addgroup());
                       //                     showMyDialog(context,Languages.of(context).grouphome,addgroup(),addgroup(),Languages.of(context).delhome,Languages.of(context).add,Languages.of(context).edithome);
 
                     },
@@ -195,7 +202,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       .size
                       .width,
                   height: 100,
-                 color: rowone,
+                  color: rowone,
                   child: InkWell(
                     onTap: () {
 
@@ -218,6 +225,243 @@ class _HomeScreenState extends State<HomeScreen> {
 
                               child: Text(
                                 Languages.of(context).Employehome, style: TextStyle(fontSize: 14,color: Colors.black),)),
+                        ),
+
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  width: MediaQuery
+                      .of(context)
+                      .size
+                      .width,
+                  height: 100,
+                  color: rowone,
+                  child: InkWell(
+                    onTap: () {
+
+                      Navigator.push(
+                          context, MaterialPageRoute(builder: (context) =>purchase_prices()));
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(30.0),
+                          child: Icon(Icons.person, size: 30,
+                            color: Colors.black,),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(30.0),
+                          child: Align(
+
+                              alignment: FractionalOffset.centerLeft,
+
+                              child: Text(
+                                'اسعار مشتركه', style: TextStyle(fontSize: 14,color: Colors.black),)),
+                        ),
+
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  width: MediaQuery
+                      .of(context)
+                      .size
+                      .width,
+                  height: 100,
+                  color: rowone,
+                  child: InkWell(
+                    onTap: () {
+
+                      Navigator.push(
+                          context, MaterialPageRoute(builder: (context) =>class_definition_public()));
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(30.0),
+                          child: Icon(Icons.person, size: 30,
+                            color: Colors.black,),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(30.0),
+                          child: Align(
+
+                              alignment: FractionalOffset.centerLeft,
+
+                              child: Text(
+                                'تعريف صنف عام', style: TextStyle(fontSize: 14,color: Colors.black),)),
+                        ),
+
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  width: MediaQuery
+                      .of(context)
+                      .size
+                      .width,
+                  height: 100,
+                  color: rowone,
+                  child: InkWell(
+                    onTap: () {
+
+                      Navigator.push(
+                          context, MaterialPageRoute(builder: (context) =>costcenter()));
+
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(30.0),
+                          child: Icon(Icons.person, size: 30,
+                            color: Colors.black,),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(30.0),
+                          child: Align(
+
+                              alignment: FractionalOffset.centerLeft,
+
+                              child: Text(
+                                'مركز الكلفه', style: TextStyle(fontSize: 14,color: Colors.black),)),
+                        ),
+
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  width: MediaQuery
+                      .of(context)
+                      .size
+                      .width,
+                  height: 100,
+                  color: rowone,
+                  child: InkWell(
+                    onTap: () {
+
+                      Navigator.push(
+                          context, MaterialPageRoute(builder: (context) => sales_representative()));
+
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(30.0),
+                          child: Icon(Icons.person, size: 30,
+                            color: Colors.black,),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(30.0),
+                          child: Align(
+
+                              alignment: FractionalOffset.centerLeft,
+
+                              child: Text(
+                                'مبيعات', style: TextStyle(fontSize: 14,color: Colors.black),)),
+                        ),
+
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  width: MediaQuery
+                      .of(context)
+                      .size
+                      .width,
+                  height: 100,
+                  color: rowone,
+                  child: InkWell(
+                    onTap: () {
+
+                      Navigator.push(
+                          context, MaterialPageRoute(builder: (context) => work_areas()));
+
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+
+                        Padding(
+                          padding: const EdgeInsets.all(30.0),
+                          child: Icon(Icons.person, size: 30,
+                            color: Colors.black,),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(30.0),
+                          child: Align(
+
+                              alignment: FractionalOffset.centerLeft,
+
+                              child: Text(
+                                'مناطق عمل', style: TextStyle(fontSize: 14,color: Colors.black),)),
+                        ),
+
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  width: MediaQuery
+                      .of(context)
+                      .size
+                      .width,
+                  height: 100,
+                  color: rowone,
+                  child: InkWell(
+                    onTap: () {
+
+                      Navigator.push(
+                          context, MaterialPageRoute(builder: (context) => gridclass()));
+
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+
+                        Padding(
+                          padding: const EdgeInsets.all(30.0),
+                          child: Icon(Icons.person, size: 30,
+                            color: Colors.black,),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(30.0),
+                          child: Align(
+
+                              alignment: FractionalOffset.centerLeft,
+
+                              child: Text(
+                                'كميات الصنف', style: TextStyle(fontSize: 14,color: Colors.black),)),
                         ),
 
                       ],

@@ -83,7 +83,7 @@ class _sales_representativeState extends State<sales_representative> {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                 child: txt(context, "التاريخ"),
+                  child: txt(context, "التاريخ"),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
