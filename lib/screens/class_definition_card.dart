@@ -22,7 +22,7 @@ class _card_cardState extends State<card_card> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: myappbar(context,'بطاقة تعريف صنف'),
+      appBar: myappbar(context,Languages.of(context).class_definition),
       drawer: drawer(),
       bottomNavigationBar: BottomBar(context),
       body: ListView(
@@ -205,17 +205,17 @@ class _card_cardState extends State<card_card> {
 
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Mycheckbox(title: 'تفعيل العرض الخاص',),
+                      child: Mycheckbox(title: Languages.of(context).Activatespecial,),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: txt(context, "التاريخ"),
+                      child: txt(context, Languages.of(context).extradete),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Row(
                         children: [
-                          Expanded(child: txt(context, "من")),
+                          Expanded(child: txt(context, Languages.of(context).deteform)),
                           Expanded(child: down(context, controller, "06/01/2021")),
                           Expanded(
                               child: SizedBox(width: 50,)
@@ -228,7 +228,7 @@ class _card_cardState extends State<card_card> {
                       padding: const EdgeInsets.all(8.0),
                       child: Row(
                         children: [
-                          Expanded(child: txt(context, "الى")),
+                          Expanded(child: txt(context, Languages.of(context).deteto)),
                           Expanded(child: down(context, controller, "06/01/2021")),
                           Expanded(
                               child: SizedBox(width: 50,)

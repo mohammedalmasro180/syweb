@@ -19,7 +19,7 @@ class _costcenterState extends State<costcenter> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: myappbar(context,'مركز الكلفة'),
+      appBar: myappbar(context,Languages.of(context).cost_center),
       drawer: drawer(),
       bottomNavigationBar:BottomBar(context),
       body: ListView(
@@ -57,13 +57,13 @@ class _costcenterState extends State<costcenter> {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: textfield(context, controller, "المركز الرئيسي"),
+                  child: textfield(context, controller, Languages.of(context).The_main_center),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Expanded(child: textfield(context, controller, "تقديري الايراد")),
+                      Expanded(child: textfield(context, controller, Languages.of(context).revenue_estimation)),
                       Expanded(child: textfield(context, controller, "%")),
 
                     ],
@@ -73,8 +73,8 @@ class _costcenterState extends State<costcenter> {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Expanded(child: textfield(context, controller, "نوعه")),
-                      Expanded(child: down(context, controller, "قسم")),
+                      Expanded(child: textfield(context, controller,Languages.of(context).type)),
+                      Expanded(child: down(context, controller, Languages.of(context).Employeelbldepatment)),
 
                     ],
                   ),
@@ -90,7 +90,7 @@ class _costcenterState extends State<costcenter> {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: textfieldicon(context, controller, "فرع الشركة",Icon( Icons.search)),
+                  child: textfieldicon(context, controller, Languages.of(context).company_branch,Icon( Icons.search)),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -101,7 +101,7 @@ class _costcenterState extends State<costcenter> {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Expanded(child: textfield(context, controller, "تقديري مصروف")),
+                      Expanded(child: textfield(context, controller, Languages.of(context).expense_estimate)),
                       Expanded(child: textfield(context, controller, "%")),
 
                     ],
@@ -116,7 +116,7 @@ class _costcenterState extends State<costcenter> {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Expanded(child: Text("قيمة المشروع",style: TextStyle(fontSize: 15,fontWeight: FontWeight.w500),),),
+                      Expanded(child: Text(Languages.of(context).project_value,style: TextStyle(fontSize: 15,fontWeight: FontWeight.w500),),),
                       Expanded(
                         child: textfield(context, controller, "0.000"),
 
@@ -137,7 +137,7 @@ class _costcenterState extends State<costcenter> {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Expanded(child: Text("الاضافات",style: TextStyle(fontSize: 15,fontWeight: FontWeight.w500),),),
+                      Expanded(child: Text(Languages.of(context).Additions,style: TextStyle(fontSize: 15,fontWeight: FontWeight.w500),),),
                       Expanded(
                         child: textfield(context, controller, "0.000"),
 
@@ -158,7 +158,7 @@ class _costcenterState extends State<costcenter> {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Expanded(child: Text("الاضافات",style: TextStyle(fontSize: 15,fontWeight: FontWeight.w500),),),
+                      Expanded(child: Text(Languages.of(context).Additions,style: TextStyle(fontSize: 15,fontWeight: FontWeight.w500),),),
                       Expanded(
                         child: textfield(context, controller, "0.000"),
 
@@ -179,7 +179,7 @@ class _costcenterState extends State<costcenter> {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Expanded(child: Text("الاضافات",style: TextStyle(fontSize: 15,fontWeight: FontWeight.w500),),),
+                      Expanded(child: Text(Languages.of(context).Additions,style: TextStyle(fontSize: 15,fontWeight: FontWeight.w500),),),
                       Expanded(
                         child: textfield(context, controller, "0.000"),
 
@@ -200,7 +200,7 @@ class _costcenterState extends State<costcenter> {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Expanded(child: Text("الخصومات",style: TextStyle(fontSize: 15,fontWeight: FontWeight.w500),),),
+                      Expanded(child: Text(Languages.of(context).Discounts,style: TextStyle(fontSize: 15,fontWeight: FontWeight.w500),),),
                       Expanded(
                         child: textfield(context, controller, "0.000"),
 
@@ -221,7 +221,7 @@ class _costcenterState extends State<costcenter> {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Expanded(child: Text("الاجمالي",style: TextStyle(fontSize: 15,fontWeight: FontWeight.w500),),),
+                      Expanded(child: Text(Languages.of(context).Total,style: TextStyle(fontSize: 15,fontWeight: FontWeight.w500),),),
                       Expanded(
                         child: textfield(context, controller, "0.000"),
 

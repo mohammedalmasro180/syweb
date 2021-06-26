@@ -27,192 +27,159 @@ class _data_clientState extends State<data_client> {
       drawer: drawer(),
       body: ListView(
         children: [
-          Container(
-            padding: EdgeInsets.all(30),
-            height: MediaQuery.of(context).size.height,
-            width: 700,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: txt(context, 'رمز الحساب'),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: textfield(context, controller, '003'),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: textfield(context, controller, '1203'),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: textfield(context, controller, 'اسم الحساب'),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: textfield(context, controller, Languages.of(context).groupnameto),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: down(context,controller,'فرع الششركة'),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: txt(context, 'نوع الحساب'),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: down(context, controller, "عادي"),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Mycheckbox(title: 'توقيف الحساب',),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Mycheckbox(title: 'عدم السماح بالبيع عند تجاوز الحد',),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: txt(context, 'حد/ الرئيسي'),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: down(context, controller, '1203-ذمم العملاء'),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: txt(context, 'حد/ الختامي'),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: down(context, controller, '3-الميزانية العمومية'),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: textfield(context, controller, 'تاريخ المطابقة'),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: txt(context, 'ضبط الحساب'),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Mycheckbox(title: 'عميل',),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Mycheckbox(title: 'صندوق',),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Mycheckbox(title: 'مصروف',),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Mycheckbox(title: 'مورد',),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Mycheckbox(title: 'اعتماد مستثنى',),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Mycheckbox(title: 'بند',),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Mycheckbox(title: 'ايراد',),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child:   txt(context, "تحذير"),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child:   Radiothree(R1: 'مدين',R2:'دائن' ,R3: 'بدون',),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child:   textfield(context, controller, 'القيمة التقديرية'),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child:   txt(context, 'العملة'),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child:   down(context, controller, 'ليرة سورية'),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child:   txt(context, 'الصرف'),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child:   down(context, controller, '1'),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child:   textfield(context, controller, 'رصيد'),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child:   textfield(context, controller, 'متوسط الصرف'),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child:   txt(context, "جهة الحساب"),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child:   Radiothree(R1: 'مدين',R2:'دائن' ,R3: 'كلاهمها',),
+          ),
 
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: Colors.white,
-                boxShadow: [
-                  BoxShadow(
-                      color: Colors.black,
-                      blurRadius: 4,
-                      spreadRadius: 0.1
-                  )
-                ]
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child:   txt(context, 'الرصيد الحالي'),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: textfield(context, controller, 'مدين'),
+          ),
 
-            ),
-            child: ListView(
-              children: [
-
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: txt(context, 'رمز الحساب'),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: textfield(context, controller, '003'),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: textfield(context, controller, '1203'),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: textfield(context, controller, 'اسم الحساب'),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: textfield(context, controller, Languages.of(context).groupnameto),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: down(context,controller,'فرع الششركة'),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: txt(context, 'نوع الحساب'),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: down(context, controller, "عادي"),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'توقيف الحساب',),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'عدم السماح بالبيع عند تجاوز الحد',),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: txt(context, 'حد/ الرئيسي'),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: down(context, controller, '1203-ذمم العملاء'),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: txt(context, 'حد/ الختامي'),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: down(context, controller, '3-الميزانية العمومية'),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: textfield(context, controller, 'تاريخ المطابقة'),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: txt(context, 'ضبط الحساب'),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'عميل',),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'صندوق',),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'مصروف',),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'مورد',),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'اعتماد مستثنى',),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'بند',),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'ايراد',),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child:   txt(context, "تحذير"),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child:   Radiothree(R1: 'مدين',R2:'دائن' ,R3: 'بدون',),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child:   textfield(context, controller, 'القيمة التقديرية'),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child:   txt(context, 'العملة'),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child:   down(context, controller, 'ليرة سورية'),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child:   txt(context, 'الصرف'),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child:   down(context, controller, '1'),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child:   textfield(context, controller, 'رصيد'),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child:   textfield(context, controller, 'متوسط الصرف'),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child:   txt(context, "جهة الحساب"),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child:   Radiothree(R1: 'مدين',R2:'دائن' ,R3: 'كلاهمها',),
-                ),
-
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child:   txt(context, 'الرصيد الحالي'),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: textfield(context, controller, 'مدين'),
-                ),
-
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: textfield(context, controller, 'دائن'),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: textfield(context, controller, 'رصيد'),
-                ),
-
-
-
-
-
-
-
-
-              ],
-            ),
-
-
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: textfield(context, controller, 'دائن'),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: textfield(context, controller, 'رصيد'),
           )
         ],
       ),

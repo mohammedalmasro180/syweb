@@ -50,7 +50,7 @@ class _class_definition_publicState extends State<class_definition_public> {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Expanded(child: txt(context, "نوع الصنف")),
+                      Expanded(child: txt(context, Languages.of(context).classhome+Languages.of(context).type)),
                       Expanded(child: down(context, controller, "مخزني")),
 
                     ],
@@ -59,7 +59,7 @@ class _class_definition_publicState extends State<class_definition_public> {
 
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: textfield(context, controller, "الكمية الحالية"),
+                  child: textfield(context, controller, Languages.of(context).currentbalance),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -82,7 +82,7 @@ class _class_definition_publicState extends State<class_definition_public> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          Text("استعراض",style: TextStyle(color:Colors.white),),
+                          Text(Languages.of(context).review,style: TextStyle(color:Colors.white),),
 
                         ],
                       ),
@@ -92,70 +92,70 @@ class _class_definition_publicState extends State<class_definition_public> {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: textfield(context, controller, "الحد الاعلى"),
+                  child: textfield(context, controller, Languages.of(context).upperlimit),
                 ),
                 Padding(                  padding: const EdgeInsets.all(8.0),
-                  child: textfield(context, controller, "الحد الادنى"),
+                  child: textfield(context, controller, Languages.of(context).minimum),
                 ),
 
-Padding(
+                Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: txt(context, "خيارات"),
+                  child: txt(context, Languages.of(context).options),
                 ),
-    Padding(
-    padding: const EdgeInsets.all(8.0),
-    child: Mycheckbox(title: 'منتج',),
-    ),
-    Padding(
-    padding: const EdgeInsets.all(8.0),
-    child: Mycheckbox(title: 'تاريخ انتاج',),
-    ),
-    Padding(
-    padding: const EdgeInsets.all(8.0),
-    child: Mycheckbox(title: 'تاريخ صلاحية',),
-    ),
-    Padding(
-    padding: const EdgeInsets.all(8.0),
-    child: Mycheckbox(title: 'رقم تسلسلي',),
-    ),
-    Padding(
-    padding: const EdgeInsets.all(8.0),
-    child: Mycheckbox(title: 'فرض عند الادخال',),
-    ),
-    Padding(
-    padding: const EdgeInsets.all(8.0),
-    child: Mycheckbox(title: 'فرض عند الاخراج',),
-    ),
-    Padding(
-    padding: const EdgeInsets.all(8.0),
-    child: Mycheckbox(title: 'توقيف الصنف',),
-    ),
-    Padding(
-    padding: const EdgeInsets.all(8.0),
-    child: Mycheckbox(title:Languages.of(context).groupdisable,),
-    ),
-    Padding(
-    padding: const EdgeInsets.all(8.0),
-    child: Mycheckbox(title: 'تكلفة خاصة',),
-    ),
-    Padding(
-    padding: const EdgeInsets.all(8.0),
-    child: Mycheckbox(title: 'صنف وزني',),
-    ),
-    Padding(
-    padding: const EdgeInsets.all(8.0),
-    child: Mycheckbox(title: 'صنف للافرع',),
-    ),
-    Padding(
-    padding: const EdgeInsets.all(8.0),
-    child: textfield(context, controller, 'رقم القطعة'),
-    ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Mycheckbox(title: Languages.of(context).product,),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Mycheckbox(title: Languages.of(context).productiondate,),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Mycheckbox(title:Languages.of(context).expirationdate,),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Mycheckbox(title: Languages.of(context).serialnumber,),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Mycheckbox(title: Languages.of(context).forceoninput,),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Mycheckbox(title: Languages.of(context).forceonoutput,),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Mycheckbox(title: Languages.of(context).classstop,),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Mycheckbox(title:Languages.of(context).groupdisable,),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Mycheckbox(title: Languages.of(context).specialcost,),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Mycheckbox(title: Languages.of(context).weightclass,),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Mycheckbox(title: Languages.of(context).classforbranches,),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: textfield(context, controller, Languages.of(context).partnumber),
+                ),
 
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Expanded(child: textfieldicon(context, controller, 'القياس',Icon(Icons.search))),
+                      Expanded(child: textfieldicon(context, controller, Languages.of(context).measurement,Icon(Icons.search))),
 
 
 
@@ -168,7 +168,7 @@ Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Expanded(child: textfieldicon(context, controller, 'المصدر',Icon(Icons.search))),
+                      Expanded(child: textfieldicon(context, controller, Languages.of(context).source,Icon(Icons.search))),
 
 
 
@@ -181,7 +181,7 @@ Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Expanded(child: textfieldicon(context, controller, 'النوع',Icon(Icons.search))),
+                      Expanded(child: textfieldicon(context, controller,Languages.of(context).type,Icon(Icons.search))),
 
 
 
@@ -194,7 +194,7 @@ Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Expanded(child: textfieldicon(context, controller, 'الشركة المصنعة',Icon(Icons.search))),
+                      Expanded(child: textfieldicon(context, controller, Languages.of(context).manufacturer,Icon(Icons.search))),
 
 
 
@@ -207,7 +207,7 @@ Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Expanded(child: textfieldicon(context, controller, 'اللون',Icon(Icons.search))),
+                      Expanded(child: textfieldicon(context, controller, Languages.of(context).color,Icon(Icons.search))),
 
 
 
@@ -220,7 +220,7 @@ Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Expanded(child: textfieldicon(context, controller, 'الدولة',Icon(Icons.search))),
+                      Expanded(child: textfieldicon(context, controller, Languages.of(context).sginupcontry,Icon(Icons.search))),
 
 
 
@@ -233,7 +233,7 @@ Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Expanded(child: textfieldicon(context, controller, 'الحجم',Icon(Icons.search))),
+                      Expanded(child: textfieldicon(context, controller, Languages.of(context).size,Icon(Icons.search))),
 
 
 
@@ -246,7 +246,7 @@ Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Expanded(child: textfieldicon(context, controller, 'الوصف',Icon(Icons.search))),
+                      Expanded(child: textfieldicon(context, controller, Languages.of(context).chapter,Icon(Icons.search))),
 
 
 
@@ -259,7 +259,7 @@ Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Expanded(child: textfieldicon(context, controller, 'الفصل',Icon(Icons.search))),
+                      Expanded(child: textfieldicon(context, controller, Languages.of(context).resource,Icon(Icons.search))),
 
 
 
@@ -285,7 +285,7 @@ Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Expanded(child: textfield(context, controller, 'المواصفات',)),
+                      Expanded(child: textfield(context, controller, Languages.of(context).description,)),
 
 
 
@@ -304,5 +304,6 @@ Padding(
     );
   }
 }
+
 
 

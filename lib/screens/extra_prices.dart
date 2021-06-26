@@ -52,34 +52,6 @@ class _extra_pricesState extends State<extra_prices> {
         ),
         child: ListView(
           children: [
-            Padding(
-              padding: const EdgeInsets.all(2.0),
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(1.0),
-                    child: textfieldicon(context, controller, Languages.of(context).grouphome,  Icon(Icons.search)),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(1.0),
-                    child: textfield(context, controller,  Languages.of(context).extracode),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(1.0),
-                    child: textfield(context, controller,  Languages.of(context).groupnameto),
-                  ),
-                  Padding(
-
-                    padding: const EdgeInsets.all(1.0),
-
-
-                    child: textfield(context, controller,  Languages.of(context).classhome),
-
-                  ),
-
-                ],
-              ),
-            ),
 
             Align(
               alignment: FractionalOffset.bottomRight,

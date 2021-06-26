@@ -144,12 +144,43 @@ abstract class Languages {
 
   String get estimatedvalue;
   String get currency;
-
-
-
+//----------------------
+  String get  undefined
+  ;
+  String get  theEast
+  ;
+  String get  Salhia
+  ;
+  String get  Shuwaikh
+  ;
+  String get thekiss
+  ;
+  String get  aroundme;
+  String get  Salmiya  ;
+  String get
+  MaidanHawally
+  ;
+  String get  thepeople  ;
+  String get  AlFarwaniyah  ;
+  String get Khaitan  ;
+  String get thenoise  ;
+  String get  Ahmadi  ;
+  String get  thenoisee  ;
+  String get  Fahaheel  ;
+  String get  Jahra  ;
+  String get  Taima  ;
+  String get theeyes  ;
+  String get  kivan  ;
+  String get  Kindergarten  ;
+  String get statement  ;
+  String get  Salesestimate  ;
+//-----------
   String get exchange;
 
-
+  String get Activatespecial;
+  String get deteform;
+  String get deteto;
+  String get class_definition;
   String get credit;
   String get averageexchange;
 
@@ -157,8 +188,62 @@ abstract class Languages {
 
   String get currentbalance;
   String get debit;
-
+  String get Rate;
+  String get Delegate_work_areas;
+  String get Sales_estimate;
 //String get credit;
+  String get Invoice_date;
+  String get the_currency;
+  String get Quantity;
+  String get invoice_number;
 
 //Employee
+// class public
+
+  String get mystore ;
+  String get currentquantity ;
+  String get review ;
+  String get upperlimit ;
+  String get minimum ;
+  String get options ;
+  String get product ;
+  String get productiondate ;
+  String get expirationdate ;
+  String get serialnumber ;
+  String get forceoninput ;
+  String get forceonoutput ;
+  String get classstop  ;
+
+
+
+  String get specialcost ;
+  String get weightclass ;
+  String get classforbranches ;
+  String get partnumber ;
+  String get measurement ;
+  String get source ;
+  String get type ;
+  String get manufacturer ;
+  String get color ;
+  String get state ;
+  String get size ;
+  String get description ;
+  String get chapter ;
+  String get resource ;
+  String get specification ;
+  String get purchase_prices ;
+  String get mored;
+
+  String get class_definition_public;
+//cost_center
+  String get cost_center;
+  String get revenue_estimation;
+  String get Additions;
+  String get  The_main_center;
+  String get company_branch;
+  String get Project_details;
+  String get  project_value;
+  String get Discounts;
+  String get  Total;
+  String get expense_estimate;
 }

@@ -261,7 +261,7 @@ class _HomeScreenState extends State<HomeScreen>
                               alignment: FractionalOffset.centerLeft,
 
                               child: Text(
-                                'اسعار مشتركه', style: TextStyle(fontSize: 14,color: Colors.black),)),
+                                Languages.of(context).purchase_prices, style: TextStyle(fontSize: 14,color: Colors.black),)),
                         ),
 
                       ],
@@ -294,7 +294,7 @@ class _HomeScreenState extends State<HomeScreen>
                               alignment: FractionalOffset.centerLeft,
 
                               child: Text(
-                                'تعريف صنف عام', style: TextStyle(fontSize: 14,color: Colors.black),)),
+                                Languages.of(context).class_definition_public, style: TextStyle(fontSize: 14,color: Colors.black),)),
                         ),
 
                       ],
@@ -328,7 +328,7 @@ class _HomeScreenState extends State<HomeScreen>
                               alignment: FractionalOffset.centerLeft,
 
                               child: Text(
-                                'مركز الكلفه', style: TextStyle(fontSize: 14,color: Colors.black),)),
+    Languages.of(context).cost_center, style: TextStyle(fontSize: 14,color: Colors.black),)),
                         ),
 
                       ],

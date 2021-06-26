@@ -15,7 +15,7 @@ class _work_areasState extends State<work_areas> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: myappbar(context,'مناطق العمل'),
+      appBar: myappbar(context,Languages.of(context).Delegate_work_areas),
       drawer: drawer(),
       body: ListView(
         children: [
@@ -44,83 +44,83 @@ class _work_areasState extends State<work_areas> {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'غير محدد',),
+                  child: Mycheckbox(title:Languages.of(context).undefined,),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'الشرق',),
+                  child: Mycheckbox(title:Languages.of(context).theEast,),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'الصالحية',),
+                  child: Mycheckbox(title: Languages.of(context).Salhia,),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'الشويخ',),
+                  child: Mycheckbox(title: Languages.of(context).Shuwaikh,),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'القبلة',),
+                  child: Mycheckbox(title: Languages.of(context).thekiss,),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'حولي',),
+                  child: Mycheckbox(title: Languages.of(context).aroundme,),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'السالمية',),
+                  child: Mycheckbox(title:Languages.of(context).Salmiya,),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'ميدان حولي',),
+                  child: Mycheckbox(title: Languages.of(context).MaidanHawally,),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'الشعب',),
+                  child: Mycheckbox(title:Languages.of(context).thepeople,),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'الفروانيه',),
+                  child: Mycheckbox(title: Languages.of(context).AlFarwaniyah,),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'خيطان',),
+                  child: Mycheckbox(title: Languages.of(context).Khaitan,),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'الضجيج',),
+                  child: Mycheckbox(title: Languages.of(context).thenoisee,),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'الاحمدي',),
+                  child: Mycheckbox(title: Languages.of(context).thenoise,),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'الضجيج',),
+                  child: Mycheckbox(title: Languages.of(context).thenoise,),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'الفحيحيل',),
+                  child: Mycheckbox(title: Languages.of(context).Fahaheel,),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'الجهراء',),
+                  child: Mycheckbox(title: Languages.of(context).Jahra,),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'تيماء',),
+                  child: Mycheckbox(title: Languages.of(context).Taima,),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'العيون',),
+                  child: Mycheckbox(title: Languages.of(context).theeyes,),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'كيفان',),
+                  child: Mycheckbox(title: Languages.of(context).kivan,),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'الروضة',),
+                  child: Mycheckbox(title: Languages.of(context).Kindergarten,),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -128,16 +128,16 @@ class _work_areasState extends State<work_areas> {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: txt(context, "تقدير المبيعات"),
+                  child: txt(context, Languages.of(context).Sales_estimate),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Expanded(child: txt(context, "مــ")),
-                      Expanded(child: txt(context, "من")),
-                      Expanded(child: txt(context, "الى")),
-                      Expanded(child: txt(context, "نسبة")),
+                      Expanded(child: txt(context,Languages.of(context).deteform)),
+                      Expanded(child: txt(context, Languages.of(context).deteto)),
+                      Expanded(child: txt(context, Languages.of(context).deteto)),
+                      Expanded(child: txt(context,Languages.of(context).Rate)),
 
                     ],
                   ),

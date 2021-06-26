@@ -73,10 +73,10 @@ flutter:
   fonts:
     - family: Lato
       fonts:
-       - asset: fonts/Lato/Lato-Regular.ttf
+        - asset: fonts/Lato/Lato-Regular.ttf
     - family: Neo
       fonts:
-       - asset: fonts/NeoSansArabic.ttf
+        - asset: fonts/NeoSansArabic.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

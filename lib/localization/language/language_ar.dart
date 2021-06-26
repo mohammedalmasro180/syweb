@@ -122,7 +122,9 @@ class LanguageAr extends Languages {
   String get groupstopgroup=> "ايقاف المجموعة";
   String get groupdisable=> "غير مرئية في نقاط البيع";
 
-
+  String get class_definition=>'تعريف الصنف';
+  String get deteform=>'من';
+  String get deteto=>'الى';
 
 
 
@@ -150,7 +152,7 @@ class LanguageAr extends Languages {
   String get bottomadd=>"اضافة";
   String get bottomnew=>"جديد";
   String get bottomedit=>"تعديل";
-
+  String get Activatespecial=>'تفعيل العرض الخاص';
   String get bottomac=>"حسابات";
   String get bottomclose=>"اغلاق";
   String get religion=>"ديانة";
@@ -195,8 +197,84 @@ class LanguageAr extends Languages {
   String get accountentity => "كيان الحساب" ;
 
   String get currentbalance => "الرصيد الحالي" ;
-  String get debit => "الخصم" ;
+  String get debit => "الخصم" ;// ----------------------
+  String get undefined => 'غير محدد';
+  String get theEast => "الشرق" ;
+  String get Salhia => 'الصالحية' ;
+  String get Shuwaikh => "شويخ";
+  String get thekiss => "the kiss" ;
+  String get aroundme => 'aroundme';
+  String get Salmiya => 'السالمية';
+  String get MaidanHawally => "ميدان حولي";
+  String get thepeople => "الشعب" ;
+  String get AlFarwaniyah => 'الفروانية';
+  String get Khaitan => "خيطان";
+  String get thenoise => "الضوضاء" ;
+  String get Ahmadi => 'الأحمدي';
+  String get thenoisee => 'the noisee' ;
+  String get Fahaheel => "الفحيحيل";
+  String get Jahra => 'الجهراء';
+  String get Taima => 'Taima';
+  String get theeyes => "العيون";
+  String get kivan => 'kivan' ;
+  String get Kindergarten => 'روضة أطفال';
+  String get statement => 'statement' ;
+  String get Salesestimate => 'Salesesti mate';
+  String get Rate=>'نسبة';
+  String get Delegate_work_areas=>' مناطق عمل المندوب';
+  String get Sales_estimate=>' تقدير المبيعات';
+  // -----------
+  String get Invoice_date => "تاريخ الفاتورة" ;
+  String get the_currency => "العملة" ;
+  String get invoice_number => "رقم الفاتورة" ;
+  String get Quantity=>'الكمية';
+  //public
+  String get mystore => "متجري" ;
+  String get currentquantity => "الكمية الحالية" ;
+  String get review => 'مراجعه' ;
+  String get upperlimit => 'الحد الاعلى' ;
+  String get min => 'الحد الأدنى' ;
+  String get options => "خيارات" ;
+  String get product => 'المنتج' ;
+  String get productiondate => "المنتج في التاريخ" ;
+  String get expirationdate => "خبير في التاريخ" ;
 
+  String get serialnumber => "الرقم التسلسلي" ;
+  String get forceoninput => "فرض على الإدخال" ;
+  String get forceonoutput => "القوة على الإخراج" ;
+  String get classstop => 'توقف الفصل' ;
+
+
+
+  String get specialcost => "تكلفة خاصة" ;
+  String get weightclass => "فئة الوزن" ;
+  String get classforbranches => "فئة للفروع" ;
+  String get partnumber => 'رقم الجزء' ;
+  String get Meas => "القياس" ;
+  String get source => 'مصدر' ;
+  String get type => 'النوع' ;
+  String get Manufacturer => 'الشركة المصنعة' ;
+  String get color => 'اللون' ;
+  String get definitely => 'حالة';
+  String get Size => 'الحجم' ;
+
+  String get Chapter => 'الفصل';
+  String get resource => 'مورد' ;
+  String get purchase_prices =>'اسعار مشتركة';
+  String get mored =>'مورد';
+
+  String get class_definition_public =>'تعريف صنف عام';
+//cost_center
+  String get cost_center=>'مركز الكلفة';
+  String get revenue_estimation=>'تقدير الايراد';
+  String get  The_main_center=>'الفرع الرئيسي';
+  String get company_branch=>'فرع شركة';
+  String get Project_details=>'تفاصيل المشروع';
+  String get  project_value=>'قيمة المشروع';
+  String get Discounts=>'خصومات';
+  String get  Total=>'اجمالي';
+  String get expense_estimate=>'تقدير المصروع';
+  String get Additions=>'الاضافات';
   @override
   // TODO: implement accountname
   String get accountname => throw UnimplementedError();
@@ -208,5 +286,37 @@ class LanguageAr extends Languages {
   @override
   // TODO: implement companybranch
   String get companybranch => throw UnimplementedError();
+
+  @override
+  // TODO: implement chapter
+  String get chapter => throw UnimplementedError();
+
+  @override
+  // TODO: implement description
+  String get description => throw UnimplementedError();
+
+  @override
+  // TODO: implement manufacturer
+  String get manufacturer => throw UnimplementedError();
+
+  @override
+  // TODO: implement measurement
+  String get measurement => throw UnimplementedError();
+
+  @override
+  // TODO: implement minimum
+  String get minimum => throw UnimplementedError();
+
+  @override
+  // TODO: implement size
+  String get size => throw UnimplementedError();
+
+  @override
+  // TODO: implement specification
+  String get specification => throw UnimplementedError();
+
+  @override
+  // TODO: implement state
+  String get state => throw UnimplementedError();
 }
 
