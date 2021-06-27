@@ -246,4 +246,68 @@ abstract class Languages {
   String get Discounts;
   String get  Total;
   String get expense_estimate;
+  String get 	Client	;
+
+  String get 	Department	;
+  String get 	Staff	;
+  String get 	representative	;
+  String get 	All	;
+  String get 	From	;
+  String get 	to_me	;
+  String get 	Payment_method	;
+
+  String get 	Sort_by	;
+  String get 	show	;
+  String get 	Customer_assembly	;
+  String get 	Show_stage_bills	;
+  String get 	Show_unstaged_bills	;
+  String get 	Show_discounts_and_extras	;
+  String get 	Group_by_delegate	;
+  String get 	Show_unsold_customers	;
+  String get 	Arrange_clients_by_groups	;
+  String get 	Customer_analysis_according_to_the_largest_net	;
+  String get 	Show_paid	;
+  String get 	Show_the_rest	;
+  String get 	Show_the_clients_goal	;
+  String get 	sales_returns	;
+  String get 	Report_sources	;
+  String get 	sales	;
+
+//
+  String get 	customer_information	;
+  String get 	account_name	;
+  //String get 	company_branch	;
+  String get 	account_type	;
+  String get 	Normal	;
+  String get 	Account_suspension	;
+  String get 	Not_allowed_to_sell_when_the_limit_is_exceeded	;
+  String get 	bordermain	;
+  String get 	Customer_receivables	;
+  String get 	borderfinal	;
+  String get 	balance_sheet	;
+  String get 	Matching_date	;
+  //String get 	Matching_date	;
+  String get 	Account_settings	;
+  //String get 	Client	;
+  String get 	Box	;
+  String get 	Expenses	;
+  String get 	Supplier	;
+  String get 	Excluded_credit	;
+  String get 	item	;
+  String get 	income	;
+  String get 	Warning	;
+  String get 	Debit	;
+  String get 	Creditor	;
+  String get 	without	;
+  String get 	Estimated_value	;
+
+  String get 	Syrian_Pound	;
+  String get 	Exchange	;
+
+  String get 	average_exchange	;
+  String get 	account_side	;
+  String get 	both_of_them	;
+  String get 	current_balance	;
+
+
 }

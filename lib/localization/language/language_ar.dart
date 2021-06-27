@@ -275,48 +275,89 @@ class LanguageAr extends Languages {
   String get  Total=>'اجمالي';
   String get expense_estimate=>'تقدير المصروع';
   String get Additions=>'الاضافات';
-  @override
-  // TODO: implement accountname
-  String get accountname => throw UnimplementedError();
+// class public
+//SELE
+  String get 	Client	=>	'	عميل	'	;
 
-  @override
-  // TODO: implement accounttype
-  String get accounttype => throw UnimplementedError();
+  String get 	Department	=>	'	قسم	'	;
+  String get 	Staff	=>	'	الموظفون	'	;
+  String get 	representative	=>	'	مندوب	'	;
+  String get 	All	=>	'	الكل	'	;
+  String get 	From	=>	'	من	'	;
+  String get 	to_me	=>	'	الى	'	;
+  String get 	Payment_method	=>	'	طريق دفع	'	;
 
-  @override
-  // TODO: implement companybranch
-  String get companybranch => throw UnimplementedError();
+  String get 	Sort_by	=>	'	فرز حسب	'	;
+  String get 	show	=>	'	اظهار	'	;
+  String get 	Customer_assembly	=>	'	تجميع العملاء	'	;
+  String get 	Show_stage_bills	=>	'	اظهار فواتير المرحلة	'	;
+  String get 	Show_unstaged_bills	=>	'	اظهار فواتير غير المرحلة	'	;
+  String get 	Show_discounts_and_extras	=>	'	اظهار الخصومات والاضافات	'	;
+  String get 	Group_by_delegate	=>	'	تجميع حسب المندوب	'	;
+  String get 	Show_unsold_customers	=>	'	عرض العملاء الغير مباع لها 	'	;
+  String get 	Arrange_clients_by_groups	=>	'	ترتيب العملاء حسب المجموعات	'	;
+  String get 	Customer_analysis_according_to_the_largest_net	=>	'	تحليل العملاء حسب اكبر صافي	'	;
+  String get 	Show_paid	=>	'	اظهار المدفوع	'	;
+  String get 	Show_the_rest	=>	'	اظهار المتبقي	'	;
+  String get 	Show_the_clients_goal	=>	'	اظهار هدف العميل	'	;
+  String get 	sales_returns	=>	'	مرتجع مبيعات	'	;
+  String get 	Report_sources	=>	'	مصادرالتقرير 	'	;
+  String get 	sales	=>	'	مبيعات	'	;
+  //----------------------
+  String get 	  accountname 	=>	'	أسم الحساب	'	;
 
-  @override
-  // TODO: implement chapter
-  String get chapter => throw UnimplementedError();
+  String get 	   accounttype 	=>	'	    نوع الحساب	'	;
+  String get 	 chapter 	=>	'	  الفصل	'	;
 
-  @override
-  // TODO: implement description
-  String get description => throw UnimplementedError();
+  String get 	companybranch 	=>	'	فرع شركة	'	;
+  String get 	 description 	=>	'	  وصف	'	;
 
-  @override
-  // TODO: implement manufacturer
-  String get manufacturer => throw UnimplementedError();
+  String get 	manufacturer 	=>	'	الصانع	'	;
+  String get 	measurement 	=>	'	قياس	'	;
+  String get 	 minimum 	=>	'	  الحد الأدنى	'	;
+  String get 	 size 	=>	'	  بحجم	'	;
 
-  @override
-  // TODO: implement measurement
-  String get measurement => throw UnimplementedError();
+  String get 	 specification 	=>	'	  تخصيص	'	;
+  String get 	 state 	=>	'	  حالة	'	;
+  //	customer_information
 
-  @override
-  // TODO: implement minimum
-  String get minimum => throw UnimplementedError();
+  String get 	customer_information	=>	"	معلومات العميل	"	;
 
-  @override
-  // TODO: implement size
-  String get size => throw UnimplementedError();
+  String get 	account_name	=>	"	أسم الحساب	"	;
+  //String get 	company_branch	=>	"	فرع شركة	"	;
+  String get 	account_type	=>	"	نوع الحساب	"	;
+  String get 	Normal	=>	"	طبيعي	"	;
+  String get 	Account_suspension	=>	"	تعليق الحساب	"	;
+  String get 	Not_allowed_to_sell_when_the_limit_is_exceeded	=>	"	غير مسموح بالبيع عند تجاوز الحد	"	;
+  String get 	bordermain	=>	"	الحد / الرئيسي	"	;
+  String get 	Customer_receivables	=>	"	ذمم العملاء	"	;
+  String get 	borderfinal	=>	"	حد / نهائي	"	;
+  String get 	balance_sheet	=>	"	ورقة التوازن	"	;
+  String get 	Matching_date	=>	"	تاريخ المطابقة	"	;
+  //String get 	Matching_date	=>	"	تاريخ المطابقة	"	;
+  String get 	Account_settings	=>	"	إعدادت الحساب	"	;
+  //String get 	Client	=>	"	عميل	"	;
+  String get 	Box	=>	"	صندوق	"	;
+  String get 	Expenses	=>	"	نفقات	"	;
+  String get 	Supplier	=>	"	المورد	"	;
+  String get 	Excluded_credit	=>	"	الائتمان المستثنى	";
+  String get 	item	=>	"	العنصر	";
+  String get 	income	=>	"	الإيرادات	";
+  String get 	Warning	=>	"	تحذير	";
+  String get 	Debit	=>	"	دين	";
+  String get 	Creditor	=>	"	الدائن	";
+  String get 	without	=>	"	بدون	";
+  String get 	Estimated_value	=>	"	القيمة المقدرة	";
 
-  @override
-  // TODO: implement specification
-  String get specification => throw UnimplementedError();
+  String get 	Syrian_Pound	=>	"	الليرة السورية	";
+  String get 	Exchange	=>	"	تبادل	";
 
-  @override
-  // TODO: implement state
-  String get state => throw UnimplementedError();
+  String get 	average_exchange	=>	"	متوسط الصرف	";
+  String get 	account_side	=>	"	جانب الحساب	";
+
+
+  String get 	both_of_them	=>	"	كلاهما	";
+  String get 	current_balance	=>	"	الرصيد الحالي	";
+
 }
 

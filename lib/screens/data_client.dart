@@ -23,7 +23,7 @@ class _data_clientState extends State<data_client> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomBar(context),
-      appBar: myappbar(context,'معلومات العميل'),
+      appBar: myappbar(context,Languages.of(context).customer_information),
       drawer: drawer(),
       body: ListView(
         children: [
@@ -41,7 +41,7 @@ class _data_clientState extends State<data_client> {
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: textfield(context, controller, 'اسم الحساب'),
+            child: textfield(context, controller, Languages.of(context).account_name),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -49,99 +49,100 @@ class _data_clientState extends State<data_client> {
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: down(context,controller,'فرع الششركة'),
+            child: down(context,controller,Languages.of(context).company_branch),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: txt(context, 'نوع الحساب'),
+            child: txt(context, Languages.of(context).account_type),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: down(context, controller, "عادي"),
+            child: down(context, controller, Languages.of(context).Normal),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Mycheckbox(title: 'توقيف الحساب',),
+            child: Mycheckbox(title: Languages.of(context).Account_suspension,),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Mycheckbox(title: 'عدم السماح بالبيع عند تجاوز الحد',),
+            child: Mycheckbox(title: Languages.of(context).Not_allowed_to_sell_when_the_limit_is_exceeded,),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: txt(context, 'حد/ الرئيسي'),
+            child: txt(context, Languages.of(context).bordermain),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: down(context, controller, '1203-ذمم العملاء'),
+            child: down(context, controller, Languages.of(context).Customer_receivables+'1203-'),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: txt(context, 'حد/ الختامي'),
+            child: txt(context, Languages.of(context).borderfinal),
+
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: down(context, controller, '3-الميزانية العمومية'),
+            child: down(context, controller, Languages.of(context).balance_sheet),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: textfield(context, controller, 'تاريخ المطابقة'),
+            child: textfield(context, controller, Languages.of(context).Matching_date),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: txt(context, 'ضبط الحساب'),
+            child: txt(context,Languages.of(context).Account_settings),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Mycheckbox(title: 'عميل',),
+            child: Mycheckbox(title: Languages.of(context).Client,),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Mycheckbox(title: 'صندوق',),
+            child: Mycheckbox(title:Languages.of(context).Box,),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Mycheckbox(title: 'مصروف',),
+            child: Mycheckbox(title:Languages.of(context).Expenses,),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Mycheckbox(title: 'مورد',),
+            child: Mycheckbox(title: Languages.of(context).Supplier,),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Mycheckbox(title: 'اعتماد مستثنى',),
+            child: Mycheckbox(title: Languages.of(context).Excluded_credit,),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Mycheckbox(title: 'بند',),
+            child: Mycheckbox(title: Languages.of(context).item,),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Mycheckbox(title: 'ايراد',),
+            child: Mycheckbox(title: Languages.of(context).income,),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child:   txt(context, "تحذير"),
+            child:   txt(context, Languages.of(context).Warning),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child:   Radiothree(R1: 'مدين',R2:'دائن' ,R3: 'بدون',),
+            child:   Radiothree(R1: Languages.of(context).Debit,R2:Languages.of(context).Creditor ,R3: Languages.of(context).without,),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child:   textfield(context, controller, 'القيمة التقديرية'),
+            child:   textfield(context, controller, Languages.of(context).Estimated_value),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child:   txt(context, 'العملة'),
+            child:   txt(context, Languages.of(context).currency),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child:   down(context, controller, 'ليرة سورية'),
+            child:   down(context, controller, Languages.of(context).Syrian_Pound),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child:   txt(context, 'الصرف'),
+            child:   txt(context, Languages.of(context).Exchange),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -149,37 +150,37 @@ class _data_clientState extends State<data_client> {
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child:   textfield(context, controller, 'رصيد'),
+            child:   textfield(context, controller, Languages.of(context).currentbalance),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child:   textfield(context, controller, 'متوسط الصرف'),
+            child:   textfield(context, controller, Languages.of(context).average_exchange),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child:   txt(context, "جهة الحساب"),
+            child:   txt(context, Languages.of(context).account_side),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child:   Radiothree(R1: 'مدين',R2:'دائن' ,R3: 'كلاهمها',),
-          ),
-
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child:   txt(context, 'الرصيد الحالي'),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: textfield(context, controller, 'مدين'),
+            child:   Radiothree(R1: Languages.of(context).Debit,R2:Languages.of(context).Creditor ,R3: Languages.of(context).both_of_them,),
           ),
 
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: textfield(context, controller, 'دائن'),
+            child:   txt(context, Languages.of(context).current_balance),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: textfield(context, controller, 'رصيد'),
+            child: textfield(context, controller,  Languages.of(context).Debit),
+          ),
+
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: textfield(context, controller, Languages.of(context).Creditor),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: textfield(context, controller,  Languages.of(context).current_balance),
           )
         ],
       ),

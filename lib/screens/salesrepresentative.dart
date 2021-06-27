@@ -45,21 +45,22 @@ class _sales_representativeState extends State<sales_representative> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: textfieldicon(context, controller, Languages.of(context).storehome,Icon(Icons.search)),
+
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: textfieldicon(context, controller, "عميل",Icon(Icons.search)),
+                  child: textfieldicon(context, controller,  Languages.of(context).Client,Icon(Icons.search)),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: textfieldicon(context, controller,"مركز الكلفة",Icon(Icons.search)),
+                  child: textfieldicon(context, controller, Languages.of(context).cost_center,Icon(Icons.search)),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Expanded(child: txt(context, "قسم")),
-                      Expanded(child: down(context, controller, "الموظفون")),
+                      Expanded(child: txt(context,  Languages.of(context).Department)),
+                      Expanded(child: down(context, controller,  Languages.of(context).Staff)),
                     ],
                   ),
                 ),
@@ -68,8 +69,8 @@ class _sales_representativeState extends State<sales_representative> {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Expanded(child: txt(context, "مندوب")),
-                      Expanded(child: down(context, controller, "الكل")),
+                      Expanded(child: txt(context,  Languages.of(context).representative)),
+                      Expanded(child: down(context, controller,  Languages.of(context).All)),
                     ],
                   ),
                 ),
@@ -77,20 +78,20 @@ class _sales_representativeState extends State<sales_representative> {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Expanded(child: txt(context, "فرع الشركة")),
+                      Expanded(child: txt(context,  Languages.of(context).company_branch)),
                       Expanded(child: down(context, controller, "قبدون")),
                     ],
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: txt(context, "التاريخ"),
+                  child: txt(context,  Languages.of(context).deteto),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Expanded(child: txt(context, "من")),
+                      Expanded(child: txt(context, Languages.of(context).deteform)),
                       Expanded(child: down(context, controller, "06/01/2021")),
                     ],
                   ),
@@ -99,7 +100,7 @@ class _sales_representativeState extends State<sales_representative> {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Expanded(child: txt(context, "الى")),
+                      Expanded(child: txt(context,  Languages.of(context).deteto)),
                       Expanded(child: down(context, controller, "06/01/2021")),
                     ],
                   ),
@@ -108,7 +109,7 @@ class _sales_representativeState extends State<sales_representative> {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Expanded(child: txt(context, "طريقة الدفع")),
+                      Expanded(child: txt(context,  Languages.of(context).Payment_method)),
                       Expanded(child: down(context, controller, "")),
                     ],
                   ),
@@ -126,73 +127,73 @@ class _sales_representativeState extends State<sales_representative> {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: txt(context, "فرز حسب"),
+                  child: txt(context,  Languages.of(context).Sort_by),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: MyStatefulWidget(R1: 'التاريخ',R2: 'العميل',),
+                  child: MyStatefulWidget(R1:  Languages.of(context).extradete,R2: 'العميل',),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: down(context, controller, "المحافظة"),
+                  child: down(context, controller, Languages.of(context).EmployeeGovernorate),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: down(context, controller, "المحافظة"),
+                  child: down(context, controller, Languages.of(context).EmployeeGovernorate),
                 ),
+
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: txt(context,  Languages.of(context).show),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Mycheckbox(title:  Languages.of(context).Customer_assembly,),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Mycheckbox(title:  Languages.of(context).Show_stage_bills	,),
+                ),
+
+
 
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: txt(context, "اظهار"),
+                  child: Mycheckbox(title: Languages.of(context).Show_unstaged_bills,),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'تجميع العملاء',),
+                  child: Mycheckbox(title: Languages.of(context).Show_discounts_and_extras,),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'اظهار فواتير المرحلة',),
-                ),
-
-
-
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'اظهار فواتير غير المرحلة',),
+                  child: Mycheckbox(title: Languages.of(context).Group_by_delegate,),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'اظهار الخصومات والاضافات',),
+                  child: Mycheckbox(title: Languages.of(context).Show_unsold_customers,),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'تجميع حسب المندوب',),
+                  child: Mycheckbox(title: Languages.of(context).Arrange_clients_by_groups,),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'عرض العملاء الغير مباع لها',),
+                  child: Mycheckbox(title: Languages.of(context).Customer_analysis_according_to_the_largest_net,),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'ترتيب العملاء حسب المجموعات',),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'تحليل العملاء حسب اكبر صافي',),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'اظهار  المدفوع ',),
-
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'اظهار  المتبقي ',),
+                  child: Mycheckbox(title: Languages.of(context).Show_paid,),
 
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Mycheckbox(title: 'اظهار  هدف العميل ',),
+                  child: Mycheckbox(title:Languages.of(context).Show_the_rest,),
+
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Mycheckbox(title: Languages.of(context).Show_the_clients_goal,),
 
                 ),
                 Padding(
@@ -202,7 +203,7 @@ class _sales_representativeState extends State<sales_representative> {
                       Expanded(
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Mycheckbox(title: 'مصادر التقرير ',),
+                          child: Mycheckbox(title: Languages.of(context).sales_returns,),
 
                         ),
                       ),
@@ -210,14 +211,14 @@ class _sales_representativeState extends State<sales_representative> {
 
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Mycheckbox(title: 'مبيعات',),
+                          child: Mycheckbox(title: Languages.of(context).sales,),
 
                         ),
                       ),
                       Expanded(
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Mycheckbox(title: 'مرتجع مبيعات ',),
+                          child: Mycheckbox(title: Languages.of(context).sales_returns,),
 
                         ),
                       ),

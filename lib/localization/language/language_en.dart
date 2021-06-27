@@ -423,5 +423,78 @@ class LanguageEn extends Languages {
   String get Total=>'Total';
   String get expense_estimate=>'Estimated expenditure';
   String get Additions=>'Additions';
+  //SELES
+  String get 	Client	=>	'	Client	'	;
+  String get 	Department	=>	'	Department	'	;
+  String get 	Staff	=>	'	Staff	'	;
+  String get 	representative	=>	'	representative	'	;
+  String get 	All	=>	'	All	'	;
+  String get 	From	=>	'	From	'	;
+  String get 	to_me	=>	'	to me	'	;
+  String get 	Payment_method	=>	'	Payment method	'	;
+  String get 	Sort_by	=>	'	Sort by	'	;
+  String get 	show	=>	'	show	'	;
+  String get 	Customer_assembly	=>	'	Customer assembly	'	;
+  String get 	Show_stage_bills	=>	'	Show stage bills	'	;
+  String get 	Show_unstaged_bills	=>	'	Show unstaged bills	'	;
+  String get 	Show_discounts_and_extras	=>	'	Show discounts and extras	'	;
+  String get 	Group_by_delegate	=>	'	Group by delegate	'	;
+  String get 	Show_unsold_customers	=>	'	Show unsold customers	'	;
+  String get 	Arrange_clients_by_groups	=>	'	Arrange clients by groups	'	;
+  String get 	Customer_analysis_according_to_the_largest_net	=>	'	Customer analysis according to the largest net	'	;
+  String get 	Show_paid	=>	'	Show paid	'	;
+  String get 	Show_the_rest	=>	'	Show the rest	'	;
+  String get 	Show_the_clients_goal	=>	'	Show the clients goal	'	;
+  String get 	sales_returns	=>	'	sales returns	'	;
+  String get 	Report_sources	=>	'	Report sources	'	;
+  String get 	sales	=>	'	sales	'	;
+
+  String get 	customer_information	=>	"	customer information	"	;
+  String get 	account_name	=>	"	account name	"	;
+
+  String get 	account_type	=>	"	account type	"	;
+  String get 	Normal	=>	"	Normal	"	;
+  String get 	Account_suspension	=>	"	Account suspension	"	;
+  String get 	Not_allowed_to_sell_when_the_limit_is_exceeded	=>	"	Not allowed to sell when the limit is exceeded	"	;
+  String get 	bordermain	=>	"	border\main	"	;
+  String get 	Customer_receivables	=>	"	Customer receivables	"	;
+  String get 	borderfinal	=>	"	border/final	"	;
+  String get 	balance_sheet	=>	"	balance sheet	"	;
+  String get 	Matching_date	=>	"	Matching date	"	;
+
+  String get 	Account_settings	=>	"	Account settings	"	;
+
+  String get 	Box	=>	"	Box	"	;
+  String get 	Expenses	=>	"	Expenses	"	;
+  String get 	Supplier	=>	"	Supplier	"	;
+  String get 	Excluded_credit	=>	"	Excluded credit	";
+  String get 	item	=>	"	item	";
+  String get 	income	=>	"	income	";
+  String get 	Warning	=>	"	Warning	";
+  String get 	Debit	=>	"	Debit	";
+  String get 	Creditor	=>	"	Creditor	";
+  String get 	without	=>	"	without	";
+  String get 	Estimated_value	=>	"	Estimated value	";
+
+  String get 	Syrian_Pound	=>	"	Syrian Pound	";
+  String get 	Exchange	=>	"	Exchange	";
+
+  String get 	average_exchange	=>	"	average exchange	";
+  String get 	account_side	=>	"	account side	";
+
+
+
+  String get 	both_of_them	=>	"	both of them	";
+  String get 	current_balance	=>	"	current balance	";
+  //String get 	credit	=>	"	credit	"	;
+
+
+
+
+
+
+
+
 }
+
 
