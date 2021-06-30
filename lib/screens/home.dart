@@ -20,69 +20,67 @@ class HomeState extends State<Home> {
   Widget build(BuildContext context) =>
       Scaffold(
         appBar:myappbar(context,"The one"),
-        body: Container(
-          margin: EdgeInsets.all(30),
-          child: Center(
-            child: Column(
-              children: <Widget>[
-                SizedBox(
-                  height: 80,
-                ),
-                Text(
-                  Languages
-                      .of(context)
-                      .labelWelcome,
-                  style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black),
-                ),
-                SizedBox(
-                  height: 30,
-                ),
-                SizedBox(
-                  height: 70,
-                ),
-                Align(
-                  alignment: FractionalOffset.center,
-                    child: changelanguage()),
-                SizedBox(
-                  height: 70,
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top:150),
-                  child: Container(
-                    height: 45,
-                    width: 180,
+        body: Center(
+          child: Column(
+            children: <Widget>[
+              SizedBox(
+                height: 80,
+              ),
+              Text(
+                Languages
+                    .of(context)
+                    .labelWelcome,
+                style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              SizedBox(
+                height: 70,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: changelanguage(),
+              ),
+              SizedBox(
+                height: 70,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top:150),
+                child: Container(
+                  height: 45,
+                  width: 180,
 
-                    child: RaisedButton(
-                      color: rowto,
-                      padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
-                      onPressed:() {
+                  child: RaisedButton(
+                    color: rowto,
+                    padding: EdgeInsets.symmetric(vertical: 10,horizontal: 40),
+                    onPressed:() {
 
-                        Navigator.push(
-                            context, MaterialPageRoute(builder: (context) =>HomeScreen()));
+                      Navigator.push(
+                          context, MaterialPageRoute(builder: (context) =>HomeScreen()));
 
-                      },
+                    },
 
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Text(Languages.of(context).Enter,style: TextStyle(color:Colors.white),),
-                          Icon(Icons.arrow_forward,color: Colors.white,
-                          )
-                        ],
-
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(Languages.of(context).Enter,style: TextStyle(color:Colors.white),),
+                        Icon(Icons.arrow_forward,color: Colors.white,
+                        )
+                      ],
 
 
-                      ),
 
                     ),
+
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       );
