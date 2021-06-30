@@ -18,7 +18,7 @@ class _unitsState extends State<units> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomBar(context),
+
       appBar: myappbar(context,''),
       drawer: drawer(),
       body: ListView(

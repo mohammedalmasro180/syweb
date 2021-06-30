@@ -28,7 +28,7 @@ class _class_definitionState extends State<class_definition> {
 
     return  Scaffold(
 
-      bottomNavigationBar: BottomBar(context),
+
       appBar: myappbar(context,Languages.of(context).add+" "+Languages.of(context).classhome),
       drawer: drawer(),
       body: ListView(

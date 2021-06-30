@@ -22,14 +22,14 @@ class _data_clientState extends State<data_client> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomBar(context),
+
       appBar: myappbar(context,Languages.of(context).customer_information),
       drawer: drawer(),
       body: ListView(
         children: [
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: txt(context, 'رمز الحساب'),
+            child: txt(context, Languages.of(context).groupcode),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),

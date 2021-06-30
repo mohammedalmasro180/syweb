@@ -18,21 +18,21 @@ class _Item_QuantitiesState extends State<Item_Quantities> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomBar(context),
-      appBar: myappbar(context,'كميات'),
+
+      appBar: myappbar(context,Languages.of(context).Quantity),
       drawer: drawer(),
       body: ListView(
         children: [
           Padding(
             padding: const EdgeInsets.all(8.0),
-   //         child: classtop(),
+            child: classtop(),
           ),
 
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Row(
               children: [
-                Expanded(child: txt(context, 'كميات')),
+                Expanded(child: txt(context, Languages.of(context).Quantity)),
                 Expanded(child:Container(width: 55,height: 22,
 
                   decoration: BoxDecoration(
@@ -58,7 +58,7 @@ class _Item_QuantitiesState extends State<Item_Quantities> {
             padding: const EdgeInsets.all(8.0),
             child: Row(
               children: [
-                Expanded(child: txt(context,'الحد الادنى')),
+                Expanded(child: txt(context,Languages.of(context).minimum)),
                 Expanded(child:Container(width: 55,height: 22,
 
                   decoration: BoxDecoration(
@@ -85,7 +85,7 @@ class _Item_QuantitiesState extends State<Item_Quantities> {
             padding: const EdgeInsets.all(8.0),
             child: Row(
               children: [
-                Expanded(child: txt(context, 'الحد الاعلى')),
+                Expanded(child: txt(context, Languages.of(context).upperlimit)),
                 Expanded(child:Container(width: 55,height: 22,
 
                   decoration: BoxDecoration(
@@ -111,7 +111,7 @@ class _Item_QuantitiesState extends State<Item_Quantities> {
             padding: const EdgeInsets.all(8.0),
             child: Row(
               children: [
-                Expanded(child: txt(context, 'المخزن الرئيسي')),
+                Expanded(child: txt(context, Languages.of(context).storehome)),
                 Expanded(child:Container(width: 55,height: 22,
 
                   decoration: BoxDecoration(

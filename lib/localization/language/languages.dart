@@ -309,5 +309,60 @@ abstract class Languages {
   String get 	both_of_them	;
   String get 	current_balance	;
 
+//Account
+  String get 	Civil_No	;
+  String get 	Administrator	;
+  String get 	Telephone	;
+  String get 	fax	;
+  String get 	Mobile	;
+  String get 	sent_to	;
+  String get 	place_of_sending	;
+String get 	email	;
+  String get 	Website	;
+  String get 	Address	;
+  String get 	Governorate	;
+  //String get 	undefined	;
+  String get 	Region	;
+  String get 	widget	;
+  String get 	home	;
+  String get 	Postal_code	;
+  String get 	street	;
+  String get 	Avenue	;
+  String get 	turn_number	;
+  String get 	mail_box	;
+  String get 	customer_present	;
+  String get 	selling_price	;
+  String get 	discount_percentage	;
+  String get 	Distribution_ratio	;
+  String get 	Branches__Locations	;
+  String get 	Payment_Terms	;
+  String get 	customer_goal	;
+  String get 	customer_rating	;
+  //String get 	without	;
+  String get 	Target	;
+  String get 	the_value	;
+  String get 	number_of_invoices	;
+  String get 	Purchase_value	;
+  String get 	design_value	;
+  String get Contractvalue;
+  String get 	delivery_date	;
+  String get 	Contract_expiry_date	;
+  //String get 	Distribution_ratio	;
+  String get Street;
+  String get 	Notes	;
 
+  String get 	Free_quantity	;
+  String get 	Activate_the_free_offer	;
+  String get 	customerr_rating	;
+  String get Nationality;
+  String get   Clieent;
+  String get 	sales_representative	;
+  String get 	work_areas;
+  String get 	Item_Quantities	;
+
+  //String get  Project_details;
+  String get 	Account	;
+
+
+  String get Delegate;
 }

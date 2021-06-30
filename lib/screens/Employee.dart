@@ -25,7 +25,7 @@ class _EmployeeState extends State<Employee> {
 
     String address= Languages.of(context).Employee;
     return Scaffold(
-      bottomNavigationBar: BottomBar(context),
+
       appBar: myappbar(context,Languages.of(context).Employehome),
       drawer: drawer(),
       body: Container(

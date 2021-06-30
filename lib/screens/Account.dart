@@ -22,14 +22,14 @@ class _AccountState extends State<Account> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomBar(context),
-      appBar: myappbar(context,'الحساب'),
+
+      appBar: myappbar(context,          Languages.of(context).Account),
       drawer: drawer(),
       body: ListView(
         children: [
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: txt(context, 'رمز الحساب'),
+            child: txt(context, Languages.of(context).groupcode),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -41,7 +41,7 @@ class _AccountState extends State<Account> {
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: textfield(context, controller, 'اسم الحساب'),
+            child: textfield(context, controller, Languages.of(context).account_name),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -49,187 +49,189 @@ class _AccountState extends State<Account> {
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: down(context,controller,'فرع الششركة'),
+            child: down(context,controller,Languages.of(context).company_branch),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: txt(context, 'نوع الحساب'),
+            child: txt(context, Languages.of(context).account_type),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: down(context, controller, "عادي"),
+            child: down(context, controller, Languages.of(context).Normal),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Mycheckbox(title: 'توقيف الحساب',),
+            child: Mycheckbox(title: Languages.of(context).Account_suspension,),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Mycheckbox(title: 'عدم السماح بالبيع عند تجاوز الحد',),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: txt(context, "الجنسية"),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: textfield(context, controller, 'الرقم المدني'),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: textfield(context, controller, 'المسؤول'),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: textfield(context, controller, 'هاتف1'),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: textfield(context, controller, 'هاتف2'),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: textfield(context, controller, 'فاكس'),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: textfield(context, controller, 'الموبايل'),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: textfield(context, controller, 'المرسلة الى'),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: textfield(context, controller, 'مكان الارسال'),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: textfield(context, controller, 'بريد إلكتروني'),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: textfield(context, controller, 'موقع انترنت'),
+            child: Mycheckbox(title: Languages.of(context).Not_allowed_to_sell_when_the_limit_is_exceeded,),
           ),
 
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: txt(context, ' العنوان'),
+            child: txt(context, Languages.of(context).Nationality),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: textfield(context, controller, Languages.of(context).Civil_No),
+
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: textfield(context, controller, Languages.of(context).Administrator),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: textfield(context, controller, Languages.of(context).Telephone+'1'),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: textfield(context, controller, Languages.of(context).Telephone+'2'),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: textfield(context, controller, Languages.of(context).fax),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: textfield(context, controller, Languages.of(context).Mobile),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: textfield(context, controller, Languages.of(context).sent_to),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: textfield(context, controller,Languages.of(context).place_of_sending),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: textfield(context, controller,Languages.of(context).email),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: textfield(context, controller, Languages.of(context).Website),
           ),
 
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: txt(context, 'المحافظة'),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: down(context, controller, 'غير محدد'),
+            child: txt(context, Languages.of(context).Address),
           ),
 
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: txt(context, 'المنطقة'),
+            child: txt(context, Languages.of(context).Governorate),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: down(context, controller, 'غير محدد'),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: textfield(context, controller, 'القطعة'),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: textfield(context, controller, 'المنزل'),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: textfield(context, controller, 'الرمز البريدي'),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: textfield(context, controller, 'الشارع'),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: textfield(context, controller, 'الجادة'),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: textfield(context, controller, 'رقم الدور'),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: textfield(context, controller, 'صندوق البريد'),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Mycheckbox(title: 'عميل نقدي',)
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: txt(context, 'سعر البيع'),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: textfield(context, controller, 'نسبة الخصم%'),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: textfield(context, controller, 'نسبة التوزيع%'),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: btn(context, 'الفروع - المواقع'),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: btn(context, 'شروط الدفع'),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: textfield(context, controller, 'مركز الكلفة'),
+            child: down(context, controller, Languages.of(context).undefined),
           ),
 
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: textfield(context, controller, 'هدف العميل'),
+            child: txt(context, Languages.of(context).Region),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: txt(context, 'تصنيف العميل'),
+            child: down(context, controller, Languages.of(context).undefined),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: down(context, controller, 'بدون'),
+            child: textfield(context, controller, Languages.of(context).widget),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: txt(context, 'الهدف'),
+           child: textfield(context, controller,Languages.of(context).home),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: textfield(context, controller, 'القيمة'),
+            child: textfield(context, controller, Languages.of(context).Postal_code),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: textfield(context, controller, 'عدد الفواتير'),
+            child: textfield(context, controller, Languages.of(context).Street),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: textfield(context, controller, 'قيمة التعاقد'),
+            child: textfield(context, controller, Languages.of(context).Avenue),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: textfield(context, controller, 'قيمة المشتريات'),
+            child: textfield(context, controller, Languages.of(context).turn_number),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: textfield(context, controller, 'قيمة التصميم'),
+            child: textfield(context, controller,  Languages.of(context).mail_box),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: txt(context, "تاريخ التسليم"),
+            child: Mycheckbox(title:  Languages.of(context).customer_present,)
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: txt(context,  Languages.of(context).selling_price),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: textfield(context, controller,  Languages.of(context).discount_percentage+'%'),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: textfield(context, controller, Languages.of(context).Distribution_ratio+'%'),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: btn(context, Languages.of(context).Branches__Locations),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: btn(context,Languages.of(context).Payment_Terms),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: textfield(context, controller, Languages.of(context).cost_center),
+          ),
+
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: textfield(context, controller, Languages.of(context).customer_goal),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: txt(context, Languages.of(context).customer_rating),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: down(context, controller, Languages.of(context).without),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: txt(context, Languages.of(context).Target),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: textfield(context, controller, Languages.of(context).the_value),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: textfield(context, controller, Languages.of(context).number_of_invoices),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: textfield(context, controller, Languages.of(context).Contractvalue),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: textfield(context, controller, Languages.of(context).Purchase_value),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: textfield(context, controller, Languages.of(context).design_value),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: txt(context, Languages.of(context).delivery_date),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -238,7 +240,7 @@ class _AccountState extends State<Account> {
 
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: txt(context, "تاريخ انتهاء العقد"),
+            child: txt(context, Languages.of(context).Contract_expiry_date),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -246,16 +248,11 @@ class _AccountState extends State<Account> {
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: textfieldicon(context, controller, 'ح نسبة التوزيع', Icon(Icons.search)),
+            child: textfieldicon(context, controller, Languages.of(context).Distribution_ratio, Icon(Icons.search)),
           ),
-          Padding(
+         Padding(
             padding: const EdgeInsets.all(8.0),
-            child: textfieldicon(context, controller, 'المندوب', Icon(Icons.search)),
-          ),
-
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: textfield(context, controller, 'ملاحظات'),
+            child: textfield(context, controller, Languages.of(context).Notes),
           ),
 
         ],

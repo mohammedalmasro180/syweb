@@ -27,7 +27,7 @@ class _unitssState extends State<unitss> {
     getLocale(codee);
 
     return Scaffold(
-      bottomNavigationBar: BottomBar(context),
+
       appBar: myappbar(context,Languages.of(context).classhome),
       body: new Center(
         child: new ListView(

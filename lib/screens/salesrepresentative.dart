@@ -18,7 +18,8 @@ class sales_representative extends StatefulWidget {
 class _sales_representativeState extends State<sales_representative> {
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: myappbar(context,'مندوب مبيعات'),
+      appBar: myappbar(context,
+          Languages.of(context).sales_representative),
       drawer: drawer(),
       body: ListView(
         children: [
@@ -79,7 +80,7 @@ class _sales_representativeState extends State<sales_representative> {
                   child: Row(
                     children: [
                       Expanded(child: txt(context,  Languages.of(context).company_branch)),
-                      Expanded(child: down(context, controller, "قبدون")),
+                      Expanded(child: down(context, controller, Languages.of(context).undefined)),
                     ],
                   ),
                 ),
@@ -120,8 +121,8 @@ class _sales_representativeState extends State<sales_representative> {
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Expanded(child: txt(context, "العنلة")),
-                      Expanded(child: down(context, controller, "ليرة سورية")),
+                      Expanded(child: txt(context,Languages.of(context).currency)),
+                      Expanded(child: down(context, controller, Languages.of(context).Syrian_Pound)),
                     ],
                   ),
                 ),
@@ -131,7 +132,7 @@ class _sales_representativeState extends State<sales_representative> {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: MyStatefulWidget(R1:  Languages.of(context).extradete,R2: 'العميل',),
+                  child: MyStatefulWidget(R1:  Languages.of(context).extradete,R2: Languages.of(context).Client),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),

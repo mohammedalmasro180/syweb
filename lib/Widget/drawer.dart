@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:theone/localization/language/languages.dart';
 import 'package:theone/screens/Employee.dart';
 import 'package:theone/screens/addgroup.dart';
+import 'package:theone/screens/changelanguage.dart';
 import 'package:theone/screens/class_definition.dart';
 import 'package:theone/screens/extra_prices.dart';
 import 'package:theone/screens/store.dart';
@@ -92,7 +93,10 @@ class _drwaerState extends State<drawer> {
               leading: Icon(Icons.money),
             ),
           ),
-
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: changelanguage(),
+          )
 
 
         ],

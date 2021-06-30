@@ -6,17 +6,14 @@ Widget myappbar(context,String title){
     centerTitle: true,
     backgroundColor: sh,
     actions: [
-      IconButton(icon: Icon(Icons.search,color: Colors.white,),
-          color: Colors.white, onPressed: (){
-
-          })],
-    elevation:10,
-    titleSpacing: 25,
-
-    leading: new IconButton(
-      icon: new Icon(Icons.arrow_back,color: Colors.white,),
+      IconButton(
+        icon: new Icon(Icons.arrow_back,color: Colors.white,),
+        onPressed: () => Navigator.of(context).pop(),
+      ),
+  ],
+    leading:IconButton(
+      icon: new Icon(Icons.list,color: Colors.white,),
       onPressed: () => Navigator.of(context).pop(),
     ),
-
   );
 }

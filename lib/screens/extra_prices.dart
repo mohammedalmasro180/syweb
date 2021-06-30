@@ -29,7 +29,7 @@ class _extra_pricesState extends State<extra_prices> {
     getLocale(codee);
 
     return Scaffold(
-      bottomNavigationBar: BottomBar(context),
+
       appBar: myappbar(context,Languages.of(context).extraprice),
       drawer: drawer(),
       body: Container(

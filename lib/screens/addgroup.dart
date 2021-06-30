@@ -42,7 +42,7 @@ class _addgroupState extends State<addgroup> {
     return  Scaffold(
         drawer: drawer(),
 
-        bottomNavigationBar: BottomBar(context),
+
         appBar: myappbar(context,Languages.of(context).add+' '+Languages.of(context).grouphome),
         body: ListView(
           children: [

@@ -57,7 +57,7 @@ class _HomeScreenState extends State<HomeScreen>
                       Navigator.push(
                           context, MaterialPageRoute(builder: (context) =>addgroup()));
 
-                        showAlertDialog(context,Languages.of(context).grouphome,addgroup(),addgroup());
+           //             showAlertDialog(context,Languages.of(context).grouphome,addgroup(),addgroup());
                       //                     showMyDialog(context,Languages.of(context).grouphome,addgroup(),addgroup(),Languages.of(context).delhome,Languages.of(context).add,Languages.of(context).edithome);
 
                     },
@@ -363,7 +363,7 @@ class _HomeScreenState extends State<HomeScreen>
                               alignment: FractionalOffset.centerLeft,
 
                               child: Text(
-                                'مبيعات', style: TextStyle(fontSize: 14,color: Colors.black),)),
+                                Languages.of(context).sales_representative, style: TextStyle(fontSize: 14,color: Colors.black),)),
                         ),
 
                       ],
@@ -398,7 +398,7 @@ class _HomeScreenState extends State<HomeScreen>
                               alignment: FractionalOffset.centerLeft,
 
                               child: Text(
-                                'مناطق عمل', style: TextStyle(fontSize: 14,color: Colors.black),)),
+                                Languages.of(context).work_areas, style: TextStyle(fontSize: 14,color: Colors.black),)),
                         ),
 
                       ],
@@ -433,8 +433,7 @@ class _HomeScreenState extends State<HomeScreen>
 
                               alignment: FractionalOffset.centerLeft,
 
-                              child: Text(
-                                'كميات الصنف', style: TextStyle(fontSize: 14,color: Colors.black),)),
+                              child: Text(Languages.of(context).Item_Quantities, style: TextStyle(fontSize: 14,color: Colors.black),)),
                         ),
 
                       ],
@@ -469,7 +468,7 @@ class _HomeScreenState extends State<HomeScreen>
                               alignment: FractionalOffset.centerLeft,
 
                               child: Text(
-                                'كميات الصنف', style: TextStyle(fontSize: 14,color: Colors.black),)),
+                                Languages.of(context).Item_Quantities, style: TextStyle(fontSize: 14,color: Colors.black),)),
                         ),
 
                       ],
@@ -503,7 +502,7 @@ class _HomeScreenState extends State<HomeScreen>
                               alignment: FractionalOffset.centerLeft,
 
                               child: Text(
-                                'معلومات العميل', style: TextStyle(fontSize: 14,color: Colors.black),)),
+                                Languages.of(context).customer_information, style: TextStyle(fontSize: 14,color: Colors.black),)),
                         ),
 
                       ],
@@ -535,10 +534,10 @@ class _HomeScreenState extends State<HomeScreen>
                           padding: const EdgeInsets.all(30.0),
                           child: Align(
 
-                              alignment: FractionalOffset.centerLeft,
+                             alignment: FractionalOffset.centerLeft,
 
                               child: Text(
-                                'الحساب', style: TextStyle(fontSize: 14,color: Colors.black),)),
+                                Languages.of(context).Account, style: TextStyle(fontSize: 14,color: Colors.black),)),
                         ),
 
                       ],

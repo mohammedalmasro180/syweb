@@ -163,7 +163,8 @@ class LanguageAr extends Languages {
 
     String get chek1=>' غير مسموح لها بالبيع عند تجاوز الحد ' ;
   //  String get  bound / main => "" ;
-  // مستحقات العميل  String get  => "" ;
+  String get   Clieent=> "العميل" ;
+
   //  String get  String => '' ;
   String get balancesheet => "الميزانية العمومية" ;
   String get matchdate => "تاريخ المطابقة" ;
@@ -358,6 +359,62 @@ class LanguageAr extends Languages {
 
   String get 	both_of_them	=>	"	كلاهما	";
   String get 	current_balance	=>	"	الرصيد الحالي	";
+//Ac
+  String get 	Civil_No	=>	"	الرقم المدني	"	;
+  String get 	Administrator	=>	"	المسؤول	"	;
+  String get 	Telephone	=>	"	هاتف	"	;
+  String get 	fax	=>	"	فاكس	"	;
+  String get 	Mobile	=>	"	موبايل	"	;
+  String get 	sent_to	=>	"	المرسلة  الى	"	;
+  String get 	place_of_sending	=>	"	مكان الارسال	"	;
+  String get 	email	=>	"	بريد الكتروني	"	;
+  String get 	Website	=>	"	موقع انترنت	"	;
+  String get 	Address	=>	"	العنوان	"	;
+  String get 	Governorate	=>	"	المحافظة	"	;
+  //String get 	undefined	=>	"	غير محدد	"	;
+  String get 	Region	=>	"	المنطقة	"	;
+  String get 	widget	=>	"	القطعة	"	;
+  String get 	home	=>	"	المنزل	"	;
+  String get 	Postal_code	=>	"	الرمز البريدي	"	;
+  String get 	Street  =>	"	الشارع	"	;
+  String get 	Avenue	=>	"	الجادة	"	;
+  String get 	turn_number	=>	"	رقم الدور	"	;
+  String get 	mail_box	=>	"	صندوق البريد	"	;
+  String get 	customer_present	=>	"	عميل تقدي	"	;
+  String get 	selling_price	=>	"	سعر البيع	"	;
+  String get 	discount_percentage	=>	"	نسبة الخصم	"	;
+  String get 	Distribution_ratio	=>	"	نسبة التوزيع	"	;
+  String get 	Branches__Locations	=>	"	الفروع - المواقع	"	;
+  String get 	Payment_Terms	=>	"	شروط الدفع	"	;
+  String get 	customer_goal	=>	"	هدف العميل	"	;
+  String get 	customer_rating	=>	"	تصنيف العميل	"	;
+//  String get 	without	=>	"	بدون	"	;
+  String get 	Target	=>	"	الهدف	"	;
+  String get 	the_value	=>	"	القيمة	"	;
+  String get 	number_of_invoices	=>	"	عدد الفواتير	"	;
+  String get 	Purchase_value	=>	"	قيمة المشتريات	"	;
+  String get 	design_value	=>	"	قيمة التصميم	"	;
+  String get 	delivery_date	=>	"	تاريخ التسليم	"	;
+  String get 	Contract_expiry_date	=>	"	تاريخ انتهاء العقد	"	;
+  //String get 	Distribution_ratio	=>	"	نسبة التوزيع	"	;
+  String get 	Notes	=>	"	ملاحظات	"	;
 
+  //------------
+  String get street => 'شارع';
+  String get Delegate=>'المندوب';
+  String get 	customerr_rating		=>	"	تصنيف العميل	"	;
+
+  String get 	Free_quantity	=>	"	كمية المجاني	"	;
+  String get 	Activate_the_free_offer		=>	"	تفعيل العرض المجاني	"	;
+
+  String get Contractvalue=>'قيمة التقاعد';
+
+  String get Nationality=> " الجنسية" ;
+  //home
+  String get sales_representative => "مندوب مبيعات" ;
+  String get work_areas => "مناطق العمل" ;
+  String get Item_Quantities => "كميات العنصر" ;
+
+  String get Account => "الحساب" ;
 }
 

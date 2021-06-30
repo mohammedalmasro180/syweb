@@ -7,6 +7,7 @@ import 'package:theone/screens/Employee.dart';
 import 'package:theone/screens/HomeScreen.dart';
 import 'package:theone/screens/Login.dart';
 import 'package:theone/screens/addgroup.dart';
+import 'package:theone/screens/changelanguage.dart';
 import 'package:theone/theme/color.dart';
 
 class Home extends StatefulWidget {
@@ -42,7 +43,9 @@ class HomeState extends State<Home> {
                 SizedBox(
                   height: 70,
                 ),
-                _createLanguageDropDown(),
+                Align(
+                  alignment: FractionalOffset.center,
+                    child: changelanguage()),
                 SizedBox(
                   height: 70,
                 ),

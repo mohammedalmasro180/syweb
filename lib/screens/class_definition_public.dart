@@ -23,7 +23,7 @@ class _class_definition_publicState extends State<class_definition_public> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: myappbar(context,'تعريف صنف عام'),
-      bottomNavigationBar: BottomBar(context),
+
       drawer: drawer(),
       body: ListView(
         children: [

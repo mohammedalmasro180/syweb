@@ -24,7 +24,7 @@ class _card_cardState extends State<card_card> {
     return Scaffold(
       appBar: myappbar(context,Languages.of(context).class_definition),
       drawer: drawer(),
-      bottomNavigationBar: BottomBar(context),
+
       body: ListView(
         children: [
           Container(

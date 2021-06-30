@@ -27,7 +27,7 @@ class _storeState extends State<store> {
         drawer: drawer(),
 
 
-        bottomNavigationBar: BottomBar(context),
+
 
         appBar: myappbar(context,Languages.of(context).storehome),
         body: ListView(
